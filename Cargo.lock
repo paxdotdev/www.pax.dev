@@ -128,7 +128,7 @@ dependencies = [
 
 [[package]]
 name = "breakout"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "getrandom",
  "pax-kit",
@@ -251,7 +251,7 @@ dependencies = [
 
 [[package]]
 name = "color-picker"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "pax-kit",
 ]
@@ -539,7 +539,7 @@ dependencies = [
 
 [[package]]
 name = "fireworks"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "pax-kit",
 ]
@@ -1176,7 +1176,7 @@ checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
 
 [[package]]
 name = "pax-chassis-common"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "core-graphics",
  "env_logger",
@@ -1192,14 +1192,14 @@ dependencies = [
 
 [[package]]
 name = "pax-chassis-ios"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "pax-chassis-common",
 ]
 
 [[package]]
 name = "pax-chassis-macos"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "core-graphics",
  "flexbuffers",
@@ -1214,7 +1214,7 @@ dependencies = [
 
 [[package]]
 name = "pax-chassis-web"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "console_error_panic_hook",
  "console_log",
@@ -1236,7 +1236,7 @@ dependencies = [
 
 [[package]]
 name = "pax-designer"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "anyhow",
  "convert_case",
@@ -1247,7 +1247,7 @@ dependencies = [
 
 [[package]]
 name = "pax-designtime"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "anyhow",
  "env_logger",
@@ -1270,7 +1270,7 @@ dependencies = [
 
 [[package]]
 name = "pax-engine"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "log",
  "pax-chassis-common",
@@ -1290,7 +1290,7 @@ dependencies = [
 
 [[package]]
 name = "pax-kit"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "pax-designer",
  "pax-engine",
@@ -1299,7 +1299,7 @@ dependencies = [
 
 [[package]]
 name = "pax-lang"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "log",
  "pax-runtime-api",
@@ -1310,7 +1310,7 @@ dependencies = [
 
 [[package]]
 name = "pax-macro"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "litrs",
  "pax-lang",
@@ -1326,7 +1326,7 @@ dependencies = [
 
 [[package]]
 name = "pax-manifest"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "kurbo",
  "log",
@@ -1339,7 +1339,7 @@ dependencies = [
 
 [[package]]
 name = "pax-message"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "cfg-if",
  "serde",
@@ -1348,7 +1348,7 @@ dependencies = [
 
 [[package]]
 name = "pax-runtime"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "cfg-if",
  "kurbo",
@@ -1368,7 +1368,7 @@ dependencies = [
 
 [[package]]
 name = "pax-runtime-api"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "kurbo",
  "log",
@@ -1383,7 +1383,7 @@ dependencies = [
 
 [[package]]
 name = "pax-std"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "kurbo",
  "lazy_static",
@@ -1963,7 +1963,7 @@ checksum = "3c5e1a9a646d36c3599cd173a41282daf47c44583ad367b8e6837255952e5c67"
 
 [[package]]
 name = "space-game"
-version = "0.36.3"
+version = "0.36.6"
 dependencies = [
  "getrandom",
  "pax-kit",
