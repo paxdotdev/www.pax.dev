@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pax Web</title>
+        <!-- Google tag (gtag.js) -->
+         <script async src="https://www.googletagmanager.com/gtag/js?id=G-MG3GLRDHYR"></script>
+         <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+    
+         gtag('config', 'G-MG3GLRDHYR');
+         </script>
+    </head>
+    <body>
+        <link rel="stylesheet" href="https://use.typekit.net/ivu7epf.css">
+        <div id="mount">
+        </div>
+        <script src="pax-interface-web.js"></script>
+        <script>
+            function checkSize() {
+                if (window.innerWidth < 1400 || window.innerHeight < 800) {
+                    window.location.href = 'mobile.html';
+                } else {
+                    if (typeof window.Pax.mount === 'function') {
+                        const basePath = window.location.origin + window.location.pathname;
+                        window.Pax.mount("#mount", basePath + "pax-cartridge");
+                    } else {
+                        console.error("Pax cartridge failed to load or was malformed.");
+                    }
+                }
+            }
+            // Check size on load
+            checkSize();
+        </script>
+    </body>
+</html>
