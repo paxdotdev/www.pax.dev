@@ -1,3 +1,17 @@
+<Text width=13.85% y=13.36% height=3.99% x=76.55% style={
+    font: Font::Web(
+        "Roboto",
+        "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap",
+        FontStyle::Normal,
+        FontWeight::Normal)
+    font_size: 20.00px
+    fill: rgba(237, 237, 237, 255)
+    align_vertical: TextAlignVertical::Top
+    align_horizontal: TextAlignHorizontal::Left
+    align_multiline: TextAlignHorizontal::Left
+    underline: false
+} 
+    text="Warfa was here" rotate=-9.32deg/>
 <Text y=56.43% x=96.88% height=12.40% text="Every visual change is code." style={
     font: Font::Web(
         "Roboto",
