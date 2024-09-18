@@ -84,7 +84,7 @@
         width=100% height=100%/>
 </Link>
 <Image source=ImageSource::Url("assets/pax-logo-white-on-black.png") x=2.72% height=8.88% y=5.97% width=9.71%/>
-<Carousel width=45.41% x=24.32% y=56.84% height=78.32% anchor_x=50.00% anchor_y=50.00%>
+<Carousel width=29.81% x=16.52% y=56.84% height=78.32% anchor_x=50.00% anchor_y=50.00%>
     <Group>
         <Calculator />
         <Rectangle fill=rgba(30, 30, 30, 255)/>
@@ -128,7 +128,7 @@
     } 
         width=110.45%/>
 </Group>
-<Link width=38.25% y=92.58% x=96.84% height=17.30% url="https://airtable.com/appCUQtUS9g4kuQZL/pagGMVOPv9AH1cNJS/form" 
+<Link width=52.95% y=93.20% x=81.05% height=17.30% url="https://airtable.com/appCUQtUS9g4kuQZL/pagGMVOPv9AH1cNJS/form" 
     target=Target::New>
     <Group y=-0.83% height=79.81% x=49.99% width=90.90%>
         <Text y=9.36% x=55.62% height=66.15% text="Be a pilot for Pax Pro" style={
