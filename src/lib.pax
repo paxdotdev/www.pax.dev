@@ -96,7 +96,7 @@
     <ColorPickerExample />
     <BreakoutGame />
 </Carousel>
-<Group x=95.19% scale_x=100% y=39.88% width=44.39% scale_y=100% height=36.88% anchor_x=100% rotate=-4.79deg>
+<Group x=93.73% scale_x=100% y=39.88% width=44.39% scale_y=100% height=36.88% anchor_x=100% rotate=-4.79deg>
     <Text y=71.71% x=108.62% height=39.59% 
         text="Build mobile apps, websites, business tools, games, digital art, interactive cartoons, desktop &amp; embedded applications, data visualizations, and more." 
         style={
