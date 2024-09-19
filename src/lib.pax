@@ -33,7 +33,10 @@
         bottom_left: 10
         bottom_right: 10
     } 
-        y=0.00% x=0.00% fill=INDIGO/>
+        y=0.00% x=0.00% fill=INDIGO stroke={
+            color: rgba(100, 116, 139, 255)
+            width: 1.00px
+        }/>
 </Link>
 <Link y=6.17% width=11.87% x=39.96% height=5.63% url="https://docs.pax.dev" target=Target::New>
     <Text y=0.00% x=0.00% text="Docs" style={
@@ -191,7 +194,7 @@
     height=16.65%/>
 <Image source=ImageSource::Url("assets/Frame 3.png") y=130.59% height=19.53% x=55.19% scale_x=139.98% scale_y=139.98% 
     width=25.86%/>
-<Group width=74.83% height=80.63% scale_x=139.99% scale_y=139.99% x=49.10% y=48.14% rotate=-3.80deg>
+<Group width=74.83% height=81.94% scale_x=139.99% scale_y=139.99% x=46.04% y=52.16% rotate=-3.80deg>
     <Rectangle x=100.00% height=43.76% y=99.99% fill=rgba(206, 207, 207, 255) width=139.95% scale_y=71.41% scale_x=71.41%/>
     <Rectangle x=58.65% height=51.06% y=50.47% fill=rgba(46, 49, 49, 255) width=139.88% scale_x=71.41% scale_y=71.41%/>
     <Rectangle x=0.00% height=45.02% y=0.00% fill=rgba(12, 12, 12, 255) corner_radii={
