@@ -1,3 +1,4 @@
+<Rectangle height=32.04% y=-20.12% width=33.82% x=97.86% fill=rgba(23, 46, 83, 255)/>
 <Text y=56.43% x=96.88% height=12.40% text="Every visual change is code." style={
     font: Font::Web(
         "Roboto",
@@ -187,7 +188,7 @@
 </Link>
 <Image source=ImageSource::Url("assets/Frame 2.png") y=-30.44% width=21.73% scale_y=139.99% x=116.58% scale_x=139.99% 
     height=21.37%/>
-<Image source=ImageSource::Url("assets/Frame 1.png") x=-11.85% scale_y=139.99% width=24.22% y=-27.14% scale_x=139.99% 
+<Image source=ImageSource::Url("assets/Frame 1.png") x=-7.48% scale_y=139.99% width=24.22% y=-27.13% scale_x=139.99% 
     height=16.65%/>
 <Image source=ImageSource::Url("assets/Frame 3.png") y=130.59% height=19.53% x=55.19% scale_x=139.98% scale_y=139.98% 
     width=25.86%/>
