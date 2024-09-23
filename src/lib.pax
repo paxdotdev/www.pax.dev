@@ -1,5 +1,6 @@
 <Scroller>
     <Stacker>
+        <Image path="assets/logo-black-on-white.png" />
         <Text id=hero_h1 text="A visual builder for AI artifacts" skew_x=0.00rad rotate=0.00rad skew_y=0.00rad style={
             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
             font_size: 64px
@@ -11,6 +12,7 @@
             width=100% height=100%/>
         <Button text="Get Started" color=INDIGO rotate=0.00rad skew_x=0.00rad skew_y=0.00rad width=25% height=25% x=50% y=50% 
             label="Get Started"/>
+
     </Stacker>
 </Scroller>
 
