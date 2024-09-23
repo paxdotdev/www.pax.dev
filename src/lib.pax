@@ -84,7 +84,7 @@
         width=100% height=100%/>
 </Link>
 <Image source=ImageSource::Url("assets/pax-logo-white-on-black.png") x=2.72% height=8.88% y=5.97% width=9.71%/>
-<Carousel width=45.41% x=24.32% y=56.84% height=78.32% anchor_x=50.00% anchor_y=50.00%>
+<Carousel width=45.41% x=24.79% y=57.19% height=78.32% anchor_x=50.00% anchor_y=50.00%>
     <Group>
         <Calculator />
         <Rectangle fill=rgba(30, 30, 30, 255)/>
