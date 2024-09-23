@@ -1,4 +1,4 @@
-<Scroller scroll_height=200%>
+<Scroller scroll_height=400%>
     <Stacker>
         <Group id=section_1>
             <Stacker>
@@ -16,9 +16,98 @@
                     y=50% label="Get Started"/>
             </Stacker>
         </Group>
-        <Group id=section_2 />
-        <Group id=section_3 />
-        <Group id=section_4 />
+        <Group id=section_2>
+            <Stacker width=75% height=75% x=50% y=50%>
+                <Text text="Prompt" style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
+                    font_size: 24px
+                    align_vertical: TextAlignVertical::Top
+                    align_horizontal: TextAlignHorizontal::Left
+                }/>
+                <Text text="Create apps, websites, or individual components." style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
+                    font_size: 24px
+                    align_vertical: TextAlignVertical::Top
+                    align_horizontal: TextAlignHorizontal::Left
+                }/>
+                <Image source=ImageSource::Url("assets/prompt.gif")/>
+                <Text text="Take creative control" style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
+                    font_size: 24px
+                    align_vertical: TextAlignVertical::Top
+                    align_horizontal: TextAlignHorizontal::Left
+                } 
+                    rotate=0.00rad skew_x=0.00rad skew_y=0.00rad/>
+                <Text text="Design and prompt and design again - iterate with prompt &amp; style." style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
+                    font_size: 24px
+                    align_vertical: TextAlignVertical::Top
+                    align_horizontal: TextAlignHorizontal::Left
+                }/>
+                <Image source=ImageSource::Url("assets/design.gif")/>
+                <Text text="Publish with a click " style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
+                    font_size: 24px
+                    align_vertical: TextAlignVertical::Top
+                    align_horizontal: TextAlignHorizontal::Left
+                }/>
+                <Text text="Or integrate with virtually any codebase or API" style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
+                    font_size: 24px
+                    align_vertical: TextAlignVertical::Top
+                    align_horizontal: TextAlignHorizontal::Left
+                } 
+                    skew_x=0.00rad skew_y=0.00rad rotate=0.00rad/>
+            </Stacker>
+        </Group>
+        <Group id=section_3>
+            <Stacker>
+                <Text text="Build:" style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
+                    font_size: 32px
+                    align_vertical: TextAlignVertical::Top
+                    align_horizontal: TextAlignHorizontal::Left
+                }/>
+                <Text text="Internal Tools: Quickly create forms and dashboards; fine-tune the details and hook up APIs with code." style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
+                    font_size: 24px
+                    align_vertical: TextAlignVertical::Top
+                    align_horizontal: TextAlignHorizontal::Left
+                }/>
+                <Text text="Landing Pages: Create landing pages with a few words; keep copy up to date through Pax’s visual CMS." style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
+                    font_size: 24px
+                    align_vertical: TextAlignVertical::Top
+                    align_horizontal: TextAlignHorizontal::Left
+                }/>
+                <Text text="Digital products: web and mobile apps. For example, Pax Designer is built in Pax — Pax compiles to native apps as well as WebAssembly-powered websites." 
+                    style={
+                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
+                        font_size: 24px
+                        align_vertical: TextAlignVertical::Top
+                        align_horizontal: TextAlignHorizontal::Left
+                    }/>
+                <Text text="Data visualizations, dashboards, games, and interactive graphics. The sky’s the limit with design & code control — if you can imagine it, you can create it with Pax." 
+                    style={
+                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
+                        font_size: 24px
+                        align_vertical: TextAlignVertical::Top
+                        align_horizontal: TextAlignHorizontal::Left
+                    }/>
+            </Stacker>
+        </Group>
+        <Group id=section_4>
+            <Stacker>
+                <Text text="This page was built with AI." style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
+                    font_size: 32px
+                    align_vertical: TextAlignVertical::Top
+                    align_horizontal: TextAlignHorizontal::Center
+                }/>
+                <Button text="Try it out" color=rgba(12, 12, 12, 255) rotate=0.00rad skew_x=0.00rad skew_y=0.00rad width=25% height=25% x=50% 
+                    y=50% label="Try it out"/>
+            </Stacker>
+        </Group>
     </Stacker>
 </Scroller>
 
