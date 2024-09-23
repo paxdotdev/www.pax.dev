@@ -1,7 +1,16 @@
 <Scroller>
     <Stacker>
-        <Text id=hero_h1 text="A visual builder for AI artifacts" skew_x=0.00rad rotate=0.00rad skew_y=0.00rad/>
-        <Button text="Get Started" rotate=0.00rad skew_x=0.00rad skew_y=0.00rad/>
+        <Text id=hero_h1 text="A visual builder for AI artifacts" skew_x=0.00rad rotate=0.00rad skew_y=0.00rad style={
+            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
+            font_size: 64px
+            underline: false
+            align_vertical: TextAlignVertical::Center
+            align_horizontal: TextAlignHorizontal::Center
+            align_multiline: TextAlignHorizontal::Center
+        } 
+            width=100% height=100%/>
+        <Button text="Get Started" color=INDIGO rotate=0.00rad skew_x=0.00rad skew_y=0.00rad width=25% height=25% x=50% y=50% 
+            label="Get Started"/>
     </Stacker>
 </Scroller>
 
