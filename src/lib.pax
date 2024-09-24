@@ -15,7 +15,7 @@
                     }/>
                 <Group>
                     <Text y=50% scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} width=90% x=49.99% 
-                        text="Prompt, design, and code, together. <br /> AI automation with human collaboration." style={
+                        text="Prompt, design, and code, together. <br /> Pax is a revolutionary new way to build with AI." style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2}
                             underline: false
@@ -35,7 +35,7 @@
         </Group>
         <Group id=section_2 height=200%>
             <Stacker>
-                <Text y=100% width=100% x=50px height=100% text="How it works" scale_x={100% - ($mobile * 40%)} 
+                <Text y=100% width=100% x=50px height=100% text="AI artifacts you can touch" scale_x={100% - ($mobile * 40%)} 
                     scale_y={100% - ($mobile * 40%)} skew_x=0.00rad rotate=0.00rad style={
                         font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
                         font_size: {PaxDotDev::get_responsive_text_size($mobile) * 3}
@@ -61,7 +61,7 @@
                 <Group>
                     <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
                         <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=50% width=90% x=50px 
-                            text="**Collaborate** with AI on a visual canvas. Design, prompt, and design again." style={
+                            text="**Collaborate** with AI on a visual canvas. Take turns refining your idea — design, prompt, and design again." style={
                                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                                 font_size: {PaxDotDev::get_responsive_text_size($mobile)}
                                 underline: false
@@ -76,7 +76,7 @@
                 <Group>
                     <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
                         <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=50% width=90% x=50px 
-                            text="**Publish** with a click — or invite no-coders to collaborate on a GitHub repo.  Work as a team on the latest development branch, regardless of technical ability." 
+                            text="**Publish** with a click — share a link to invite any teammate to collaborate.  Optionally link a GitHub repo so your entire team can build together around the same codebase." 
                             style={
                                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                                 font_size: {PaxDotDev::get_responsive_text_size($mobile)}
@@ -111,7 +111,7 @@
                 <Group>
                     <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
                         <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=50% width=90% x=50px 
-                            text="**Integrate & extend** — Pax artifacts can be integrated with any codebase or API, or shipped as stand-alone web or mobile apps." 
+                            text="**Integrate & extend** — Pax artifacts integrate with any codebase or API, or ship as stand-alone web or mobile apps." 
                             style={
                                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                                 font_size: {PaxDotDev::get_responsive_text_size($mobile)}
@@ -188,7 +188,7 @@
                             align_multiline: TextAlignHorizontal::Left
                         }/>
                     <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=0% width=90% x=50px 
-                        text="Give your entire team a portal into your product — make visual and AI-driven changes at any point in the development lifecycle." 
+                        text="Give your entire team a portal into your product — make no-code visual and AI-driven contributions at any point in the development lifecycle." 
                         style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: {PaxDotDev::get_responsive_text_size($mobile)}
@@ -223,7 +223,7 @@
         <Group id=section_4>
             <Stacker>
                 <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=100.00% width=95% x=50% height=100% 
-                    text="Design, code, and ship with AI" style={
+                    text="Prompt, design, code, ship" style={
                         font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
                         font_size: {PaxDotDev::get_responsive_text_size($mobile) * 3}
                         underline: false
