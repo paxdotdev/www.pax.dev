@@ -1,38 +1,51 @@
 <Scroller scroll_height=400%>
     <Stacker>
         <Group id=section_1>
-            <Stacker>
-                <Image source=ImageSource::Url("assets/logo-black-on-white.png")/>
-                <Text width=75% height=100% x=50% id=hero_h1 text="Visual AI for building apps & websites" skew_x=0.00rad rotate=0.00rad skew_y=0.00rad 
-                    style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-                        font_size: 64px
+            <Stacker >
+                <Stacker y=50% direction=StackerDireciton::Horizontal sizes=[Some(29.09%), Some(70.85%), None] rotate=0.00rad skew_x=0.00rad 
+                    width=100.58% x=100.58% y=100.00%>
+                    <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% x=50% 
+                        y=50%/>
+                    <Text y=50.00% width=95% x=5.00% height=100% text="How the future builds software" skew_x=0.00rad rotate=0.00rad 
+                        style={
+                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
+                            font_size: 64px
+                            underline: false
+                            align_vertical: TextAlignVertical::Center
+                            align_horizontal: TextAlignHorizontal::Center
+                        }/>
+                </Stacker>
+                <Group y=50%>
+                    <Text y=50% width=90% x=50% text="Prompt, draw, and code, together. AI automation with complete human control." style={
+                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
+                        font_size: 48px
                         underline: false
                         align_vertical: TextAlignVertical::Center
                         align_horizontal: TextAlignHorizontal::Center
-                        align_multiline: TextAlignHorizontal::Center
-                    } 
-                    />
-                <Button text="Get Started" color=rgba(12, 12, 12, 255) rotate=0.00rad skew_x=0.00rad skew_y=0.00rad width=25% height=25% x=50% 
-                    y=50% label="Try the demo" style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Bold, FontWeight::Light)}
-                        font_size: 24px
-                        fill: WHITE
-                        align_vertical: TextAlignVertical::Center
-                        align_horizontal: TextAlignHorizontal::Center
-                    }/>
+                    } / >
+                </Group>
+                <Group y=50%>
+                    <Button x=50% y=50% width=200px height=75px text="Try the demo" color=rgba(12, 12, 12, 255) rotate=0.00rad skew_x=0.00rad label="Try the demo" style={
+                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Bold, FontWeight::Light)}
+                            font_size: 24px
+                            fill: WHITE
+                            align_vertical: TextAlignVertical::Center
+                            align_horizontal: TextAlignHorizontal::Center
+                        } 
+                            skew_y=0.00rad/>
+                </Group>
             </Stacker>
         </Group>
         <Group id=section_2>
             <Stacker width=75% height=75% x=50% y=50%>
-                <Text text="Prompt" id=s2h2 />
+                <Text text="Prompt" id=s2h2/>
                 <Text text="Create apps, websites, or individual components." style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
                     font_size: 24px
                     align_vertical: TextAlignVertical::Top
                     align_horizontal: TextAlignHorizontal::Left
                 }/>
-                <Text id=s2h2 text="Take creative control"  />
+                <Text id=s2h2 text="Take creative control"/>
                 <Text text="Design and prompt and design again - iterate with prompt &amp; style." style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
                     font_size: 24px
@@ -40,7 +53,7 @@
                     align_horizontal: TextAlignHorizontal::Left
                 }/>
                 <Image source=ImageSource::Url("assets/design.gif")/>
-                <Text id=s2h2 text="Publish with a click " />
+                <Text id=s2h2 text="Publish with a click "/>
                 <Text text="Or integrate with virtually any codebase or API" style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
                     font_size: 24px
@@ -106,9 +119,8 @@
         style: {
             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
             font_size: 48px
-            align_vertical: TextAlignVertical::Center
-            align_horizontal: TextAlignHorizontal::Center
-            align_multiline: TextAlignHorizontal::Center
+            align_vertical: TextAlignVertical::Top
+            align_horizontal: TextAlignHorizontal::Left
         }
     }
     #hero_h2 {
