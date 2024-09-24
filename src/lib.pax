@@ -1,67 +1,113 @@
-<Scroller scroll_height=400%>
+<Scroller scroll_height=500%>
     <Stacker>
         <Group id=section_1>
-            <Stacker >
-                <Stacker y=50% direction=StackerDireciton::Horizontal sizes=[Some(29.09%), Some(70.85%), None] rotate=0.00rad skew_x=0.00rad 
-                    width=100.58% x=100.58% y=100.00%>
-                    <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% x=50% 
-                        y=50%/>
-                    <Text y=50.00% width=95% x=5.00% height=100% text="How the future builds software" skew_x=0.00rad rotate=0.00rad 
-                        style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-                            font_size: 64px
-                            underline: false
-                            align_vertical: TextAlignVertical::Center
-                            align_horizontal: TextAlignHorizontal::Center
-                        }/>
-                </Stacker>
-                <Group y=50%>
-                    <Text y=50% width=90% x=50% text="Prompt, draw, and code, together. AI automation with complete human control." style={
+            <Stacker>
+                <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
+                    x=50% y=50%/>
+                <Text y=50.00% width=95% x=5.00% height=100% text="How the future builds software" skew_x=0.00rad rotate=0.00rad style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
+                    font_size: 64px
+                    underline: false
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Center
+                    align_multiline: TextAlignHorizontal::Center
+                }/>
+                <Group>
+                    <Text y=50% width=90% x=50% text="Prompt, design, and code, together. <br />  AI automation with complete human control." style={
                         font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                         font_size: 48px
                         underline: false
                         align_vertical: TextAlignVertical::Center
                         align_horizontal: TextAlignHorizontal::Center
-                    } / >
+                        align_multiline: TextAlignHorizontal::Center
+                    }/>
                 </Group>
-                <Group y=50%>
-                    <Button x=50% y=50% width=200px height=75px text="Try the demo" color=rgba(12, 12, 12, 255) rotate=0.00rad skew_x=0.00rad label="Try the demo" style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Bold, FontWeight::Light)}
-                            font_size: 24px
-                            fill: WHITE
+                <Button x=50% y=50% width=200px height=75px text="Try the demo" color=rgba(12, 12, 12, 255) label="Try the demo" style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Bold, FontWeight::Light)}
+                    font_size: 24px
+                    fill: WHITE
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Center
+                }/>
+            </Stacker>
+        </Group>
+        <Group id=section_2 height=200%>
+            <Stacker>
+                <Text y=50.00% width=95% x=5.00% height=100% text="How it works" skew_x=0.00rad rotate=0.00rad style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
+                    font_size: 48px
+                    underline: false
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Left
+                }/>
+                <Group>
+                    <Stacker direction=StackerDirection::Horizontal>
+                        <Text y=50% width=90% x=50% text="**Prompt** to create apps, websites, interactive widgets, or forms." style={
+                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
+                            font_size: 28px
+                            underline: false
                             align_vertical: TextAlignVertical::Center
                             align_horizontal: TextAlignHorizontal::Center
-                        } 
-                            skew_y=0.00rad/>
+                        }/>
+                        <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
+                        x=50% y=50%/>
+                    </Stacker>
+                </Group>
+                <Group>
+                    <Stacker direction=StackerDirection::Horizontal>
+                        <Text y=50% width=90% x=50% text="**Make it yours.**  Iterate on styles and content with intuitive visual tools. Design and prompt and design again." style={
+                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
+                            font_size: 28px
+                            underline: false
+                            align_vertical: TextAlignVertical::Center
+                            align_horizontal: TextAlignHorizontal::Center
+                        }/>
+                        <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
+                        x=50% y=50%/>
+                    </Stacker>
+                </Group>
+                <Group>
+                    <Stacker direction=StackerDirection::Horizontal>
+                        <Text y=50% width=90% x=50% text="**Publish** with a click — or invite no-coders to collaborate around GitHub repos; work as a team on the latest development branch." style={
+                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
+                            font_size: 28px
+                            underline: false
+                            align_vertical: TextAlignVertical::Center
+                            align_horizontal: TextAlignHorizontal::Center
+                        }/>
+                        <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
+                        x=50% y=50%/>
+                    </Stacker>
+                </Group>
+                <Group>
+                    <Stacker direction=StackerDirection::Horizontal>
+                        <Text y=50% width=90% x=50% text="**Total code control:** Pop the hood and edit Pax's code at any time, while staying in sync AI & design. [Learn more about code control](https://docs.pax.dev/reference/designability/) ." style={
+                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
+                            font_size: 28px
+                            underline: false
+                            align_vertical: TextAlignVertical::Center
+                            align_horizontal: TextAlignHorizontal::Center
+                        }/>
+                        <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
+                        x=50% y=50%/>
+                    </Stacker>
+                </Group>
+                <Group>
+                    <Stacker direction=StackerDirection::Horizontal>
+                        <Text y=50% width=90% x=50% text="**Integrate & extend** — Pax artifacts can be integrated with any codebase or API, or shipped as stand-alone web or mobile apps." style={
+                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
+                            font_size: 28px
+                            underline: false
+                            align_vertical: TextAlignVertical::Center
+                            align_horizontal: TextAlignHorizontal::Center
+                        }/>
+                        <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
+                        x=50% y=50%/>
+                    </Stacker>
                 </Group>
             </Stacker>
         </Group>
-        <Group id=section_2>
-            <Stacker width=75% height=75% x=50% y=50%>
-                <Text text="Prompt" id=s2h2/>
-                <Text text="Create apps, websites, or individual components." style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                    font_size: 24px
-                    align_vertical: TextAlignVertical::Top
-                    align_horizontal: TextAlignHorizontal::Left
-                }/>
-                <Text id=s2h2 text="Take creative control"/>
-                <Text text="Design and prompt and design again - iterate with prompt &amp; style." style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                    font_size: 24px
-                    align_vertical: TextAlignVertical::Top
-                    align_horizontal: TextAlignHorizontal::Left
-                }/>
-                <Image source=ImageSource::Url("assets/design.gif")/>
-                <Text id=s2h2 text="Publish with a click "/>
-                <Text text="Or integrate with virtually any codebase or API" style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                    font_size: 24px
-                    align_vertical: TextAlignVertical::Top
-                    align_horizontal: TextAlignHorizontal::Left
-                }/>
-            </Stacker>
-        </Group>
+        <Group height=0 />
         <Group id=section_3>
             <Stacker>
                 <Text text="Build:" style={
