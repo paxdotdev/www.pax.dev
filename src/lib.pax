@@ -4,7 +4,7 @@
             <Stacker>
                 <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
                     x=50% y=50%/>
-                <Text y=50.00% width=95% x=5.00% height=100% text="How the future builds software" skew_x=0.00rad rotate=0.00rad style={
+                <Text y=50.00% width=95% x=50% height=100% text="How the future builds software" style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
                     font_size: 64px
                     underline: false
@@ -33,12 +33,12 @@
         </Group>
         <Group id=section_2 height=200%>
             <Stacker>
-                <Text y=50.00% width=95% x=5.00% height=100% text="How it works" skew_x=0.00rad rotate=0.00rad style={
+                <Text y=100% width=95% x=50% height=100% text="How it works" skew_x=0.00rad rotate=0.00rad style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-                    font_size: 48px
+                    font_size: 64px
                     underline: false
-                    align_vertical: TextAlignVertical::Center
-                    align_horizontal: TextAlignHorizontal::Left
+                    align_vertical: TextAlignVertical::Bottom
+                    align_horizontal: TextAlignHorizontal::Center
                 }/>
                 <Group>
                     <Stacker direction=StackerDirection::Horizontal>
@@ -47,7 +47,8 @@
                             font_size: 28px
                             underline: false
                             align_vertical: TextAlignVertical::Center
-                            align_horizontal: TextAlignHorizontal::Center
+                            align_horizontal: TextAlignHorizontal::Left
+                            align_multiline: TextAlignHorizontal::Left
                         }/>
                         <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
                         x=50% y=50%/>
@@ -55,12 +56,13 @@
                 </Group>
                 <Group>
                     <Stacker direction=StackerDirection::Horizontal>
-                        <Text y=50% width=90% x=50% text="**Make it yours.**  Iterate on styles and content with intuitive visual tools. Design and prompt and design again." style={
+                        <Text y=50% width=90% x=50% text="**Make it yours.**  Use intuitive visual tools to iterate on styles and content. Design and prompt and design again." style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: 28px
                             underline: false
                             align_vertical: TextAlignVertical::Center
-                            align_horizontal: TextAlignHorizontal::Center
+                            align_horizontal: TextAlignHorizontal::Left
+                            align_multiline: TextAlignHorizontal::Left
                         }/>
                         <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
                         x=50% y=50%/>
@@ -68,12 +70,13 @@
                 </Group>
                 <Group>
                     <Stacker direction=StackerDirection::Horizontal>
-                        <Text y=50% width=90% x=50% text="**Publish** with a click — or invite no-coders to collaborate around GitHub repos; work as a team on the latest development branch." style={
+                        <Text y=50% width=90% x=50% text="**Publish** with a click — or invite no-coders to collaborate on a GitHub repo.  Work as a team on the latest development branch — no terminals or code required." style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: 28px
                             underline: false
                             align_vertical: TextAlignVertical::Center
-                            align_horizontal: TextAlignHorizontal::Center
+                            align_horizontal: TextAlignHorizontal::Left
+                            align_multiline: TextAlignHorizontal::Left
                         }/>
                         <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
                         x=50% y=50%/>
@@ -81,13 +84,17 @@
                 </Group>
                 <Group>
                     <Stacker direction=StackerDirection::Horizontal>
-                        <Text y=50% width=90% x=50% text="**Total code control:** Pop the hood and edit Pax's code at any time, while staying in sync AI & design. [Learn more about code control](https://docs.pax.dev/reference/designability/) ." style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                            font_size: 28px
-                            underline: false
-                            align_vertical: TextAlignVertical::Center
-                            align_horizontal: TextAlignHorizontal::Center
-                        }/>
+                        <Stacker direction=StackerDirection::Vertical>
+                            <Text y=95% width=90% x=50% text="**Total code control:** Pop the hood and edit Pax's code at any time, while staying in sync with AI & design." style={
+                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
+                                font_size: 28px
+                                underline: false
+                                align_vertical: TextAlignVertical::Center
+                                align_horizontal: TextAlignHorizontal::Left
+                                align_multiline: TextAlignHorizontal::Left
+                            }/>
+                            <Text y=5% width=90% x=50% text="[Learn more about code control](https://docs.pax.dev/reference/designability/)" />
+                        </Stacker>
                         <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
                         x=50% y=50%/>
                     </Stacker>
@@ -99,7 +106,8 @@
                             font_size: 28px
                             underline: false
                             align_vertical: TextAlignVertical::Center
-                            align_horizontal: TextAlignHorizontal::Center
+                            align_horizontal: TextAlignHorizontal::Left
+                            align_multiline: TextAlignHorizontal::Left
                         }/>
                         <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
                         x=50% y=50%/>
