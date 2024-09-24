@@ -13,19 +13,31 @@ pub use calculator::Calculator;
 #[pax]
 #[main]
 #[file("lib.pax")]
+#[has_helpers]
 pub struct Example {
-    pub ticks: Property<usize>,
-    pub num_clicks: Property<usize>,
+    pub responsive_stacker_direction: Property<StackerDirection>,
+    pub is_mobile: Property<bool>,
 }
 
+
 impl Example {
-    pub fn handle_pre_render(&mut self, _ctx: &NodeContext) {
-        let old_ticks = self.ticks.get();
-        self.ticks.set((old_ticks + 1) % 255);
+
+    pub fn handle_mount(&mut self, ctx: &NodeContext) {
+        
     }
 
-    pub fn increment(&mut self, _ctx: &NodeContext, _args: Event<Click>) {
-        let old_num_clicks = self.num_clicks.get();
-        self.num_clicks.set(old_num_clicks + 1);
+    pub fn handle_pre_render(&mut self, ctx: &NodeContext) {
+        
+    }
+}
+
+#[helpers]
+impl Example {
+    pub fn get_stacker_direction(is_mobile: bool) -> StackerDirection {
+        if is_mobile {
+            StackerDirection::Vertical
+        } else {
+            StackerDirection::Horizontal
+        }
     }
 }
