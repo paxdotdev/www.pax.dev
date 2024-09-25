@@ -160,7 +160,7 @@
                         align_multiline: TextAlignHorizontal::Left
                     }/>
                     <Text y=0% width={100% - 100px} x=50px 
-                        text="Quickly create & iterate on forms and dashboards; developers can integrate your data & APIs." style={
+                        text="Quickly create & iterate on forms and dashboards; developers can integrate data & APIs." style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: {PaxDotDev::get_responsive_text_size($mobile)}
                             underline: false
