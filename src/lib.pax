@@ -4,7 +4,7 @@
             <Stacker>
                 <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
                     x=50% y=50%/>
-                <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=50.00% width=95% x=50% height=100% 
+                <Text  y=50.00% width=95% x=50% height=100% 
                     text="How the future builds software" style={
                         font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
                         font_size: {PaxDotDev::get_responsive_text_size($mobile) * 3}
@@ -14,7 +14,7 @@
                         align_multiline: TextAlignHorizontal::Center
                     }/>
                 <Group>
-                    <Text y=50% scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} width=90% x=49.99% 
+                    <Text y=50%  width=90% x=49.99% 
                         text="Prompt, design, and code, together. <br /> Pax is a revolutionary new way to build with AI." style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2}
@@ -24,7 +24,7 @@
                             align_multiline: TextAlignHorizontal::Center
                         }/>
                 </Group>
-                <Button x=50% y=50% width=200px height=75px text="Try the demo" color=rgba(12, 12, 12, 255) label="Try the demo" style={
+                <Button @click=show_demo x=50% y=50% width=200px height=75px label="Try the preview" color=rgba(12, 12, 12, 255) style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
                     font_size: {PaxDotDev::get_responsive_text_size($mobile)}
                     fill: WHITE
@@ -45,7 +45,7 @@
                     }/>
                 <Group>
                     <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=50% width=90% x=50px 
+                        <Text  y=50% width=90% x=50px 
                             text="**Prompt** to create apps, websites, interactive widgets, or forms." style={
                                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                                 font_size: {PaxDotDev::get_responsive_text_size($mobile)}
@@ -60,8 +60,8 @@
                 </Group>
                 <Group>
                     <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=50% width=90% x=50px 
-                            text="**Collaborate** with AI on a visual canvas. Take turns refining your idea — design, prompt, and design again." style={
+                        <Text  y=50%  width={100% - 100px} x=50px 
+                            text="**Collaborate visually** with AI on a shared canvas. Take turns refining your idea — design, prompt, and design again." style={
                                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                                 font_size: {PaxDotDev::get_responsive_text_size($mobile)}
                                 underline: false
@@ -75,8 +75,8 @@
                 </Group>
                 <Group>
                     <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=50% width=90% x=50px 
-                            text="**Publish** with a click — share a link to invite any teammate to collaborate.  Optionally link a GitHub repo so your entire team can build together around the same codebase." 
+                        <Text  y=50%  width={100% - 100px}x=50px 
+                            text="**Publish** with a click — share a link to invite a teammate.  Optionally link a GitHub repo so your whole team can ship software together." 
                             style={
                                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                                 font_size: {PaxDotDev::get_responsive_text_size($mobile)}
@@ -91,7 +91,7 @@
                 <Group>
                     <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
                         <Stacker direction=StackerDirection::Vertical>
-                            <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=95% width=90% x=50px 
+                            <Text  y=95%  width={100% - 100px} x=50px 
                                 text="**Total code control:** Pop the hood and edit Pax's code at any time, while staying in sync with AI & design. Works for individuals and for teams." 
                                 style={
                                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
@@ -101,7 +101,7 @@
                                     align_horizontal: TextAlignHorizontal::Left
                                     align_multiline: TextAlignHorizontal::Left
                                 }/>
-                            <Text y=5% scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} width=90% x=50px 
+                            <Text y=5%  width=90% x=50px 
                                 text="[Learn more about code control](https://docs.pax.dev/reference/designability/)"/>
                         </Stacker>
                         //<Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50%
@@ -110,7 +110,7 @@
                 </Group>
                 <Group>
                     <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=50% width=90% x=50px 
+                        <Text  y=50% width={100% - 100px} x=50px 
                             text="**Integrate & extend** — Pax artifacts integrate with any codebase or API, or ship as stand-alone web or mobile apps." 
                             style={
                                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
@@ -129,7 +129,7 @@
         <Group height=0/>
         <Group id=section_3>
             <Stacker>
-                <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=100% width=95% x=50px height=100% text="Ship:" 
+                <Text  y=100% width=95% x=50px height=100% text="Ship:" 
                     skew_x=0.00rad rotate=0.00rad style={
                         font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
                         font_size: {PaxDotDev::get_responsive_text_size($mobile) * 3}
@@ -138,7 +138,7 @@
                         align_horizontal: TextAlignHorizontal::Left
                     }/>
                 <Stacker>
-                    <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=100% width=90% x=50px text="**Internal tools **" 
+                    <Text  y=100%  width={100% - 100px} x=50px text="**Internal tools **" 
                         style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: {PaxDotDev::get_responsive_text_size($mobile)}
@@ -147,7 +147,7 @@
                             align_horizontal: TextAlignHorizontal::Left
                             align_multiline: TextAlignHorizontal::Bottom
                         }/>
-                    <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=0% width=90% x=50px 
+                    <Text  y=0%  width={100% - 100px} x=50px 
                         text="Quickly create & iterate on forms and dashboards; hook up APIs with code." style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: {PaxDotDev::get_responsive_text_size($mobile)}
@@ -158,7 +158,7 @@
                         }/>
                 </Stacker>
                 <Stacker>
-                    <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=100% width=90% x=50px text="**Landing pages**" 
+                    <Text  y=100%  width={100% - 100px} x=50px text="**Landing pages**" 
                         style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: {PaxDotDev::get_responsive_text_size($mobile)}
@@ -167,7 +167,7 @@
                             align_horizontal: TextAlignHorizontal::Left
                             align_multiline: TextAlignHorizontal::Left
                         }/>
-                    <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=0% width=90% x=50px 
+                    <Text  y=0%  width={100% - 100px} x=50px 
                         text="Create landing pages with a few words; keep copy up to date through Pax's visual CMS." style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: {PaxDotDev::get_responsive_text_size($mobile)}
@@ -178,7 +178,7 @@
                         }/>
                 </Stacker>
                 <Stacker>
-                    <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=100% width=90% x=50px 
+                    <Text  y=100%  width={100% - 100px} x=50px 
                         text="**Digital products: web and mobile apps**" style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: {PaxDotDev::get_responsive_text_size($mobile)}
@@ -187,7 +187,7 @@
                             align_horizontal: TextAlignHorizontal::Left
                             align_multiline: TextAlignHorizontal::Left
                         }/>
-                    <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=0% width=90% x=50px 
+                    <Text  y=0%  width={100% - 100px} x=50px 
                         text="Give your entire team a portal into your product — make no-code visual and AI-driven contributions at any point in the development lifecycle." 
                         style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
@@ -199,7 +199,7 @@
                         }/>
                 </Stacker>
                 <Stacker>
-                    <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=100% width=90% x=50px 
+                    <Text  y=100%  width={100% - 100px} x=50px 
                         text="**Data visualizations, games, and interactive graphics**" style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: {PaxDotDev::get_responsive_text_size($mobile)}
@@ -208,8 +208,8 @@
                             align_horizontal: TextAlignHorizontal::Left
                             align_multiline: TextAlignHorizontal::Left
                         }/>
-                    <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=0% width=90% x=50px 
-                        text="The sky’s the limit with design & code control — if you can imagine it, you can create it with Pax." style={
+                    <Text  y=0%  width={100% - 100px} x=50px 
+                        text="The sky's the limit with design & code control — if you can imagine it, you can create it with Pax." style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: {PaxDotDev::get_responsive_text_size($mobile)}
                             underline: false
@@ -222,16 +222,16 @@
         </Group>
         <Group id=section_4>
             <Stacker>
-                <Text scale_x={100% - ($mobile * 40%)} scale_y={100% - ($mobile * 40%)} y=100.00% width=95% x=50% height=100% 
-                    text="Prompt, design, code, ship" style={
+                <Text  y=100.00%  width={100% - 100px} x=50% height=100% 
+                    text="Prompt, design, code, ship, repeat" style={
                         font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
                         font_size: {PaxDotDev::get_responsive_text_size($mobile) * 3}
                         underline: false
                         align_vertical: TextAlignVertical::Bottom
                         align_horizontal: TextAlignHorizontal::Center
-                        align_multiline: TextAlignHorizontal::Left
+                        align_multiline: TextAlignHorizontal::Center
                     }/>
-                <Button x=50% y=50px width=200px height=75px color=rgba(12, 12, 12, 255) label="Try the demo" style={
+                <Button @click=show_demo x=50% y=50px width=200px height=75px color=rgba(12, 12, 12, 255) label="Try the preview" style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
                     font_size: {PaxDotDev::get_responsive_text_size($mobile)}
                     fill: WHITE
@@ -245,6 +245,5 @@
 </Scroller>
 
 @settings {
-    @pre_render: handle_pre_render
     @mount: handle_mount
 }

@@ -12,5 +12,5 @@ current_dir=$(pwd)
 pushd ../pax/pax-cli
 cargo build
 popd
-PUB_PAX_SERVER=http://localhost:9090 PAX_PUBLISH_BUTTON=1 PAX_WORKSPACE_ROOT=../pax ../pax/target/debug/pax-cli "$@" --path="$current_dir" --libdev
-#PAX_PUBLISH_BUTTON=1 PAX_WORKSPACE_ROOT=../pax ../target/debug/pax-cli "$@" --path="$current_dir" --libdev
+#PUB_PAX_SERVER=http://localhost:9090 PAX_PUBLISH_BUTTON=1 PAX_WORKSPACE_ROOT=../pax ../pax/target/debug/pax-cli "$@" --path="$current_dir" --libdev
+PAX_PUBLISH_BUTTON=1 PAX_WORKSPACE_ROOT=../pax ../target/debug/pax-cli "$@" --path="$current_dir" --libdev

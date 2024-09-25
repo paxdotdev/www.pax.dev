@@ -9,6 +9,13 @@ use space_game::*;
 pub mod calculator;
 pub use calculator::Calculator;
 
+/* TODO:
+[ ] interstitial signup + storage mechanism (db + accounts? + transactional email conf? or airtable / google sheets), 
+[ ] designtime API for triggering designer play/pause  
+[ ] storyboard / content for GIFs 
+[ ] produce GIFs
+*/
+
 
 #[pax]
 #[main]
@@ -26,9 +33,11 @@ impl PaxDotDev {
         
     }
 
-    pub fn handle_pre_render(&mut self, ctx: &NodeContext) {
-        
+
+    pub fn show_demo(&mut self, ctx: &NodeContext, args: Event<Click>) {
+        ctx.designtime.borrow_mut().reload_edit();
     }
+
 }
 
 #[helpers]
