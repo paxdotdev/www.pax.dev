@@ -24,6 +24,7 @@ pub use calculator::Calculator;
 pub struct PaxDotDev {
     pub responsive_stacker_direction: Property<StackerDirection>,
     pub is_mobile: Property<bool>,
+    pub show_desktop_warning: Property<bool>,
 }
 
 
@@ -35,10 +36,18 @@ impl PaxDotDev {
 
 
     pub fn show_demo(&mut self, ctx: &NodeContext, _args: Event<Click>) {
-        pax_designer::model::perform_action(
-            &pax_designer::ProjectMsg(pax_designer::model::ProjectMode::Edit),
-            ctx,
-        );
+        if ctx.os.is_mobile() {
+            self.show_desktop_warning.set(true);
+        } else {
+            pax_designer::model::perform_action(
+                &pax_designer::ProjectMsg(pax_designer::model::ProjectMode::Edit),
+                ctx,
+            );
+        }
+    }
+
+    pub fn hide_desktop_warning_click(&mut self, ctx: &NodeContext, _args: Event<Click>) {
+        self.show_desktop_warning.set(false);
     }
 
 }
@@ -60,4 +69,6 @@ impl PaxDotDev {
             Size::Pixels(24.into())
         }
     }
+
+    
 }
