@@ -1,16 +1,25 @@
 #!/bin/bash
 
-### Helper script for pax libdev, allowing pax-cli-like ergonomics inside the pax-example directory
-###
-### For example, from @/pax root:
-### `cd pax-example && ./pax run --target=macos`
-### `cd pax-example && ./pax parse`
-### `cd pax-example && ./pax libdev build-chassis`
-
 set -e
 current_dir=$(pwd)
 pushd ../pax/pax-cli
 cargo build
 popd
-PUB_PAX_SERVER=http://localhost:9090 PAX_PUBLISH_BUTTON=1 PAX_WORKSPACE_ROOT=../pax ../pax/target/debug/pax-cli "$@" --path="$current_dir" --libdev
-#PAX_PUBLISH_BUTTON=1 PAX_WORKSPACE_ROOT=../pax ../pax/target/debug/pax-cli "$@" --path="$current_dir" --libdev
+
+# Initialize a flag to check for --release
+is_release=false
+
+# Loop through arguments to check for --release
+for arg in "$@"; do
+    if [ "$arg" = "--release" ]; then
+        is_release=true
+        break
+    fi
+done
+
+# Conditionally set PUB_PAX_SERVER based on the --release flag
+if [ "$is_release" = true ]; then
+    PAX_PUBLISH_BUTTON=1 PAX_WORKSPACE_ROOT=../pax ../pax/target/debug/pax-cli "$@" --path="$current_dir" --libdev
+else
+    PUB_PAX_SERVER=http://localhost:9090 PAX_PUBLISH_BUTTON=1 PAX_WORKSPACE_ROOT=../pax ../pax/target/debug/pax-cli "$@" --path="$current_dir" --libdev
+fi
