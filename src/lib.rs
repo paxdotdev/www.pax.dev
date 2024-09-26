@@ -34,8 +34,11 @@ impl PaxDotDev {
     }
 
 
-    pub fn show_demo(&mut self, ctx: &NodeContext, args: Event<Click>) {
-        ctx.designtime.borrow_mut().reload_edit();
+    pub fn show_demo(&mut self, ctx: &NodeContext, _args: Event<Click>) {
+        pax_designer::model::perform_action(
+            &pax_designer::ProjectMsg(pax_designer::model::ProjectMode::Edit),
+            ctx,
+        );
     }
 
 }
