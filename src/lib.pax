@@ -1,16 +1,16 @@
 if show_desktop_warning {
     <Group @click=hide_desktop_warning_click>
-        <Text y=50% x=50% width=90% 
-                            text="Thank you for your interest in Pax!<br /> Please use a desktop browser to try the preview." style={
-                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                font_size: {PaxDotDev::get_responsive_text_size($mobile) * 1.75}
-                                underline: false
-                                fill: WHITE,
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Center
-                                align_multiline: TextAlignHorizontal::Center
-                            }/>
-        <Rectangle fill=rgba(0,0,0,90%) />
+        <Text y=50% x=50% width=90% text="Thank you for your interest in Pax!<br /> Please use a desktop browser to try the preview." 
+            style={
+                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
+                font_size: {PaxDotDev::get_responsive_text_size($mobile) * 1.75}
+                underline: false
+                fill: WHITE
+                align_vertical: TextAlignVertical::Center
+                align_horizontal: TextAlignHorizontal::Center
+                align_multiline: TextAlignHorizontal::Center
+            }/>
+        <Rectangle fill=rgba(0, 0, 0, 90%)/>
     </Group>
 }
 <Scroller scroll_height=500% x=100.00% y=0.00%>
@@ -39,14 +39,13 @@ if show_desktop_warning {
                             align_multiline: TextAlignHorizontal::Center
                         }/>
                 </Group>
-                <Button @click=show_demo x=50% y=50% width=250px height=75px label="Try the Preview" color=BLACK
-                    style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                        font_size: {25px}
-                        fill: WHITE
-                        align_vertical: TextAlignVertical::Center
-                        align_horizontal: TextAlignHorizontal::Center
-                    }/>
+                <Button @click=show_demo x=50% y=50% width=250px height=75px label="Try the Preview" color=BLACK style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
+                    font_size: {25px}
+                    fill: WHITE
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Center
+                }/>
             </Stacker>
         </Group>
         <Group id=section_2 height=200%>
@@ -251,14 +250,13 @@ if show_desktop_warning {
                     align_horizontal: TextAlignHorizontal::Center
                     align_multiline: TextAlignHorizontal::Center
                 }/>
-                <Button @click=show_demo x=50% y=50% width=250px height=75px label="Try the Preview" color=BLACK
-                    style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                        font_size: {25px}
-                        fill: WHITE
-                        align_vertical: TextAlignVertical::Center
-                        align_horizontal: TextAlignHorizontal::Center
-                    }/>
+                <Button @click=show_demo x=50% y=50% width=250px height=75px label="Try the Preview" color=BLACK style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
+                    font_size: {25px}
+                    fill: WHITE
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Center
+                }/>
             </Stacker>
         </Group>
     </Stacker>
