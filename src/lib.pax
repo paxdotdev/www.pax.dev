@@ -41,7 +41,7 @@ if show_desktop_warning {
                 </Group>
                 <Button @click=show_demo x=50% y=50% width=250px height=75px label="Try the Preview" color=BLACK style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                    font_size: {25px}
+                    font_size: 25px
                     fill: WHITE
                     align_vertical: TextAlignVertical::Center
                     align_horizontal: TextAlignHorizontal::Center
@@ -252,7 +252,7 @@ if show_desktop_warning {
                 }/>
                 <Button @click=show_demo x=50% y=50% width=250px height=75px label="Try the Preview" color=BLACK style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                    font_size: {25px}
+                    font_size: 25px
                     fill: WHITE
                     align_vertical: TextAlignVertical::Center
                     align_horizontal: TextAlignHorizontal::Center
