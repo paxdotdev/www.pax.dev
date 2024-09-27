@@ -13,21 +13,12 @@ if show_desktop_warning {
         <Rectangle fill=rgba(0, 0, 0, 90%)/>
     </Group>
 }
-<Scroller scroll_height=500% x=100.00% y=0.00%>
+<Scroller scroll_height=500% x=0.00% y=101.52%>
     <Stacker width=90% x=50%>
         <Group id=section_1>
             <Stacker>
                 <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
                     x=50% y=50%/>
-                <Text x=50% width=100% y=50% text="How the future builds software" style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-                    font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.75}
-                    underline: false
-                    align_vertical: TextAlignVertical::Center
-                    align_horizontal: TextAlignHorizontal::Center
-                    align_multiline: TextAlignHorizontal::Center
-                } 
-                    rotate=0.00rad skew_x=0.00rad skew_y=0.00rad/>
                 <Group>
                     <Text y=50% x=50% width=100% 
                         text="Prompt, design, and code, together. <br /> Pax is a revolutionary new canvas for creating with AI." style={
@@ -39,9 +30,18 @@ if show_desktop_warning {
                             align_multiline: TextAlignHorizontal::Center
                         }/>
                 </Group>
+                <Text width=100% text="How the future builds software" style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
+                    font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.75}
+                    underline: false
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Center
+                    align_multiline: TextAlignHorizontal::Center
+                } 
+                    rotate=0.00rad skew_x=0.00rad skew_y=0.00rad/>
                 <Button @click=show_demo x=50% y=50% width=250px height=75px label="Try the Preview" color=BLACK style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                    font_size: 25px
+                    font_size: {25px}
                     fill: WHITE
                     align_vertical: TextAlignVertical::Center
                     align_horizontal: TextAlignHorizontal::Center
@@ -252,7 +252,7 @@ if show_desktop_warning {
                 }/>
                 <Button @click=show_demo x=50% y=50% width=250px height=75px label="Try the Preview" color=BLACK style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                    font_size: 25px
+                    font_size: {25px}
                     fill: WHITE
                     align_vertical: TextAlignVertical::Center
                     align_horizontal: TextAlignHorizontal::Center
