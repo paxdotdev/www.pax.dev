@@ -19,7 +19,7 @@ if show_desktop_warning {
             <Stacker>
                 <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
                     x=50% y=50%/>
-                <Text x=50% width=100% y=50% text="How the future builds software" style={
+                <Text x=50% width=100% y=50% text="How does the future build software?" style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
                     font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.75}
                     underline: false
@@ -29,8 +29,9 @@ if show_desktop_warning {
                 } 
                     rotate=0.00rad skew_x=0.00rad skew_y=0.00rad/>
                 <Group>
-                    <Text y=50% x=50% width=100% 
-                        text="Prompt, design, and code, together. <br /> Pax is a revolutionary new canvas for creating with AI." style={
+                    <Text y=50% x=50% width=100% text="Prompting, designing, and coding, together. 
+ Pax is a revolutionary new canvas for creating with AI." 
+                        style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                             font_size: {PaxDotDev::get_responsive_text_size($mobile) * 1.75}
                             underline: false
