@@ -13,7 +13,7 @@ if show_desktop_warning {
         <Rectangle fill=rgba(0, 0, 0, 90%)/>
     </Group>
 }
-<Scroller scroll_height=500% x=100.00% y=0.00%>
+<Scroller scroll_height=500% x=0.00% y=-0.00%>
     <Stacker width=90% x=50%>
         <Group id=section_1>
             <Stacker>
