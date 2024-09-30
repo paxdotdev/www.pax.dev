@@ -1,3 +1,5 @@
+<Image y=56.48% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad rotate=0.00rad width=44.73% x=137.58% 
+    y=50% height=24.94%/>
 if show_desktop_warning {
     <Group @click=hide_desktop_warning_click>
         <Text y=50% x=50% width=90% text="Thank you for your interest in Pax!<br /> Please use a desktop browser to try the preview." 
@@ -17,8 +19,6 @@ if show_desktop_warning {
     <Stacker width=90% x=50%>
         <Group id=section_1>
             <Stacker>
-                <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
-                    x=50% y=50%/>
                 <Text x=50% width=100% y=50% text="How does the future build software?" style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
                     font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.75}
@@ -29,7 +29,7 @@ if show_desktop_warning {
                 } 
                     rotate=0.00rad skew_x=0.00rad skew_y=0.00rad/>
                 <Group>
-                    <Text y=50% x=50% width=100% text="Prompting, designing, and coding, together. 
+                    <Text y=50% x=50% width=100% text="Chat, design, and code: together. 
  Pax is a revolutionary new canvas for creating with AI." 
                         style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
@@ -72,7 +72,8 @@ if show_desktop_warning {
                 </Group>
                 <Group>
                     <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Text y=50% width=100% x=0 text="**Refine visually** with AI on a collaborative canvas. Design, prompt, and design again." 
+                        <Text y=50% width=100% x=0 
+                            text="**Refine visually** with AI on a collaborative canvas. Design, prompt, and design again. You're building software." 
                             style={
                                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                                 font_size: {PaxDotDev::get_responsive_text_size($mobile)}
