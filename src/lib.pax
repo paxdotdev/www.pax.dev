@@ -10,7 +10,10 @@ if show_desktop_warning {
                 align_horizontal: TextAlignHorizontal::Center
                 align_multiline: TextAlignHorizontal::Center
             }/>
-        <Rectangle fill=rgba(0, 0, 0, 90%)/>
+        <Rectangle fill=rgba(0, 0, 0, 90%) stroke={
+            color: rgba(100, 116, 139, 255)
+            width: 1.00px
+        }/>
     </Group>
 }
 <Scroller scroll_height=500% x=100.00% y=0.00%>
@@ -29,7 +32,7 @@ if show_desktop_warning {
                 } 
                     rotate=0.00rad skew_x=0.00rad skew_y=0.00rad/>
                 <Group>
-                    <Text y=50% x=50% width=100% text="Prompting, designing, and coding, together. 
+                    <Text y=50% x=50% width=100% text="Chat, design, and code: together. 
  Pax is a revolutionary new canvas for creating with AI." 
                         style={
                             font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
@@ -72,7 +75,8 @@ if show_desktop_warning {
                 </Group>
                 <Group>
                     <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Text y=50% width=100% x=0 text="**Refine visually** with AI on a collaborative canvas. Design, prompt, and design again." 
+                        <Text y=50% width=100% x=0 
+                            text="**Refine visually** with AI on a collaborative canvas. Design, prompt, and design again. You're building software." 
                             style={
                                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                                 font_size: {PaxDotDev::get_responsive_text_size($mobile)}
