@@ -10,7 +10,10 @@ if show_desktop_warning {
                 align_horizontal: TextAlignHorizontal::Center
                 align_multiline: TextAlignHorizontal::Center
             }/>
-        <Rectangle fill=rgba(0, 0, 0, 90%)/>
+        <Rectangle fill=rgba(0, 0, 0, 90%) stroke={
+            color: rgba(100, 116, 139, 255)
+            width: 1.00px
+        }/>
     </Group>
 }
 <Group width=100% height=65px y=0>
@@ -55,7 +58,15 @@ if show_desktop_warning {
                 x=0.00% y=0.00%/>
         </Link>
     </Stacker>
-    <Rectangle fill=BLACK/>
+    <Rectangle fill=BLACK stroke={
+        color: rgba(100, 116, 139, 255)
+        width: 1.00px
+    } corner_radii={
+        top_left: 0
+        top_right: 0
+        bottom_left: 7
+        bottom_right: 5
+    }/>
 </Group>
 <Scroller scroll_height=500% x=100.00% y=0.00%>
     <Stacker width=90% x=50%>
