@@ -21,7 +21,7 @@ if show_desktop_warning {
         <Link url="https://docs.pax.dev/" target=Target::New>
             <Text width=100% height=100% text="Docs" style={
                 font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)
-                font_size: 19px
+                font_size: 20px
                 fill: WHITE
                 underline: false
                 align_vertical: TextAlignVertical::Center
@@ -33,7 +33,7 @@ if show_desktop_warning {
         <Link url="https://discord.com/invite/Eq8KWAUc6b" target=Target::New>
             <Text width=96.13% height=100% text="Discord" style={
                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: 19px
+                font_size: 20px
                 fill: WHITE
                 underline: false
                 align_vertical: TextAlignVertical::Center
@@ -45,7 +45,7 @@ if show_desktop_warning {
         <Link url="https://www.github.com/paxdotdev/pax" target=Target::New>
             <Text width=100% height=100% text="GitHub" style={
                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: 19px
+                font_size: 20px
                 fill: WHITE
                 underline: false
                 align_vertical: TextAlignVertical::Center
