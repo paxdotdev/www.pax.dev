@@ -14,11 +14,11 @@ if show_desktop_warning {
     </Group>
 }
 <Group width=100% height=65px y=0>
-    <Stacker direction=StackerDirection::Horizontal x=1.93px sizes=[Some(11.60%), Some(9.03%), Some(11.25%), Some(9.36%), None] 
+    <Stacker direction=StackerDirection::Horizontal x=1.93px sizes=[Some(12.27%), Some(9.03%), Some(11.25%), Some(9.36%), None] 
         width=897.06px height=65.00px>
         <Image x=10px height=85px width=85px y=-12px source=ImageSource::Url("assets/logo-white-on-transparent.png") skew_x=0.00rad 
             skew_y=0.00rad rotate=0.00rad/>
-        <Link url="https://docs.pax.dev/">
+        <Link url="https://docs.pax.dev/" target=Target::New>
             <Text width=100% height=100% text="Docs" style={
                 font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)
                 font_size: 19px
@@ -30,7 +30,7 @@ if show_desktop_warning {
             } 
                 y=100.00% x=0.00%/>
         </Link>
-        <Link url="https://discord.com/invite/Eq8KWAUc6b">
+        <Link url="https://discord.com/invite/Eq8KWAUc6b" target=Target::New>
             <Text width=96.13% height=100% text="Discord" style={
                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                 font_size: 19px
@@ -42,7 +42,7 @@ if show_desktop_warning {
             } 
                 y=0.00%/>
         </Link>
-        <Link url="https://www.github.com/paxdotdev/pax">
+        <Link url="https://www.github.com/paxdotdev/pax" target=Target::New>
             <Text width=100% height=100% text="GitHub" style={
                 font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
                 font_size: 19px
