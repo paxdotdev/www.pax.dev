@@ -14,9 +14,37 @@ if show_desktop_warning {
     </Group>
 }
 <Group width=100% height=65px y=0>
-    <Stacker direction=StackerDirection::Horizontal>
-        <Image x=10px height=90px width=90px y=50% source=ImageSource::Url("assets/logo-white-on-transparent.png") skew_x=0.00rad 
+    <Stacker direction=StackerDirection::Horizontal y=102.41% x=-0.28% 
+        sizes=[Some(9.04%), Some(13.48%), Some(12.68%), Some(13.19%), None]>
+        <Image x=10px height=85px width=85px y=50% source=ImageSource::Url("assets/logo-white-on-transparent.png") skew_x=0.00rad 
             skew_y=0.00rad rotate=0.00rad/>
+        <Text width=100% height=100% text="Get Started" style={
+                    font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::SemiBold)
+                    font_size: 22px
+                    fill: WHITE
+                    underline: false
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Center
+                    align_multiline: TextAlignHorizontal::Center
+        } />
+        <Text width=100% height=100% text="GitHub" style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
+                    font_size: 22px
+                    fill: WHITE
+                    underline: false
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Center
+                    align_multiline: TextAlignHorizontal::Center
+        }/>
+        <Text width=100% height=100% text="Discord" style={
+                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
+                    font_size: 22px
+                    fill: WHITE
+                    underline: false
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Center
+                    align_multiline: TextAlignHorizontal::Center
+        }/>
         <Group />
     </Stacker>
     <Rectangle fill=BLACK/>
