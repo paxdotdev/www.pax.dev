@@ -14,7 +14,7 @@ if show_desktop_warning {
     </Group>
 }
 <Scroller scroll_height=500% x=100.00% y=0.00%>
-    <Stacker width=90% x=50%>
+    <Stacker width=90% x=50% direction=StackerDirection::Vertical sizes=12>
         <Group id=section_1>
             <Stacker>
                 <Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50% 
