@@ -14,48 +14,56 @@ if show_desktop_warning {
     </Group>
 }
 <Group width=100% height=65px y=0>
-    <Stacker direction=StackerDirection::Horizontal y=102.41% x=-0.28% 
-        sizes=[Some(9.04%), Some(13.48%), Some(12.68%), Some(13.19%), None]>
-        <Image x=10px height=85px width=85px y=50% source=ImageSource::Url("assets/logo-white-on-transparent.png") skew_x=0.00rad 
+    <Stacker direction=StackerDirection::Horizontal x=1.93px sizes=[Some(11.60%), Some(9.03%), Some(11.25%), Some(9.36%), None] 
+        width=897.06px height=65.00px>
+        <Image x=10px height=85px width=85px y=-12px source=ImageSource::Url("assets/logo-white-on-transparent.png") skew_x=0.00rad 
             skew_y=0.00rad rotate=0.00rad/>
-        <Text width=100% height=100% text="Get Started" style={
-                    font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::SemiBold)
-                    font_size: 22px
-                    fill: WHITE
-                    underline: false
-                    align_vertical: TextAlignVertical::Center
-                    align_horizontal: TextAlignHorizontal::Center
-                    align_multiline: TextAlignHorizontal::Center
-        } />
-        <Text width=100% height=100% text="GitHub" style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                    font_size: 22px
-                    fill: WHITE
-                    underline: false
-                    align_vertical: TextAlignVertical::Center
-                    align_horizontal: TextAlignHorizontal::Center
-                    align_multiline: TextAlignHorizontal::Center
-        }/>
-        <Text width=100% height=100% text="Discord" style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                    font_size: 22px
-                    fill: WHITE
-                    underline: false
-                    align_vertical: TextAlignVertical::Center
-                    align_horizontal: TextAlignHorizontal::Center
-                    align_multiline: TextAlignHorizontal::Center
-        }/>
-        <Group />
+        <Link url="https://docs.pax.dev/">
+            <Text width=100% height=100% text="Docs" style={
+                font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)
+                font_size: 19px
+                fill: WHITE
+                underline: false
+                align_vertical: TextAlignVertical::Center
+                align_horizontal: TextAlignHorizontal::Center
+                align_multiline: TextAlignHorizontal::Center
+            } 
+                y=100.00% x=0.00%/>
+        </Link>
+        <Link url="https://discord.com/invite/Eq8KWAUc6b">
+            <Text width=96.13% height=100% text="Discord" style={
+                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
+                font_size: 19px
+                fill: WHITE
+                underline: false
+                align_vertical: TextAlignVertical::Center
+                align_horizontal: TextAlignHorizontal::Center
+                align_multiline: TextAlignHorizontal::Center
+            } 
+                y=0.00%/>
+        </Link>
+        <Link url="https://www.github.com/paxdotdev/pax">
+            <Text width=100% height=100% text="GitHub" style={
+                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
+                font_size: 19px
+                fill: WHITE
+                underline: false
+                align_vertical: TextAlignVertical::Center
+                align_horizontal: TextAlignHorizontal::Center
+                align_multiline: TextAlignHorizontal::Center
+            } 
+                x=0.00% y=0.00%/>
+        </Link>
     </Stacker>
     <Rectangle fill=BLACK/>
 </Group>
 <Scroller scroll_height=500% x=100.00% y=0.00%>
     <Stacker width=90% x=50%>
         <Group id=section_1>
-            <Stacker y=100.20% x=0.00% sizes=[Some(17.29%), Some(22.95%), Some(21.67%), Some(21.69%), Some(16.59%), None]>
+            <Stacker y=100.20% x=0.00% sizes=[Some(9.66%), Some(25.75%), Some(21.67%), Some(21.69%), Some(16.59%), None]>
                 <Group />
-                <Image x=10.36% y=-50.00% source=ImageSource::Url("assets/logo-black-on-transparent.png") skew_x=0.00rad rotate=0.00rad 
-                    height=150.00%/>
+                <Image source=ImageSource::Url("assets/logo-black-on-transparent.png") skew_x=0.00rad rotate=0.00rad height=150.00% x=-0.00% 
+                    y=37.51%/>
                 <Text x=100.00% width=100% y=50% text="How the future builds software" style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
                     font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.75}
