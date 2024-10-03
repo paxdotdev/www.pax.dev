@@ -1,3 +1,8 @@
+<Rectangle y=22.64% width=11.88% x=25.93% height=16.03% stroke={
+    color: rgba(210, 214, 217, 255)
+    width: 1.00px
+} 
+    anchor_x=49.99% anchor_y=49.99%/>
 if show_desktop_warning {
     <Group @click=hide_desktop_warning_click>
         <Text y=50% x=50% width=90% text="Thank you for your interest in Pax!<br /> Please use a desktop browser to try the preview." 
