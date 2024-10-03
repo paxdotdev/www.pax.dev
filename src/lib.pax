@@ -1,3 +1,8 @@
+<Dropdown height=3.43% x=15.93% width=13.57% y=7.77% stroke={
+    color: rgba(100, 116, 139, 255)
+    width: 1.00px
+} 
+    options={dfg}/>
 if show_desktop_warning {
     <Group @click=hide_desktop_warning_click>
         <Text y=50% x=50% width=90% text="Thank you for your interest in Pax!<br /> Please use a desktop browser to try the preview." 
