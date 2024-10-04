@@ -68,13 +68,13 @@ if show_desktop_warning {
         bottom_right: 5
     }/>
 </Group>
-<Scroller scroll_height=500% x=100.00% y=0.00%>
+<Scroller scroll_height=500% x=111.95% y=-4.45%>
     <Stacker width=90% x=50%>
         <Group id=section_1>
-            <Stacker y=100.20% x=0.00% sizes=[Some(9.66%), Some(25.75%), Some(21.67%), Some(21.69%), Some(16.59%), None]>
+            <Stacker y=100.20% x=0.00% sizes=[Some(9.66%), Some(30.29%), Some(27.03%), Some(21.69%), Some(16.59%), None]>
                 <Group />
-                <Image source=ImageSource::Url("assets/logo-black-on-transparent.png") skew_x=0.00rad rotate=0.00rad height=150.00% x=-0.00% 
-                    y=37.51%/>
+                <Image source=ImageSource::Url("assets/logo-black-on-transparent.png") skew_x=0.00rad rotate=0.00rad height=247.56% x=-17.94% 
+                    y=21.61% width=102.06%/>
                 <Text x=100.00% width=100% y=50% text="How the future builds software" style={
                     font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
                     font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.75}
