@@ -1,329 +1,318 @@
-if show_desktop_warning {
-    <Group @click=hide_desktop_warning_click>
-        <Text y=50% x=50% width=90% text="Thank you for your interest in Pax!<br /> Please use a desktop browser to try the preview." 
-            style={
-                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: {PaxDotDev::get_responsive_text_size($mobile) * 1.75}
-                underline: false
-                fill: WHITE
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            }/>
-        <Rectangle fill=rgba(0, 0, 0, 90%) stroke={
-            color: rgba(100, 116, 139, 255)
-            width: 1.00px
-        }/>
-    </Group>
-}
-<Group width=100% height=65px y=0>
-    <Stacker direction=StackerDirection::Horizontal x=1.93px sizes=[Some(12.27%), Some(9.03%), Some(11.25%), Some(9.36%), None] 
-        width=897.06px height=65.00px>
-        <Image x=10px height=85px width=85px y=-12px source=ImageSource::Url("assets/logo-white-on-transparent.png") skew_x=0.00rad 
-            skew_y=0.00rad rotate=0.00rad/>
-        <Link url="https://docs.pax.dev/" target=Target::New>
-            <Text width=100% height=100% text="Docs" style={
-                font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                y=100.00% x=0.00%/>
-        </Link>
-        <Link url="https://discord.com/invite/Eq8KWAUc6b" target=Target::New>
-            <Text width=96.13% height=100% text="Discord" style={
-                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                y=0.00%/>
-        </Link>
-        <Link url="https://www.github.com/paxdotdev/pax" target=Target::New>
-            <Text width=100% height=100% text="GitHub" style={
-                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                x=0.00% y=0.00%/>
-        </Link>
-    </Stacker>
-    <Rectangle fill=BLACK stroke={
-        color: rgba(100, 116, 139, 255)
-        width: 1.00px
-    } corner_radii={
-        top_left: 0
-        top_right: 0
-        bottom_left: 7
-        bottom_right: 5
-    }/>
-</Group>
-<Scroller scroll_height=500% x=100.00% y=0.00%>
-    <Stacker width=90% x=50%>
-        <Group id=section_1>
-            <Stacker y=100.20% x=0.00% sizes=[Some(9.66%), Some(25.75%), Some(21.67%), Some(21.69%), Some(16.59%), None]>
-                <Group />
-                <Image source=ImageSource::Url("assets/logo-black-on-transparent.png") skew_x=0.00rad rotate=0.00rad height=150.00% x=-0.00% 
-                    y=37.51%/>
-                <Text x=100.00% width=100% y=50% text="How the future builds software" style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-                    font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.75}
-                    underline: false
-                    align_vertical: TextAlignVertical::Center
-                    align_horizontal: TextAlignHorizontal::Center
-                    align_multiline: TextAlignHorizontal::Center
-                } 
-                    rotate=0.00rad skew_x=0.00rad height=54.12%/>
-                <Group>
-                    <Text y=50% x=50% width=100% text="Chat, design, and code: together. 
- Pax is a revolutionary new canvas for creating with AI." 
-                        style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                            font_size: {PaxDotDev::get_responsive_text_size($mobile) * 1.75}
-                            underline: false
-                            align_vertical: TextAlignVertical::Center
-                            align_horizontal: TextAlignHorizontal::Center
-                            align_multiline: TextAlignHorizontal::Center
-                        }/>
-                </Group>
-                <Button @click=show_demo x=50% y=50% width=250px height=75px label="Try the Preview" color=BLACK style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                    font_size: 25px
-                    fill: WHITE
-                    align_vertical: TextAlignVertical::Center
-                    align_horizontal: TextAlignHorizontal::Center
-                }/>
-            </Stacker>
-        </Group>
-        <Group id=section_2 height=200%>
-            <Stacker>
-                <Text y=100% width=100% height=100% text="AI artifacts with design & code control" style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-                    font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.25}
-                    underline: false
-                    align_vertical: TextAlignVertical::Bottom
-                    align_horizontal: TextAlignHorizontal::Left
-                }/>
-                <Group>
-                    <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Text y=50% width=100% text="**Chat with AI** to create apps, websites, interactive widgets, or forms." style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                            font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                            underline: false
-                            align_vertical: TextAlignVertical::Center
-                            align_horizontal: TextAlignHorizontal::Left
-                            align_multiline: TextAlignHorizontal::Left
-                        }/>
-                    </Stacker>
-                </Group>
-                <Group>
-                    <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Text y=50% width=100% x=0 
-                            text="**Refine visually** with AI on a collaborative canvas. Design, prompt, and design again. You're building software." 
-                            style={
-                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                                underline: false
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Left
-                                align_multiline: TextAlignHorizontal::Left
-                            }/>
-                        //<Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50%
-                        //    x=50% y=50%/>
-                    </Stacker>
-                </Group>
-                <Group>
-                    <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Text y=50% width=100% x=0 
-                            text="**Publish** with a click — share a link to invite a teammate.  Optionally link a GitHub repo so your whole team can build the same thing, together." 
-                            style={
-                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                                underline: false
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Left
-                                align_multiline: TextAlignHorizontal::Left
-                            }/>
-                    </Stacker>
-                </Group>
-                <Group>
-                    <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Stacker direction=StackerDirection::Vertical>
-                            <Text y=95% width=100% x=0 
-                                text="**Total code control:** Pop the hood and edit Pax's code at any time, while staying in sync with AI & design. Great for individuals and for teams." 
-                                style={
-                                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                    font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                                    underline: false
-                                    align_vertical: TextAlignVertical::Center
-                                    align_horizontal: TextAlignHorizontal::Left
-                                    align_multiline: TextAlignHorizontal::Left
-                                }/>
-                            <Text y=5% width=90% text="[Learn more about code control](https://docs.pax.dev/)" link_style={
-                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                                underline: true
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Left
-                                align_multiline: TextAlignHorizontal::Left
-                            }/>
-                        </Stacker>
-                        //<Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50%
-                        //    x=50% y=50%/>
-                    </Stacker>
-                </Group>
-                <Group>
-                    <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Stacker>
-                            <Text y=95% width=100% x=0 
-                                text="**Integrate & extend** — Pax artifacts integrate with any codebase or API, or ship as stand-alone web or mobile apps." 
-                                style={
-                                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                    font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                                    underline: false
-                                    align_vertical: TextAlignVertical::Center
-                                    align_horizontal: TextAlignHorizontal::Left
-                                    align_multiline: TextAlignHorizontal::Left
-                                }/>
-                            <Text y=5% width=100% x=0 text="[Developer Docs](https://docs.pax.dev/)" link_style={
-                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                                underline: true
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Left
-                                align_multiline: TextAlignHorizontal::Left
-                            }/>
-                        </Stacker>
-                        //<Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50%
-                        //    x=50% y=50%/>
-                    </Stacker>
-                </Group>
-            </Stacker>
-        </Group>
-        <Group height=0/>
-        <Group id=section_3>
-            <Stacker>
-                <Text y=100% width=100% x=0 height=100% text="You (yes, _you_) can build:" skew_x=0.00rad rotate=0.00rad style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-                    font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.50}
-                    underline: false
-                    align_vertical: TextAlignVertical::Bottom
-                    align_horizontal: TextAlignHorizontal::Left
-                }/>
-                <Stacker>
-                    <Text y=100% width=100% x=0 text="**Internal tools **" style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                        font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                        underline: false
-                        align_vertical: TextAlignVertical::Bottom
-                        align_horizontal: TextAlignHorizontal::Left
-                        align_multiline: TextAlignHorizontal::Left
-                    }/>
-                    <Text y=0% width=100% x=0 text="Quickly create & iterate on forms and dashboards; developers can integrate data & APIs." 
-                        style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                            font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                            underline: false
-                            align_vertical: TextAlignVertical::Top
-                            align_horizontal: TextAlignHorizontal::Left
-                            align_multiline: TextAlignHorizontal::Left
-                        }/>
-                </Stacker>
-                <Stacker>
-                    <Text y=100% width=100% x=0 text="**Landing pages and e-commerce sites**" style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                        font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                        underline: false
-                        align_vertical: TextAlignVertical::Bottom
-                        align_horizontal: TextAlignHorizontal::Left
-                        align_multiline: TextAlignHorizontal::Left
-                    }/>
-                    <Text y=0% width=100% x=0 text="Create landing pages with a few words; keep copy up to date through Pax's visual CMS." style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                        font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                        underline: false
-                        align_vertical: TextAlignVertical::Top
-                        align_horizontal: TextAlignHorizontal::Left
-                        align_multiline: TextAlignHorizontal::Left
-                    }/>
-                </Stacker>
-                <Stacker>
-                    <Text y=100% width=100% x=0 text="**Web and mobile apps**" style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                        font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                        underline: false
-                        align_vertical: TextAlignVertical::Bottom
-                        align_horizontal: TextAlignHorizontal::Left
-                        align_multiline: TextAlignHorizontal::Left
-                    }/>
-                    <Text y=0% width=100% x=0 
-                        text="Give your entire team a portal into your product — make visual and AI-driven contributions at any point in the development lifecycle." 
-                        style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                            font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                            underline: false
-                            align_vertical: TextAlignVertical::Top
-                            align_horizontal: TextAlignHorizontal::Left
-                            align_multiline: TextAlignHorizontal::Left
-                        }/>
-                </Stacker>
-                <Stacker>
-                    <Text y=100% width=100% x=0 text="**Data visualizations, games, and interactive graphics**" style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                        font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                        underline: false
-                        align_vertical: TextAlignVertical::Bottom
-                        align_horizontal: TextAlignHorizontal::Left
-                        align_multiline: TextAlignHorizontal::Left
-                    }/>
-                    <Text y=0% width=100% x=0 
-                        text="The sky's the limit with design & code control — if you can imagine it, you can create it with Pax." style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                            font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                            underline: false
-                            align_vertical: TextAlignVertical::Top
-                            align_horizontal: TextAlignHorizontal::Left
-                            align_multiline: TextAlignHorizontal::Left
-                        }/>
-                </Stacker>
-            </Stacker>
-        </Group>
-        <Group id=section_4>
-            <Stacker>
-                <Text y=100.00% width=100% x=0 height=100% text="Now in Open Preview" style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-                    font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.75}
-                    underline: false
-                    align_vertical: TextAlignVertical::Bottom
-                    align_horizontal: TextAlignHorizontal::Center
-                    align_multiline: TextAlignHorizontal::Center
-                }/>
-                <Button @click=show_demo x=50% y=50% width=250px height=75px label="Try the Preview" color=BLACK style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                    font_size: 25px
-                    fill: WHITE
-                    align_vertical: TextAlignVertical::Center
-                    align_horizontal: TextAlignHorizontal::Center
-                }/>
-            </Stacker>
-        </Group>
-    </Stacker>
-    <Rectangle fill=WHITE rotate=0.00rad skew_x=0.00rad width={100% + 10px} height=100% stroke={
-        color: rgba(100, 116, 139, 255)
-        width: 1.00px
-    }/>
-</Scroller>
-
-@settings {
-    @mount: handle_mount
-}
+<Checkbox width=18.26% x=7.71% y=66.82% height=18.69% background=rgba(100, 116, 139, 255)/>
+<Path fill=rgba(0, 0, 0, 255) stroke={
+    color: rgba(107, 114, 128, 255)
+    width: 3px
+} elements=[
+    PathElement::Point(603.00px, 272.03px),
+    PathElement::Cubic(603.04px, 272.71px, 603.04px, 273.37px),
+    PathElement::Point(603.00px, 274.03px),
+    PathElement::Cubic(603.04px, 274.69px, 603.04px, 275.35px),
+    PathElement::Point(603.00px, 275.99px),
+    PathElement::Line,
+    PathElement::Point(603.00px, 276.00px),
+    PathElement::Cubic(603.30px, 277.28px, 603.39px, 278.63px),
+    PathElement::Point(603.30px, 280.00px),
+    PathElement::Cubic(603.35px, 280.66px, 603.34px, 281.32px),
+    PathElement::Point(603.30px, 282.00px),
+    PathElement::Cubic(603.35px, 282.66px, 603.34px, 283.32px),
+    PathElement::Point(603.30px, 284.00px),
+    PathElement::Cubic(603.46px, 286.29px, 603.05px, 288.72px),
+    PathElement::Point(602.18px, 291.14px),
+    PathElement::Cubic(601.62px, 295.23px, 599.53px, 299.53px),
+    PathElement::Point(596.56px, 303.40px),
+    PathElement::Cubic(596.45px, 304.03px, 596.32px, 304.64px),
+    PathElement::Point(596.17px, 305.23px),
+    PathElement::Cubic(596.06px, 305.71px, 595.92px, 306.18px),
+    PathElement::Point(595.76px, 306.64px),
+    PathElement::Cubic(595.59px, 307.14px, 595.41px, 307.62px),
+    PathElement::Point(595.20px, 308.09px),
+    PathElement::Cubic(594.53px, 311.07px, 592.80px, 313.95px),
+    PathElement::Point(590.39px, 316.54px),
+    PathElement::Cubic(590.19px, 316.82px, 589.99px, 317.09px),
+    PathElement::Point(589.77px, 317.35px),
+    PathElement::Line,
+    PathElement::Point(589.72px, 317.43px),
+    PathElement::Cubic(589.13px, 319.30px, 588.07px, 321.03px),
+    PathElement::Point(586.67px, 322.61px),
+    PathElement::Cubic(586.56px, 322.74px, 586.46px, 322.87px),
+    PathElement::Point(586.36px, 323.00px),
+    PathElement::Cubic(585.15px, 325.33px, 583.21px, 327.38px),
+    PathElement::Point(580.79px, 329.10px),
+    PathElement::Cubic(580.33px, 329.58px, 579.85px, 330.02px),
+    PathElement::Point(579.35px, 330.43px),
+    PathElement::Cubic(577.70px, 332.49px, 575.37px, 334.13px),
+    PathElement::Point(572.63px, 335.35px),
+    PathElement::Cubic(572.20px, 335.64px, 571.77px, 335.92px),
+    PathElement::Point(571.33px, 336.17px),
+    PathElement::Cubic(568.88px, 338.14px, 565.60px, 339.34px),
+    PathElement::Point(561.97px, 339.86px),
+    PathElement::Cubic(560.98px, 340.27px, 559.97px, 340.57px),
+    PathElement::Point(558.97px, 340.76px),
+    PathElement::Cubic(556.72px, 342.00px, 554.04px, 342.56px),
+    PathElement::Point(551.16px, 342.58px),
+    PathElement::Cubic(549.79px, 343.07px, 548.41px, 343.38px),
+    PathElement::Point(547.05px, 343.49px),
+    PathElement::Cubic(544.61px, 344.55px, 541.77px, 344.83px),
+    PathElement::Point(538.78px, 344.51px),
+    PathElement::Cubic(538.57px, 344.53px, 538.35px, 344.53px),
+    PathElement::Point(538.14px, 344.54px),
+    PathElement::Line,
+    PathElement::Point(536.72px, 344.77px),
+    PathElement::Cubic(534.60px, 345.55px, 532.24px, 345.75px),
+    PathElement::Point(529.77px, 345.47px),
+    PathElement::Line,
+    PathElement::Point(525.67px, 346.06px),
+    PathElement::Cubic(523.88px, 346.62px, 522.10px, 346.92px),
+    PathElement::Point(520.37px, 346.89px),
+    PathElement::Cubic(517.65px, 347.80px, 514.55px, 347.78px),
+    PathElement::Point(511.36px, 347.05px),
+    PathElement::Line,
+    PathElement::Point(499.09px, 347.71px),
+    PathElement::Cubic(497.54px, 348.02px, 496.01px, 348.11px),
+    PathElement::Point(494.54px, 347.96px),
+    PathElement::Line,
+    PathElement::Point(494.25px, 347.97px),
+    PathElement::Cubic(491.68px, 348.69px, 488.84px, 348.56px),
+    PathElement::Point(485.95px, 347.79px),
+    PathElement::Line,
+    PathElement::Point(473.57px, 347.94px),
+    PathElement::Cubic(472.62px, 348.04px, 471.67px, 348.06px),
+    PathElement::Point(470.75px, 347.98px),
+    PathElement::Line,
+    PathElement::Point(469.00px, 348.00px),
+    PathElement::Cubic(466.72px, 348.53px, 464.25px, 348.41px),
+    PathElement::Point(461.75px, 347.76px),
+    PathElement::Line,
+    PathElement::Point(438.67px, 347.96px),
+    PathElement::Cubic(437.32px, 348.14px, 435.99px, 348.16px),
+    PathElement::Point(434.72px, 347.99px),
+    PathElement::Line,
+    PathElement::Point(434.00px, 348.00px),
+    PathElement::Cubic(431.48px, 348.59px, 428.74px, 348.37px),
+    PathElement::Point(425.96px, 347.54px),
+    PathElement::Line,
+    PathElement::Point(402.84px, 347.08px),
+    PathElement::Cubic(401.08px, 347.33px, 399.37px, 347.34px),
+    PathElement::Point(397.75px, 347.06px),
+    PathElement::Cubic(394.88px, 347.55px, 391.77px, 347.03px),
+    PathElement::Point(388.69px, 345.77px),
+    PathElement::Line,
+    PathElement::Point(365.27px, 343.30px),
+    PathElement::Cubic(363.80px, 343.34px, 362.38px, 343.20px),
+    PathElement::Point(361.05px, 342.85px),
+    PathElement::Line,
+    PathElement::Point(360.59px, 342.81px),
+    PathElement::Cubic(357.96px, 343.11px, 355.19px, 342.55px),
+    PathElement::Point(352.47px, 341.36px),
+    PathElement::Line,
+    PathElement::Point(331.20px, 338.33px),
+    PathElement::Cubic(329.60px, 338.33px, 328.07px, 338.12px),
+    PathElement::Point(326.65px, 337.68px),
+    PathElement::Line,
+    PathElement::Point(326.51px, 337.66px),
+    PathElement::Cubic(323.77px, 337.88px, 320.93px, 337.17px),
+    PathElement::Point(318.17px, 335.78px),
+    PathElement::Line,
+    PathElement::Point(294.57px, 331.27px),
+    PathElement::Cubic(293.47px, 331.18px, 292.42px, 330.98px),
+    PathElement::Point(291.42px, 330.67px),
+    PathElement::Line,
+    PathElement::Point(290.12px, 330.42px),
+    PathElement::Cubic(287.67px, 330.50px, 285.18px, 329.83px),
+    PathElement::Point(282.76px, 328.62px),
+    PathElement::Line,
+    PathElement::Point(261.39px, 324.28px),
+    PathElement::Cubic(259.93px, 324.18px, 258.54px, 323.91px),
+    PathElement::Point(257.24px, 323.44px),
+    PathElement::Line,
+    PathElement::Point(256.77px, 323.35px),
+    PathElement::Cubic(254.13px, 323.40px, 251.43px, 322.58px),
+    PathElement::Point(248.84px, 321.14px),
+    PathElement::Line,
+    PathElement::Point(228.21px, 316.18px),
+    PathElement::Cubic(227.01px, 316.04px, 225.85px, 315.76px),
+    PathElement::Point(224.77px, 315.36px),
+    PathElement::Line,
+    PathElement::Point(223.72px, 315.10px),
+    PathElement::Cubic(221.24px, 315.07px, 218.75px, 314.26px),
+    PathElement::Point(216.35px, 312.90px),
+    PathElement::Line,
+    PathElement::Point(201.77px, 309.14px),
+    PathElement::Cubic(200.49px, 308.97px, 199.27px, 308.67px),
+    PathElement::Point(198.13px, 308.21px),
+    PathElement::Line,
+    PathElement::Point(197.20px, 307.97px),
+    PathElement::Cubic(194.71px, 307.88px, 192.21px, 307.02px),
+    PathElement::Point(189.82px, 305.60px),
+    PathElement::Line,
+    PathElement::Point(172.60px, 300.80px),
+    PathElement::Cubic(170.67px, 300.70px, 168.75px, 300.13px),
+    PathElement::Point(166.90px, 299.19px),
+    PathElement::Line,
+    PathElement::Point(158.52px, 297.23px),
+    PathElement::Cubic(156.80px, 297.09px, 155.18px, 296.73px),
+    PathElement::Point(153.70px, 296.10px),
+    PathElement::Cubic(151.02px, 296.06px, 148.32px, 295.12px),
+    PathElement::Point(145.75px, 293.54px),
+    PathElement::Line,
+    PathElement::Point(144.04px, 293.05px),
+    PathElement::Cubic(142.10px, 292.84px, 140.27px, 292.38px),
+    PathElement::Point(138.65px, 291.63px),
+    PathElement::Cubic(135.82px, 291.31px, 133.03px, 290.00px),
+    PathElement::Point(130.44px, 288.02px),
+    PathElement::Line,
+    PathElement::Point(129.32px, 287.59px),
+    PathElement::Cubic(127.68px, 287.21px, 126.16px, 286.63px),
+    PathElement::Point(124.82px, 285.83px),
+    PathElement::Line,
+    PathElement::Point(124.46px, 285.69px),
+    PathElement::Cubic(121.93px, 285.27px, 119.50px, 284.03px),
+    PathElement::Point(117.27px, 282.23px),
+    PathElement::Line,
+    PathElement::Point(115.06px, 281.26px),
+    PathElement::Cubic(113.21px, 280.80px, 111.50px, 280.10px),
+    PathElement::Point(110.02px, 279.15px),
+    PathElement::Cubic(107.60px, 278.56px, 105.32px, 277.24px),
+    PathElement::Point(103.24px, 275.39px),
+    PathElement::Cubic(101.88px, 274.83px, 100.60px, 274.17px),
+    PathElement::Point(99.45px, 273.42px),
+    PathElement::Cubic(96.32px, 271.98px, 93.58px, 269.25px),
+    PathElement::Point(91.38px, 265.83px),
+    PathElement::Cubic(90.82px, 265.32px, 90.31px, 264.78px),
+    PathElement::Point(89.85px, 264.20px),
+    PathElement::Line,
+    PathElement::Point(88.79px, 263.21px),
+    PathElement::Cubic(87.35px, 262.32px, 86.09px, 261.12px),
+    PathElement::Point(85.01px, 259.69px),
+    PathElement::Cubic(83.89px, 258.87px, 82.89px, 257.86px),
+    PathElement::Point(82.01px, 256.69px),
+    PathElement::Cubic(79.45px, 254.82px, 77.51px, 251.92px),
+    PathElement::Point(76.18px, 248.49px),
+    PathElement::Cubic(75.06px, 246.74px, 74.17px, 244.72px),
+    PathElement::Point(73.50px, 242.54px),
+    PathElement::Cubic(65.82px, 231.42px, 74.52px, 206.28px),
+    PathElement::Point(87.58px, 203.17px),
+    PathElement::Cubic(97.52px, 194.92px, 121.33px, 202.12px),
+    PathElement::Point(126.95px, 214.08px),
+    PathElement::Cubic(128.53px, 215.89px, 129.78px, 217.84px),
+    PathElement::Point(130.57px, 219.85px),
+    PathElement::Cubic(130.80px, 220.16px, 131.01px, 220.47px),
+    PathElement::Point(131.21px, 220.79px),
+    PathElement::Line,
+    PathElement::Point(132.21px, 221.86px),
+    PathElement::Cubic(132.94px, 222.44px, 133.61px, 223.11px),
+    PathElement::Point(134.24px, 223.85px),
+    PathElement::Cubic(134.70px, 224.13px, 135.15px, 224.43px),
+    PathElement::Point(135.57px, 224.76px),
+    PathElement::Line,
+    PathElement::Point(142.24px, 228.01px),
+    PathElement::Cubic(144.22px, 228.46px, 146.01px, 229.21px),
+    PathElement::Point(147.54px, 230.31px),
+    PathElement::Line,
+    PathElement::Point(153.58px, 232.99px),
+    PathElement::Cubic(154.73px, 233.30px, 155.82px, 233.74px),
+    PathElement::Point(156.82px, 234.33px),
+    PathElement::Line,
+    PathElement::Point(163.27px, 236.47px),
+    PathElement::Cubic(165.07px, 236.65px, 166.76px, 237.12px),
+    PathElement::Point(168.28px, 237.90px),
+    PathElement::Line,
+    PathElement::Point(181.43px, 241.39px),
+    PathElement::Cubic(184.37px, 241.35px, 187.11px, 241.91px),
+    PathElement::Point(189.40px, 243.20px),
+    PathElement::Line,
+    PathElement::Point(189.77px, 243.31px),
+    PathElement::Cubic(191.19px, 243.51px, 192.62px, 243.96px),
+    PathElement::Point(194.02px, 244.61px),
+    PathElement::Line,
+    PathElement::Point(206.45px, 248.40px),
+    PathElement::Cubic(208.77px, 248.51px, 210.93px, 249.03px),
+    PathElement::Point(212.80px, 250.03px),
+    PathElement::Line,
+    PathElement::Point(215.87px, 250.90px),
+    PathElement::Cubic(216.04px, 250.94px, 216.21px, 250.99px),
+    PathElement::Point(216.38px, 251.04px),
+    PathElement::Line,
+    PathElement::Point(231.79px, 255.37px),
+    PathElement::Cubic(234.15px, 255.43px, 236.35px, 255.91px),
+    PathElement::Point(238.28px, 256.90px),
+    PathElement::Line,
+    PathElement::Point(241.22px, 257.66px),
+    PathElement::Cubic(241.44px, 257.71px, 241.66px, 257.77px),
+    PathElement::Point(241.88px, 257.83px),
+    PathElement::Line,
+    PathElement::Point(263.18px, 263.36px),
+    PathElement::Cubic(265.36px, 263.39px, 267.41px, 263.80px),
+    PathElement::Point(269.23px, 264.65px),
+    PathElement::Line,
+    PathElement::Point(295.08px, 270.38px),
+    PathElement::Cubic(297.53px, 270.29px, 299.85px, 270.66px),
+    PathElement::Point(301.88px, 271.58px),
+    PathElement::Line,
+    PathElement::Point(304.32px, 272.09px),
+    PathElement::Cubic(304.83px, 272.17px, 305.34px, 272.28px),
+    PathElement::Point(305.85px, 272.41px),
+    PathElement::Line,
+    PathElement::Point(329.72px, 277.39px),
+    PathElement::Cubic(331.77px, 277.34px, 333.72px, 277.63px),
+    PathElement::Point(335.49px, 278.34px),
+    PathElement::Line,
+    PathElement::Point(361.29px, 282.48px),
+    PathElement::Cubic(363.45px, 282.31px, 365.52px, 282.52px),
+    PathElement::Point(367.41px, 283.19px),
+    PathElement::Line,
+    PathElement::Point(395.34px, 286.63px),
+    PathElement::Cubic(396.90px, 286.52px, 398.42px, 286.63px),
+    PathElement::Point(399.86px, 287.01px),
+    PathElement::Line,
+    PathElement::Point(427.58px, 288.04px),
+    PathElement::Cubic(429.80px, 287.57px, 431.97px, 287.53px),
+    PathElement::Point(434.00px, 288.00px),
+    PathElement::Line,
+    PathElement::Point(461.75px, 288.24px),
+    PathElement::Cubic(464.25px, 287.59px, 466.72px, 287.47px),
+    PathElement::Point(469.00px, 288.00px),
+    PathElement::Line,
+    PathElement::Point(470.75px, 288.02px),
+    PathElement::Cubic(471.67px, 287.94px, 472.62px, 287.96px),
+    PathElement::Point(473.57px, 288.06px),
+    PathElement::Line,
+    PathElement::Point(485.86px, 288.21px),
+    PathElement::Cubic(487.88px, 287.76px, 489.86px, 287.67px),
+    PathElement::Point(491.75px, 288.03px),
+    PathElement::Line,
+    PathElement::Point(508.81px, 287.53px),
+    PathElement::Cubic(510.32px, 287.19px, 511.82px, 287.08px),
+    PathElement::Point(513.28px, 287.23px),
+    PathElement::Line,
+    PathElement::Point(522.37px, 286.27px),
+    PathElement::Cubic(524.69px, 285.39px, 527.03px, 284.99px),
+    PathElement::Point(529.28px, 285.23px),
+    PathElement::Line,
+    PathElement::Point(530.71px, 285.11px),
+    PathElement::Cubic(531.77px, 284.85px, 532.87px, 284.73px),
+    PathElement::Point(534.00px, 284.72px),
+    PathElement::Cubic(534.16px, 284.71px, 534.33px, 284.71px),
+    PathElement::Point(534.49px, 284.71px),
+    PathElement::Line,
+    PathElement::Point(537.83px, 284.09px),
+    PathElement::Cubic(538.29px, 283.94px, 538.77px, 283.82px),
+    PathElement::Point(539.24px, 283.73px),
+    PathElement::Cubic(539.62px, 282.13px, 540.19px, 280.65px),
+    PathElement::Point(540.95px, 279.33px),
+    PathElement::Cubic(541.37px, 277.97px, 541.90px, 276.69px),
+    PathElement::Point(542.57px, 275.53px),
+    PathElement::Cubic(542.69px, 275.12px, 542.83px, 274.72px),
+    PathElement::Point(542.99px, 274.33px),
+    PathElement::Cubic(542.99px, 274.23px, 543.00px, 274.13px),
+    PathElement::Point(543.00px, 274.03px),
+    PathElement::Cubic(542.96px, 273.37px, 542.96px, 272.71px),
+    PathElement::Point(543.00px, 272.03px),
+    PathElement::Cubic(542.07px, 258.87px, 560.35px, 241.34px),
+    PathElement::Point(573.00px, 244.30px),
+    PathElement::Cubic(585.65px, 241.34px, 603.93px, 258.87px),
+    PathElement::Point(603.00px, 272.03px),
+    PathElement::Close
+]/>
+<Text y=8.60% x=18.45% height=17.17% width=45.43% text="Test"/>
+<Group width=100% height=100% fill=WHITE/>
