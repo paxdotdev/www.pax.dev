@@ -8,5 +8,5 @@ set -e
 cp -r .pax/build/release/web/assets ./public/
 cp .pax/build/release/web/pax-* ./public/
 
-aws --profile=pax s3 sync --exclude ".git/*" --acl=public-read ./public s3://staging.pax.dev/www
-aws --profile=pax cloudfront create-invalidation --distribution-id=E29ZMWF6F0HQ61 --paths "/www/*"
+aws --profile=pax s3 cp --recursive --exclude ".git/*" --acl=public-read ./public s3://staging.pax.dev/
+aws --profile=pax cloudfront create-invalidation --distribution-id=E29ZMWF6F0HQ61 --paths "/*"
