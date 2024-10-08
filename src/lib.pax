@@ -1,327 +1,241 @@
-if show_desktop_warning {
-    <Group @click=hide_desktop_warning_click>
-        <Text y=50% x=50% width=90% text="Thank you for your interest in Pax!<br /> Please use a desktop browser to try the preview." 
-            style={
-                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: {PaxDotDev::get_responsive_text_size($mobile) * 1.75}
-                underline: false
-                fill: WHITE
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            }/>
-        <Rectangle fill=rgba(0, 0, 0, 90%) stroke={
-            color: rgba(100, 116, 139, 255)
-            width: 1.00px
-        }/>
-    </Group>
-}
-<Group width=100% height=65px y=0>
-    <Stacker direction=StackerDirection::Horizontal x=1.93px sizes=[Some(12.27%), Some(9.03%), Some(11.25%), Some(9.36%), None] 
-        width=897.06px height=65.00px>
-        <Image x=10px height=85px width=85px y=-12px source=ImageSource::Url("assets/logo-white-on-transparent.png") skew_x=0.00rad 
-            skew_y=0.00rad rotate=0.00rad/>
-        <Link url="https://docs.pax.dev/" target=Target::New>
-            <Text width=100% height=100% text="Docs" style={
-                font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                y=100.00% x=0.00%/>
-        </Link>
-        <Link url="https://discord.com/invite/Eq8KWAUc6b" target=Target::New>
-            <Text width=96.13% height=100% text="Discord" style={
-                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                y=0.00%/>
-        </Link>
-        <Link url="https://www.github.com/paxdotdev/pax" target=Target::New>
-            <Text width=100% height=100% text="GitHub" style={
-                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
+<Scroller scroll_height=400% x=0% y=0% width=100% height=100%>
+    <Stacker width={100% + 10px} height=100% y=0% x=0% direction=StackerDirection::Vertical sizes=[Some(750px), None, None]>
+        <Group x=0 height=750px skew_y=0.00rad skew_x=0.00rad rotate=0.00rad>
+            <Group rotate=0.00rad skew_x=0.00rad x=10% y=41.45% height=430.05px width=466.31px>
+                <Button style={
+                    font: Font::Web(
+                        "Crimson Text",
+                        "https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap",
+                        FontStyle::Normal,
+                        FontWeight::Bold)
+                    font_size: 14px
+                    fill: rgba(255, 0, 0, 255)
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Center
+                    align_multiline: TextAlignHorizontal::Center
+                    underline: false
+                } 
+                    rotate=0.00rad skew_x=0.00rad width=112.48% height=10.52% x=33.49% y=-1.53% label="ROCK BAND: UNLEASH THE POWER - >" 
+                    outline={
+                        color: rgba(238, 0, 0, 255)
+                        width: 1.50px
+                    } color=rgba(0, 0, 0, 255) 
+                    hover_color=rgba(100, 116, 139, 255)/>
+                <Text width=519.48px height=120.52px y=17.10% style={
+                    font: Font::Web(
+                        "Cormorant Garamond",
+                        "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap",
+                        FontStyle::Normal,
+                        FontWeight::Bold)
+                    font_size: 52px
+                    fill: rgba(255, 0, 0, 255)
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Center
+                    align_multiline: TextAlignHorizontal::Center
+                    underline: false
+                } 
+                    text="Join the Inferno. Embrace the Chaos." x=31.92%/>
+                <Text width=420px x=92.23% y=55.30% height=85px style={
+                    font: Font::Web(
+                        "Crimson Text",
+                        "https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap",
+                        FontStyle::Normal,
+                        FontWeight::Bold)
+                    font_size: 26.00px
+                    fill: rgba(255, 0, 0, 175)
+                    align_vertical: TextAlignVertical::Top
+                    align_horizontal: TextAlignHorizontal::Center
+                    align_multiline: TextAlignHorizontal::Center
+                    underline: false
+                } 
+                    text="Unleash the fury. Surrender to the sound that consumes."/>
+                <Button style={
+                    font: Font::Web(
+                        "Alegreya",
+                        "https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+                        FontStyle::Normal,
+                        FontWeight::Bold)
+                    font_size: 18px
+                    fill: rgba(255, 0, 0, 255)
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Center
+                    align_multiline: TextAlignHorizontal::Center
+                    underline: false
+                } 
+                    label="Contact Us" color=rgba(0, 0, 0, 255) rotate=0.00rad skew_x=0.00rad width=52.23% height=15.68% x=108.30% y=85.08% 
+                    outline={
+                        color: rgba(237, 0, 0, 255)
+                        width: 1.50px
+                    } hover_color=rgba(255, 0, 0, 255)/>
+                <Button style={
+                    font: Font::Web(
+                        "Alegreya",
+                        "https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+                        FontStyle::Normal,
+                        FontWeight::Bold)
+                    font_size: 18px
+                    fill: rgba(255, 255, 255, 255)
+                    align_vertical: TextAlignVertical::Center
+                    align_horizontal: TextAlignHorizontal::Center
+                    align_multiline: TextAlignHorizontal::Center
+                    underline: false
+                } 
+                    label="Listen Now" color=rgba(225, 0, 0, 255) rotate=0.00rad skew_x=0.00rad width=52.23% height=15.68% x=-4.18% y=85.08% 
+                    hover_color=rgba(128, 127, 127, 255) outline={
+                        color: rgba(100, 116, 139, 255)
+                        width: 1.00px
+                    }/>
+                <Text width=88.83% x=93.09% y=108.12% height=11.41% style={
+                    font: Font::Web(
+                        "Crimson Text",
+                        "https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap",
+                        FontStyle::Normal,
+                        FontWeight::Bold)
+                    font_size: 16.00px
+                    fill: rgba(255, 0, 0, 175)
+                    align_vertical: TextAlignVertical::Top
+                    align_horizontal: TextAlignHorizontal::Center
+                    align_multiline: TextAlignHorizontal::Center
+                    underline: false
+                } 
+                    text="Join our hardcore newsletter for the latest updates."/>
+            </Group>
+            <Stacker direction=StackerDirection::Horizontal y=0 x=0 height=70px width=100% sizes=[None, Some(500px), None]>
+                <Group rotate=0.00rad skew_x=0.00rad skew_y=0.00rad>
+                    <Stacker width=114.70px height=30.00px direction=StackerDirection::Horizontal y=20.00px x=14.72px>
+                        <Group skew_x=0.00rad rotate=0.00rad y=99.99% x=0.00% width=166.66% height=166.66%>
+                            <Image source=ImageSource::Url("assets/band-logo-hard-core.png") skew_x=0.00rad rotate=0.00rad x=78.13% y=200.90% width=180.91% 
+                                height=180.91%/>
+                        </Group>
+                    </Stacker>
+                </Group>
+                <Group skew_x=0.00rad rotate=0.00rad skew_y=0.00rad>
+                    <Stacker x=99.99% y=114.28% direction=StackerDirection::Horizontal width=146.89% sizes=[Some(18.75%), Some(27.94%), None, None]>
+                        <Group skew_x=0.00rad rotate=0.00rad skew_y=0.00rad>
+                            <Text style={
+                                font: Font::Web(
+                                    "Alegreya",
+                                    "https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+                                    FontStyle::Normal,
+                                    FontWeight::Bold)
+                                font_size: 18px
+                                fill: rgba(255, 0, 0, 255)
+                                align_vertical: TextAlignVertical::Center
+                                align_horizontal: TextAlignHorizontal::Center
+                                align_multiline: TextAlignHorizontal::Center
+                                underline: false
+                            } 
+                                text="About Us" skew_x=0.00rad rotate=0.00rad skew_y=0.00rad width=100% height=100%/>
+                        </Group>
+                        <Group skew_y=0.00rad skew_x=0.00rad rotate=0.00rad>
+                            <Text style={
+                                font: Font::Web(
+                                    "Alegreya",
+                                    "https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+                                    FontStyle::Normal,
+                                    FontWeight::Bold)
+                                font_size: 18px
+                                fill: rgba(255, 0, 0, 255)
+                                align_vertical: TextAlignVertical::Center
+                                align_horizontal: TextAlignHorizontal::Center
+                                align_multiline: TextAlignHorizontal::Center
+                                underline: false
+                            } 
+                                text="Merchandise" skew_x=0.00rad rotate=0.00rad skew_y=0.00rad width=100% height=100%/>
+                        </Group>
+                        <Group>
+                            <Text style={
+                                font: Font::Web(
+                                    "Alegreya",
+                                    "https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+                                    FontStyle::Normal,
+                                    FontWeight::Bold)
+                                font_size: 18px
+                                fill: rgba(255, 0, 0, 255)
+                                align_vertical: TextAlignVertical::Center
+                                align_horizontal: TextAlignHorizontal::Center
+                                align_multiline: TextAlignHorizontal::Center
+                                underline: false
+                            } 
+                                text="Tour Dates" rotate=0.00rad width=100% height=100%/>
+                        </Group>
+                        <Group skew_x=0.00rad rotate=0.00rad skew_y=0.00rad>
+                            <Text style={
+                                font: Font::Web(
+                                    "Alegreya",
+                                    "https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+                                    FontStyle::Normal,
+                                    FontWeight::Bold)
+                                font_size: 18px
+                                fill: rgba(255, 0, 0, 255)
+                                align_vertical: TextAlignVertical::Center
+                                align_horizontal: TextAlignHorizontal::Center
+                                align_multiline: TextAlignHorizontal::Center
+                                underline: false
+                            } 
+                                text="Contact" skew_x=0.00rad rotate=0.00rad skew_y=0.00rad width=100% height=100%/>
+                        </Group>
+                    </Stacker>
+                </Group>
+                <Group rotate=0.00rad skew_x=0.00rad skew_y=0.00rad>
+                    <Button style={
+                        font: Font::Web(
+                            "Alegreya",
+                            "https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+                            FontStyle::Normal,
+                            FontWeight::Bold)
+                        font_size: 22.00px
+                        fill: rgba(229, 1, 1, 255)
+                        align_vertical: TextAlignVertical::Center
+                        align_horizontal: TextAlignHorizontal::Center
+                        align_multiline: TextAlignHorizontal::Center
+                        underline: false
+                    } 
+                        label="Get the Hardcore Newsletter" color=rgba(0, 0, 0, 255) rotate=0.00rad skew_x=0.00rad width=88.74% height=80.00% 
+                        x=49.99% y=104.27% outline={
+                            color: rgba(230, 0, 0, 255)
+                            width: 1.50px
+                        }/>
+                </Group>
+            </Stacker>
+            <Group y=-0.00% width=69.55% x=100.00%>
+                <Rectangle x=0.00% height=100% y=47.42% width=58.18% fill={Fill::LinearGradient(
+                    {
+                        end: (100%, 50%)
+                        start: (0%, 50%)
+                        stops: [
+                            {
+                                color: rgba(0, 0, 0, 100%)
+                                position: 50%
+                            },
+                            {
+                                color: rgba(0, 0, 0, 0%)
+                                position: 100%
+                            }
+                        ]
+                    })} 
+                    stroke={
+                        color: rgba(1, 1, 1, 255)
+                        width: 0.00px
+                    }/>
+                <Image width=97.84% x=99.99% y=0.00% source=ImageSource::Url("assets/rock-band-hard-core.png")/>
+            </Group>
+            <Rectangle fill=rgba(0, 0, 0, 255) skew_x=0.00rad rotate=0.00rad stroke={
+                color: rgba(90, 106, 129, 255)
+                width: 1.50px
             } 
                 x=0.00% y=0.00%/>
-        </Link>
-    </Stacker>
-    <Rectangle fill=BLACK stroke={
-        color: rgba(100, 116, 139, 255)
-        width: 1.00px
-    } corner_radii={
-        top_left: 0
-        top_right: 0
-        bottom_left: 7
-        bottom_right: 5
-    }/>
-</Group>
-<Scroller scroll_height=500% x=100.00% y=0.00%>
-    <Stacker width=90% x=50%>
-        <Group id=section_1>
-            <Stacker y=100.20% x=0.00% sizes=[Some(9.66%), Some(25.75%), Some(21.67%), Some(21.69%), Some(16.59%), None]>
-                <Group />
-                <Image source=ImageSource::Url("assets/logo-black-on-transparent.png") skew_x=0.00rad rotate=0.00rad height=150.00% x=-0.00% 
-                    y=37.51%/>
-                <Text x=100.00% width=100% y=50% text="How the future builds software" style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-                    font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.75}
-                    underline: false
-                    align_vertical: TextAlignVertical::Center
-                    align_horizontal: TextAlignHorizontal::Center
-                    align_multiline: TextAlignHorizontal::Center
-                } 
-                    rotate=0.00rad skew_x=0.00rad height=54.12%/>
-                <Group>
-                    <Text y=50% x=50% width=100% text="Chat, design, and code: together. 
- Pax is a revolutionary new canvas for creating with AI." 
-                        style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                            font_size: {PaxDotDev::get_responsive_text_size($mobile) * 1.75}
-                            underline: false
-                            align_vertical: TextAlignVertical::Center
-                            align_horizontal: TextAlignHorizontal::Center
-                            align_multiline: TextAlignHorizontal::Center
-                        }/>
-                </Group>
-                <Button @click=show_demo x=50% y=50% width=250px height=75px label="Try the Preview" color=BLACK style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                    font_size: 25px
-                    fill: WHITE
-                    align_vertical: TextAlignVertical::Center
-                    align_horizontal: TextAlignHorizontal::Center
-                }/>
-            </Stacker>
         </Group>
-        <Group id=section_2 height=200%>
-            <Stacker>
-                <Text y=100% width=100% height=100% text="AI artifacts with design & code control" style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-                    font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.25}
-                    underline: false
-                    align_vertical: TextAlignVertical::Bottom
-                    align_horizontal: TextAlignHorizontal::Left
-                }/>
-                <Group>
-                    <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Text y=50% width=100% text="**Chat with AI** to create apps, websites, interactive widgets, or forms." style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                            font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                            underline: false
-                            align_vertical: TextAlignVertical::Center
-                            align_horizontal: TextAlignHorizontal::Left
-                            align_multiline: TextAlignHorizontal::Left
-                        }/>
-                    </Stacker>
-                </Group>
-                <Group>
-                    <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Text y=50% width=100% x=0 
-                            text="**Refine visually** with AI on a collaborative canvas. Design, prompt, and design again. You're building software." 
-                            style={
-                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                                underline: false
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Left
-                                align_multiline: TextAlignHorizontal::Left
-                            }/>
-                        //<Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50%
-                        //    x=50% y=50%/>
-                    </Stacker>
-                </Group>
-                <Group>
-                    <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Text y=50% width=100% x=0 
-                            text="**Publish** with a click — share a link to invite a teammate.  Optionally link a GitHub repo so your whole team can build the same thing, together." 
-                            style={
-                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                                underline: false
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Left
-                                align_multiline: TextAlignHorizontal::Left
-                            }/>
-                    </Stacker>
-                </Group>
-                <Group>
-                    <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Stacker direction=StackerDirection::Vertical>
-                            <Text y=95% width=100% x=0 
-                                text="**Total code control:** Pop the hood and edit Pax's code at any time, while staying in sync with AI & design. Great for individuals and for teams." 
-                                style={
-                                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                    font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                                    underline: false
-                                    align_vertical: TextAlignVertical::Center
-                                    align_horizontal: TextAlignHorizontal::Left
-                                    align_multiline: TextAlignHorizontal::Left
-                                }/>
-                            <Text y=5% width=90% text="[Learn more about code control](https://docs.pax.dev/)" link_style={
-                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                                underline: true
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Left
-                                align_multiline: TextAlignHorizontal::Left
-                            }/>
-                        </Stacker>
-                        //<Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50%
-                        //    x=50% y=50%/>
-                    </Stacker>
-                </Group>
-                <Group>
-                    <Stacker direction={PaxDotDev::get_stacker_direction($mobile)}>
-                        <Stacker>
-                            <Text y=95% width=100% x=0 
-                                text="**Integrate & extend** — Pax artifacts integrate with any codebase or API, or ship as stand-alone web or mobile apps." 
-                                style={
-                                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                    font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                                    underline: false
-                                    align_vertical: TextAlignVertical::Center
-                                    align_horizontal: TextAlignHorizontal::Left
-                                    align_multiline: TextAlignHorizontal::Left
-                                }/>
-                            <Text y=5% width=100% x=0 text="[Developer Docs](https://docs.pax.dev/)" link_style={
-                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                                font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                                underline: true
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Left
-                                align_multiline: TextAlignHorizontal::Left
-                            }/>
-                        </Stacker>
-                        //<Image y=50% source=ImageSource::Url("assets/logo-black-on-white.png") skew_x=0.00rad skew_y=0.00rad rotate=0.00rad width=50%
-                        //    x=50% y=50%/>
-                    </Stacker>
-                </Group>
-            </Stacker>
+        <Group skew_x=0.00rad rotate=0.00rad skew_y=0.00rad>
+            <Rectangle fill=rgba(255, 0, 0, 255) skew_y=0.00rad skew_x=0.00rad rotate=0.00rad stroke={
+                color: rgba(90, 106, 129, 255)
+                width: 1.50px
+            }/>
         </Group>
-        <Group height=0/>
-        <Group id=section_3>
-            <Stacker>
-                <Text y=100% width=100% x=0 height=100% text="You (yes, _you_) can build:" skew_x=0.00rad rotate=0.00rad style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-                    font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.50}
-                    underline: false
-                    align_vertical: TextAlignVertical::Bottom
-                    align_horizontal: TextAlignHorizontal::Left
-                }/>
-                <Stacker>
-                    <Text y=100% width=100% x=0 text="**Internal tools **" style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                        font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                        underline: false
-                        align_vertical: TextAlignVertical::Bottom
-                        align_horizontal: TextAlignHorizontal::Left
-                        align_multiline: TextAlignHorizontal::Left
-                    }/>
-                    <Text y=0% width=100% x=0 text="Quickly create & iterate on forms and dashboards; developers can integrate data & APIs." 
-                        style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                            font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                            underline: false
-                            align_vertical: TextAlignVertical::Top
-                            align_horizontal: TextAlignHorizontal::Left
-                            align_multiline: TextAlignHorizontal::Left
-                        }/>
-                </Stacker>
-                <Stacker>
-                    <Text y=100% width=100% x=0 text="**Landing pages and e-commerce sites**" style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                        font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                        underline: false
-                        align_vertical: TextAlignVertical::Bottom
-                        align_horizontal: TextAlignHorizontal::Left
-                        align_multiline: TextAlignHorizontal::Left
-                    }/>
-                    <Text y=0% width=100% x=0 text="Create landing pages with a few words; keep copy up to date through Pax's visual CMS." style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                        font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                        underline: false
-                        align_vertical: TextAlignVertical::Top
-                        align_horizontal: TextAlignHorizontal::Left
-                        align_multiline: TextAlignHorizontal::Left
-                    }/>
-                </Stacker>
-                <Stacker>
-                    <Text y=100% width=100% x=0 text="**Web and mobile apps**" style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                        font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                        underline: false
-                        align_vertical: TextAlignVertical::Bottom
-                        align_horizontal: TextAlignHorizontal::Left
-                        align_multiline: TextAlignHorizontal::Left
-                    }/>
-                    <Text y=0% width=100% x=0 
-                        text="Give your entire team a portal into your product — make visual and AI-driven contributions at any point in the development lifecycle." 
-                        style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                            font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                            underline: false
-                            align_vertical: TextAlignVertical::Top
-                            align_horizontal: TextAlignHorizontal::Left
-                            align_multiline: TextAlignHorizontal::Left
-                        }/>
-                </Stacker>
-                <Stacker>
-                    <Text y=100% width=100% x=0 text="**Data visualizations, games, and interactive graphics**" style={
-                        font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                        font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                        underline: false
-                        align_vertical: TextAlignVertical::Bottom
-                        align_horizontal: TextAlignHorizontal::Left
-                        align_multiline: TextAlignHorizontal::Left
-                    }/>
-                    <Text y=0% width=100% x=0 
-                        text="The sky's the limit with design & code control — if you can imagine it, you can create it with Pax." style={
-                            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                            font_size: {PaxDotDev::get_responsive_text_size($mobile)}
-                            underline: false
-                            align_vertical: TextAlignVertical::Top
-                            align_horizontal: TextAlignHorizontal::Left
-                            align_multiline: TextAlignHorizontal::Left
-                        }/>
-                </Stacker>
-            </Stacker>
-        </Group>
-        <Group id=section_4>
-            <Stacker>
-                <Text y=100.00% width=100% x=0 height=100% text="Now in Open Preview" style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-                    font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.75}
-                    underline: false
-                    align_vertical: TextAlignVertical::Bottom
-                    align_horizontal: TextAlignHorizontal::Center
-                    align_multiline: TextAlignHorizontal::Center
-                }/>
-                <Button @click=show_demo x=50% y=50% width=250px height=75px label="Try the Preview" color=BLACK style={
-                    font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                    font_size: 25px
-                    fill: WHITE
-                    align_vertical: TextAlignVertical::Center
-                    align_horizontal: TextAlignHorizontal::Center
-                }/>
-            </Stacker>
+        <Group rotate=0.00rad skew_x=0.00rad skew_y=0.00rad>
+            <Rectangle fill=rgb(0, 0, 0) rotate=0.00rad skew_y=0.00rad skew_x=0.00rad/>
         </Group>
     </Stacker>
-    <Rectangle fill=WHITE rotate=0.00rad skew_x=0.00rad width={100% + 10px} height=100% stroke={
-        color: rgba(100, 116, 139, 255)
-        width: 1.00px
-    }/>
 </Scroller>
 
 @settings {
