@@ -68,7 +68,7 @@ if show_desktop_warning {
         bottom_right: 5
     }/>
 </Group>
-<Scroller scroll_height=500% x=100.00% y=0.00%>
+<Scroller scroll_height=500% x=100.14% y=0.00%>
     <Stacker width=90% x=50%>
         <Group id=section_1>
             <Stacker y=100.20% x=0.00% sizes=[Some(9.66%), Some(23.41%), Some(27.03%), Some(21.69%), Some(16.59%), None]>
