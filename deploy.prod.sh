@@ -3,7 +3,7 @@
 set -e
 
 # Build and copy build artifacts
-./pax build --release --designer
+./pax build --release
 #
 cp -r .pax/build/release/web/assets ./public/
 cp .pax/build/release/web/pax-* ./public/

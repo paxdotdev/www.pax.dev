@@ -1,21 +1,6 @@
 #![allow(unused_imports)]
 
 use pax_kit::*;
-use fireworks::*;
-use color_picker::*;
-use breakout::*;
-use space_game::*;
-
-pub mod calculator;
-pub use calculator::Calculator;
-
-/* TODO:
-[ ] interstitial signup + storage mechanism (db + accounts? + transactional email conf? or airtable / google sheets), 
-[ ] designtime API for triggering designer play/pause  
-[ ] storyboard / content for GIFs 
-[ ] produce GIFs
-*/
-
 
 #[pax]
 #[main]
@@ -32,18 +17,6 @@ impl PaxDotDev {
 
     pub fn handle_mount(&mut self, ctx: &NodeContext) {
         
-    }
-
-
-    pub fn show_demo(&mut self, ctx: &NodeContext, _args: Event<Click>) {
-        if ctx.os.is_mobile() {
-            self.show_desktop_warning.set(true);
-        } else {
-            pax_designer::model::perform_action(
-                &pax_designer::ProjectMsg(pax_designer::model::ProjectMode::Edit),
-                ctx,
-            );
-        }
     }
 
     pub fn hide_desktop_warning_click(&mut self, ctx: &NodeContext, _args: Event<Click>) {
