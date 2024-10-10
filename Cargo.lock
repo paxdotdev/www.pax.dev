@@ -1317,7 +1317,7 @@ checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
 
 [[package]]
 name = "pax-chassis-common"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "core-graphics",
  "env_logger",
@@ -1333,14 +1333,14 @@ dependencies = [
 
 [[package]]
 name = "pax-chassis-ios"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "pax-chassis-common",
 ]
 
 [[package]]
 name = "pax-chassis-macos"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "core-graphics",
  "flexbuffers",
@@ -1355,7 +1355,7 @@ dependencies = [
 
 [[package]]
 name = "pax-chassis-web"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "console_error_panic_hook",
  "console_log",
@@ -1378,7 +1378,7 @@ dependencies = [
 
 [[package]]
 name = "pax-designer"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "anyhow",
  "bezier-rs",
@@ -1393,7 +1393,7 @@ dependencies = [
 
 [[package]]
 name = "pax-designtime"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "anyhow",
  "env_logger",
@@ -1418,7 +1418,7 @@ dependencies = [
 
 [[package]]
 name = "pax-engine"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "log",
  "pax-chassis-common",
@@ -1438,7 +1438,7 @@ dependencies = [
 
 [[package]]
 name = "pax-kit"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "pax-designer",
  "pax-engine",
@@ -1447,7 +1447,7 @@ dependencies = [
 
 [[package]]
 name = "pax-lang"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "color-eyre",
  "log",
@@ -1461,7 +1461,7 @@ dependencies = [
 
 [[package]]
 name = "pax-macro"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "litrs",
  "pax-lang",
@@ -1477,7 +1477,7 @@ dependencies = [
 
 [[package]]
 name = "pax-manifest"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "colored",
  "html-escape",
@@ -1498,7 +1498,7 @@ dependencies = [
 
 [[package]]
 name = "pax-message"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "cfg-if",
  "serde",
@@ -1507,7 +1507,7 @@ dependencies = [
 
 [[package]]
 name = "pax-runtime"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "cfg-if",
  "kurbo",
@@ -1527,7 +1527,7 @@ dependencies = [
 
 [[package]]
 name = "pax-runtime-api"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "kurbo",
  "log",
@@ -1542,7 +1542,7 @@ dependencies = [
 
 [[package]]
 name = "pax-std"
-version = "0.36.9"
+version = "0.37.1"
 dependencies = [
  "kurbo",
  "lazy_static",
