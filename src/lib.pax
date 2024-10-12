@@ -1,130 +1,387 @@
-<Group width=100% height=65px y=0.00% x=-0.00%>
-    <Stacker direction=StackerDirection::Horizontal x=1.93px sizes=[Some(12.27%), Some(9.03%), Some(11.25%), Some(9.36%), None] 
-        width=897.06px height=65.00px>
-        <Image x=10px height=85px width=85px y=-12px source=ImageSource::Url("assets/logo-white-on-transparent.png") skew_x=0.00rad 
-            skew_y=0.00rad rotate=0.00rad/>
-        <Link url="https://docs.pax.dev/" target=Target::New>
-            <Text width=100% height=100% text="Docs" style={
-                font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                y=100.00% x=0.00%/>
-        </Link>
-        <Link url="https://discord.com/invite/Eq8KWAUc6b" target=Target::New>
-            <Text width=96.13% height=100% text="Discord" style={
-                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                y=0.00%/>
-        </Link>
-        <Link url="https://www.github.com/paxdotdev/pax" target=Target::New>
-            <Text width=100% height=100% text="GitHub" style={
-                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                x=0.00% y=0.00%/>
-        </Link>
-    </Stacker>
-    <Rectangle fill=BLACK stroke={
-        color: rgba(100, 116, 139, 255)
-        width: 1.00px
-    } corner_radii={
-        top_left: 0
-        top_right: 0
-        bottom_left: 7
-        bottom_right: 5
-    }/>
-</Group>
-<Group width=90% x=50% y=0.00% height=146.18%>
-    <Group id=section_1 y=0.00% x=82.44% height=68.40%>
-        <Stacker y=100.00% x=100.00% sizes=[Some(75px), None]>
-            <Group />
-            <Stacker height=100% x=50% width=100% y=50% direction={PaxDotDev::get_stacker_direction($mobile)} sizes=[Some(55.52%), None]>
-                <Stacker height=100% width=95% x=49.99% y=50% direction=StackerDirection::Vertical gutter=25px 
-                    sizes=[Some(23.75%), Some(25.95%), Some(19.54%), Some(31.58%)]>
-                    <Image source=ImageSource::Url("assets/logo-black-on-transparent.png") y={100% + 50px * (1 - (1 * $mobile))}/>
-                    if !$mobile {
-                        <Group x=100.00% y=0.00%>
-                            <Text x=0.00% width=100% y=100.00% text="Build with words.<br />Control the details." class=h1 height=100%/>
-                        </Group>
-                    }
-                    <Group>
-                        <Text y=0.00% x=0.00% width=100% text="Pax is a revolutionary new canvas for building apps &amp; websites with AI." class=h2 
-                            height=165.07px/>
-                    </Group>
-                    <Stacker height=100% width=100% y=50px x=50% direction=StackerDirection::Horizontal>
-                        <Link width=200px height=75px x={100% - 5px} y=10px target=Target::New 
-                            url="https://airtable.com/appCUQtUS9g4kuQZL/pagGMVOPv9AH1cNJS/form">
-                            <Button x=49.99% y=50.00% width=100% height=75px label="Try it now" color=BLACK style={
-                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                                font_size: 25px
-                                fill: WHITE
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Center
-                            } 
-                                outline={
-                                    color: rgba(100, 116, 139, 255)
-                                    width: 1.00px
-                                }/>
-                        </Link>
-                        <Link width=200px height=75px x=5px y=10px target=Target::New url="https://www.github.com/paxdotdev/pax">
-                            <Button x=100.00% y=0.00% width=100% height=100% label="GitHub" color=rgba(0, 0, 0, 0) style={
-                                font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Normal)
-                                font_size: 26.00px
-                                fill: rgba(0, 0, 0, 255)
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Center
-                                align_multiline: TextAlignHorizontal::Center
-                                underline: false
-                            } 
-                                outline={
-                                    color: rgba(3, 3, 3, 255)
-                                    width: 1.00px
-                                } hover_color=rgba(100, 116, 139, 255)/>
-                        </Link>
-                    </Stacker>
-                </Stacker>
-                <YoutubeVideo width=100% url="https://www.youtube.com/embed/o8pkhbyb1Yo?si=uHno4d-n2O7ejp21" y=50.00% x=0.00% height=75%/>
-            </Stacker>
-        </Stacker>
-    </Group>
-</Group>
-
-@settings {
-    @mount: handle_mount
-    .h1 {
-        style: {
-            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-            font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.25}
-            underline: false
-            align_vertical: TextAlignVertical::Bottom
-            align_horizontal: TextAlignHorizontal::Center
-            align_multiline: TextAlignHorizontal::Center
-        }
-    }
-    .h2 {
-        style: {
-            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-            font_size: {PaxDotDev::get_responsive_text_size($mobile) * 1.65}
-            underline: false
-            align_vertical: TextAlignVertical::Top
-            align_horizontal: TextAlignHorizontal::Center
-            align_multiline: TextAlignHorizontal::Center
-        }
-    }
-}
+<Path stroke={
+    color: rgba(107, 114, 128, 255)
+    width: 3px
+} fill=rgba(0, 0, 0, 255) elements=[
+    PathElement::Point(537.28px, 295.77px),
+    PathElement::Cubic(537.84px, 295.76px, 538.41px, 295.78px),
+    PathElement::Point(538.98px, 295.84px),
+    PathElement::Cubic(539.35px, 295.80px, 539.73px, 295.78px),
+    PathElement::Point(540.11px, 295.77px),
+    PathElement::Cubic(539.11px, 294.85px, 538.24px, 293.87px),
+    PathElement::Point(537.51px, 292.83px),
+    PathElement::Cubic(535.13px, 290.68px, 533.44px, 287.56px),
+    PathElement::Point(532.41px, 283.96px),
+    PathElement::Line,
+    PathElement::Point(527.45px, 276.03px),
+    PathElement::Line,
+    PathElement::Point(527.31px, 275.87px),
+    PathElement::Cubic(525.73px, 274.56px, 524.41px, 273.09px),
+    PathElement::Point(523.45px, 271.48px),
+    PathElement::Cubic(521.55px, 269.87px, 520.10px, 267.66px),
+    PathElement::Point(519.07px, 265.08px),
+    PathElement::Cubic(509.52px, 255.33px, 515.00px, 228.62px),
+    PathElement::Point(527.76px, 223.84px),
+    PathElement::Cubic(537.19px, 213.78px, 564.52px, 219.24px),
+    PathElement::Point(569.36px, 232.16px),
+    PathElement::Line,
+    PathElement::Point(569.37px, 232.18px),
+    PathElement::Cubic(569.86px, 232.84px, 570.28px, 233.53px),
+    PathElement::Point(570.63px, 234.26px),
+    PathElement::Line,
+    PathElement::Point(572.30px, 236.50px),
+    PathElement::Cubic(575.00px, 238.54px, 577.10px, 240.96px),
+    PathElement::Point(578.21px, 243.69px),
+    PathElement::Cubic(579.32px, 245.12px, 580.21px, 246.81px),
+    PathElement::Point(580.89px, 248.68px),
+    PathElement::Line,
+    PathElement::Point(584.76px, 255.40px),
+    PathElement::Line,
+    PathElement::Point(597.26px, 270.14px),
+    PathElement::Cubic(598.62px, 271.19px, 599.76px, 272.41px),
+    PathElement::Point(600.61px, 273.79px),
+    PathElement::Line,
+    PathElement::Point(602.47px, 275.79px),
+    PathElement::Cubic(606.22px, 278.12px, 609.20px, 281.09px),
+    PathElement::Point(610.69px, 284.47px),
+    PathElement::Cubic(611.54px, 285.84px, 612.25px, 287.38px),
+    PathElement::Point(612.83px, 289.02px),
+    PathElement::Line,
+    PathElement::Point(623.22px, 308.33px),
+    PathElement::Cubic(625.68px, 310.85px, 627.45px, 313.68px),
+    PathElement::Point(628.11px, 316.66px),
+    PathElement::Cubic(628.99px, 318.25px, 629.60px, 320.06px),
+    PathElement::Point(629.97px, 322.01px),
+    PathElement::Line,
+    PathElement::Point(631.46px, 325.97px),
+    PathElement::Cubic(633.84px, 329.19px, 635.38px, 332.67px),
+    PathElement::Point(635.59px, 336.06px),
+    PathElement::Cubic(635.98px, 337.57px, 636.18px, 339.18px),
+    PathElement::Point(636.20px, 340.86px),
+    PathElement::Cubic(637.43px, 343.90px, 637.99px, 346.96px),
+    PathElement::Point(637.62px, 349.79px),
+    PathElement::Cubic(637.83px, 351.72px, 637.69px, 353.77px),
+    PathElement::Point(637.25px, 355.87px),
+    PathElement::Line,
+    PathElement::Point(637.21px, 357.24px),
+    PathElement::Line,
+    PathElement::Point(638.43px, 364.75px),
+    PathElement::Cubic(640.03px, 368.16px, 640.82px, 371.66px),
+    PathElement::Point(640.44px, 374.87px),
+    PathElement::Cubic(640.62px, 376.68px, 640.51px, 378.61px),
+    PathElement::Point(640.13px, 380.58px),
+    PathElement::Line,
+    PathElement::Point(640.00px, 388.53px),
+    PathElement::Cubic(641.05px, 392.65px, 641.17px, 396.70px),
+    PathElement::Point(639.99px, 400.08px),
+    PathElement::Cubic(639.79px, 401.22px, 639.48px, 402.38px),
+    PathElement::Point(639.06px, 403.54px),
+    PathElement::Cubic(638.84px, 407.12px, 637.93px, 410.41px),
+    PathElement::Point(636.21px, 412.97px),
+    PathElement::Cubic(635.48px, 414.56px, 634.49px, 416.12px),
+    PathElement::Point(633.29px, 417.61px),
+    PathElement::Line,
+    PathElement::Point(629.23px, 424.77px),
+    PathElement::Cubic(628.06px, 429.22px, 625.99px, 433.11px),
+    PathElement::Point(623.05px, 435.57px),
+    PathElement::Cubic(621.87px, 436.87px, 620.47px, 438.07px),
+    PathElement::Point(618.91px, 439.15px),
+    PathElement::Line,
+    PathElement::Point(618.68px, 439.37px),
+    PathElement::Cubic(616.74px, 442.64px, 614.28px, 445.27px),
+    PathElement::Point(611.40px, 446.76px),
+    PathElement::Cubic(609.99px, 447.90px, 608.34px, 448.86px),
+    PathElement::Point(606.51px, 449.64px),
+    PathElement::Line,
+    PathElement::Point(598.12px, 455.06px),
+    PathElement::Cubic(595.36px, 458.15px, 592.16px, 460.45px),
+    PathElement::Point(588.78px, 461.36px),
+    PathElement::Cubic(587.09px, 462.16px, 585.21px, 462.71px),
+    PathElement::Point(583.19px, 463.06px),
+    PathElement::Line,
+    PathElement::Point(580.91px, 463.85px),
+    PathElement::Cubic(577.09px, 466.42px, 572.99px, 467.98px),
+    PathElement::Point(569.15px, 467.90px),
+    PathElement::Cubic(567.55px, 468.08px, 565.86px, 468.07px),
+    PathElement::Point(564.13px, 467.90px),
+    PathElement::Line,
+    PathElement::Point(553.28px, 468.47px),
+    PathElement::Cubic(550.29px, 469.50px, 547.30px, 469.83px),
+    PathElement::Point(544.57px, 469.24px),
+    PathElement::Cubic(542.86px, 469.50px, 541.04px, 469.42px),
+    PathElement::Point(539.19px, 469.08px),
+    PathElement::Line,
+    PathElement::Point(538.64px, 469.06px),
+    PathElement::Cubic(536.28px, 469.62px, 533.96px, 469.70px),
+    PathElement::Point(531.80px, 469.20px),
+    PathElement::Line,
+    PathElement::Point(530.18px, 469.17px),
+    PathElement::Cubic(529.09px, 469.27px, 527.96px, 469.24px),
+    PathElement::Point(526.81px, 469.09px),
+    PathElement::Line,
+    PathElement::Point(523.68px, 469.03px),
+    PathElement::Cubic(519.73px, 470.04px, 515.86px, 470.16px),
+    PathElement::Point(512.59px, 469.06px),
+    PathElement::Cubic(510.82px, 468.81px, 509.00px, 468.26px),
+    PathElement::Point(507.20px, 467.48px),
+    PathElement::Line,
+    PathElement::Point(496.80px, 464.90px),
+    PathElement::Line,
+    PathElement::Point(495.26px, 464.85px),
+    PathElement::Cubic(488.63px, 466.03px, 482.07px, 465.31px),
+    PathElement::Point(477.89px, 461.92px),
+    PathElement::Cubic(477.68px, 461.80px, 477.48px, 461.68px),
+    PathElement::Point(477.28px, 461.56px),
+    PathElement::Line,
+    PathElement::Point(471.31px, 458.40px),
+    PathElement::Cubic(466.52px, 457.25px, 462.32px, 455.09px),
+    PathElement::Point(459.74px, 451.94px),
+    PathElement::Cubic(458.75px, 451.00px, 457.82px, 449.95px),
+    PathElement::Point(456.95px, 448.79px),
+    PathElement::Line,
+    PathElement::Point(449.84px, 444.34px),
+    PathElement::Cubic(444.05px, 441.97px, 438.99px, 438.27px),
+    PathElement::Point(436.43px, 433.83px),
+    PathElement::Cubic(432.77px, 432.59px, 429.62px, 430.69px),
+    PathElement::Point(427.54px, 428.14px),
+    PathElement::Cubic(426.45px, 427.11px, 425.43px, 425.93px),
+    PathElement::Point(424.49px, 424.64px),
+    PathElement::Line,
+    PathElement::Point(418.06px, 417.96px),
+    PathElement::Line,
+    PathElement::Point(417.77px, 417.72px),
+    PathElement::Cubic(414.71px, 416.42px, 412.13px, 414.62px),
+    PathElement::Point(410.39px, 412.30px),
+    PathElement::Cubic(409.23px, 411.41px, 408.23px, 410.40px),
+    PathElement::Point(407.43px, 409.28px),
+    PathElement::Cubic(407.17px, 408.95px, 406.92px, 408.60px),
+    PathElement::Point(406.67px, 408.25px),
+    PathElement::Line,
+    PathElement::Point(406.35px, 407.87px),
+    PathElement::Cubic(400.59px, 403.47px, 396.38px, 397.62px),
+    PathElement::Point(396.30px, 391.88px),
+    PathElement::Line,
+    PathElement::Point(396.18px, 391.28px),
+    PathElement::Cubic(394.37px, 387.74px, 393.42px, 384.08px),
+    PathElement::Point(393.72px, 380.72px),
+    PathElement::Cubic(393.65px, 379.76px, 393.66px, 378.78px),
+    PathElement::Point(393.73px, 377.77px),
+    PathElement::Cubic(393.59px, 376.27px, 393.67px, 374.80px),
+    PathElement::Point(394.00px, 373.40px),
+    PathElement::Line,
+    PathElement::Point(394.05px, 371.89px),
+    PathElement::Cubic(393.97px, 371.19px, 393.95px, 370.47px),
+    PathElement::Point(393.99px, 369.75px),
+    PathElement::Cubic(393.57px, 367.62px, 393.55px, 365.55px),
+    PathElement::Point(394.00px, 363.60px),
+    PathElement::Line,
+    PathElement::Point(394.07px, 362.30px),
+    PathElement::Cubic(394.04px, 362.05px, 394.01px, 361.79px),
+    PathElement::Point(394.00px, 361.53px),
+    PathElement::Cubic(393.03px, 355.81px, 393.57px, 350.24px),
+    PathElement::Point(396.21px, 346.34px),
+    PathElement::Cubic(396.54px, 345.67px, 396.89px, 345.00px),
+    PathElement::Point(397.28px, 344.34px),
+    PathElement::Line,
+    PathElement::Point(399.52px, 339.58px),
+    PathElement::Cubic(399.96px, 337.33px, 400.77px, 335.28px),
+    PathElement::Point(402.03px, 333.58px),
+    PathElement::Line,
+    PathElement::Point(402.88px, 331.73px),
+    PathElement::Cubic(403.11px, 331.05px, 403.39px, 330.38px),
+    PathElement::Point(403.73px, 329.73px),
+    PathElement::Cubic(404.17px, 327.50px, 404.98px, 325.47px),
+    PathElement::Point(406.23px, 323.78px),
+    PathElement::Line,
+    PathElement::Point(406.87px, 322.39px),
+    PathElement::Cubic(407.23px, 321.22px, 407.77px, 320.08px),
+    PathElement::Point(408.45px, 318.98px),
+    PathElement::Line,
+    PathElement::Point(408.72px, 318.40px),
+    PathElement::Cubic(409.82px, 312.85px, 412.22px, 307.96px),
+    PathElement::Point(415.89px, 305.20px),
+    PathElement::Cubic(416.48px, 304.63px, 417.10px, 304.08px),
+    PathElement::Point(417.75px, 303.55px),
+    PathElement::Cubic(418.96px, 300.90px, 420.57px, 298.65px),
+    PathElement::Point(422.57px, 297.04px),
+    PathElement::Cubic(422.99px, 296.53px, 423.45px, 296.04px),
+    PathElement::Point(423.94px, 295.57px),
+    PathElement::Cubic(424.75px, 294.72px, 425.63px, 293.98px),
+    PathElement::Point(426.59px, 293.39px),
+    PathElement::Line,
+    PathElement::Point(426.79px, 293.24px),
+    PathElement::Cubic(427.20px, 292.79px, 427.61px, 292.36px),
+    PathElement::Point(428.03px, 291.94px),
+    PathElement::Cubic(428.45px, 291.47px, 428.90px, 291.01px),
+    PathElement::Point(429.39px, 290.59px),
+    PathElement::Cubic(430.84px, 288.92px, 432.75px, 287.55px),
+    PathElement::Point(434.96px, 286.47px),
+    PathElement::Cubic(438.72px, 284.20px, 442.70px, 282.82px),
+    PathElement::Point(446.39px, 282.87px),
+    PathElement::Cubic(449.17px, 281.78px, 451.97px, 281.27px),
+    PathElement::Point(454.59px, 281.53px),
+    PathElement::Cubic(455.88px, 281.50px, 457.22px, 281.58px),
+    PathElement::Point(458.58px, 281.76px),
+    PathElement::Cubic(460.66px, 281.37px, 462.69px, 281.35px),
+    PathElement::Point(464.60px, 281.80px),
+    PathElement::Line,
+    PathElement::Point(465.90px, 281.87px),
+    PathElement::Cubic(466.35px, 281.81px, 466.80px, 281.78px),
+    PathElement::Point(467.26px, 281.77px),
+    PathElement::Cubic(473.50px, 280.86px, 479.57px, 281.68px),
+    PathElement::Point(483.51px, 284.88px),
+    PathElement::Cubic(483.83px, 285.06px, 484.16px, 285.25px),
+    PathElement::Point(484.48px, 285.45px),
+    PathElement::Line,
+    PathElement::Point(484.95px, 285.72px),
+    PathElement::Cubic(490.17px, 285.31px, 495.08px, 286.21px),
+    PathElement::Point(498.53px, 288.78px),
+    PathElement::Cubic(499.73px, 289.13px, 500.89px, 289.55px),
+    PathElement::Point(501.98px, 290.03px),
+    PathElement::Cubic(502.64px, 290.28px, 503.31px, 290.56px),
+    PathElement::Point(503.97px, 290.87px),
+    PathElement::Cubic(508.40px, 291.72px, 512.43px, 293.39px),
+    PathElement::Point(515.32px, 295.88px),
+    PathElement::Cubic(516.68px, 295.79px, 518.06px, 295.78px),
+    PathElement::Point(519.43px, 295.83px),
+    PathElement::Cubic(520.70px, 295.71px, 522.01px, 295.77px),
+    PathElement::Point(523.34px, 295.99px),
+    PathElement::Cubic(525.44px, 295.47px, 527.51px, 295.32px),
+    PathElement::Point(529.46px, 295.62px),
+    PathElement::Cubic(530.66px, 295.45px, 531.84px, 295.42px),
+    PathElement::Point(532.99px, 295.53px),
+    PathElement::Cubic(534.46px, 295.40px, 535.90px, 295.47px),
+    PathElement::Point(537.28px, 295.77px),
+    PathElement::Close,
+    PathElement::Point(541.78px, 355.76px),
+    PathElement::Cubic(540.92px, 355.84px, 540.07px, 355.85px),
+    PathElement::Point(539.24px, 355.79px),
+    PathElement::Cubic(538.78px, 355.92px, 538.30px, 356.05px),
+    PathElement::Point(537.83px, 356.17px),
+    PathElement::Cubic(535.37px, 357.01px, 532.93px, 357.39px),
+    PathElement::Point(530.63px, 357.17px),
+    PathElement::Cubic(530.57px, 357.17px, 530.51px, 357.17px),
+    PathElement::Point(530.45px, 357.17px),
+    PathElement::Cubic(529.66px, 357.24px, 528.87px, 357.25px),
+    PathElement::Point(528.09px, 357.19px),
+    PathElement::Cubic(527.94px, 357.19px, 527.78px, 357.18px),
+    PathElement::Point(527.62px, 357.18px),
+    PathElement::Cubic(527.10px, 357.22px, 526.59px, 357.24px),
+    PathElement::Point(526.08px, 357.23px),
+    PathElement::Cubic(524.70px, 357.53px, 523.26px, 357.60px),
+    PathElement::Point(521.79px, 357.47px),
+    PathElement::Cubic(520.64px, 357.58px, 519.46px, 357.55px),
+    PathElement::Point(518.26px, 357.38px),
+    PathElement::Cubic(515.45px, 357.81px, 512.40px, 357.31px),
+    PathElement::Point(509.37px, 356.12px),
+    PathElement::Cubic(508.80px, 356.13px, 508.24px, 356.12px),
+    PathElement::Point(507.68px, 356.08px),
+    PathElement::Cubic(504.70px, 356.35px, 501.48px, 355.63px),
+    PathElement::Point(498.32px, 354.20px),
+    PathElement::Cubic(497.13px, 354.02px, 495.98px, 353.74px),
+    PathElement::Point(494.91px, 353.37px),
+    PathElement::Cubic(491.91px, 352.94px, 488.93px, 351.45px),
+    PathElement::Point(486.18px, 349.27px),
+    PathElement::Cubic(486.02px, 349.21px, 485.86px, 349.15px),
+    PathElement::Point(485.70px, 349.09px),
+    PathElement::Cubic(482.61px, 348.87px, 479.36px, 347.71px),
+    PathElement::Point(476.24px, 345.93px),
+    PathElement::Cubic(474.90px, 345.63px, 473.54px, 345.18px),
+    PathElement::Point(472.19px, 344.60px),
+    PathElement::Cubic(470.78px, 344.50px, 469.42px, 344.29px),
+    PathElement::Point(468.13px, 343.95px),
+    PathElement::Cubic(466.81px, 343.80px, 465.48px, 343.46px),
+    PathElement::Point(464.17px, 342.94px),
+    PathElement::Cubic(463.72px, 343.42px, 463.24px, 343.89px),
+    PathElement::Point(462.72px, 344.34px),
+    PathElement::Cubic(462.49px, 344.91px, 462.23px, 345.47px),
+    PathElement::Point(461.94px, 345.99px),
+    PathElement::Line,
+    PathElement::Point(461.37px, 347.42px),
+    PathElement::Cubic(461.02px, 349.43px, 460.14px, 351.38px),
+    PathElement::Point(458.88px, 353.20px),
+    PathElement::Cubic(458.54px, 354.27px, 458.11px, 355.28px),
+    PathElement::Point(457.57px, 356.21px),
+    PathElement::Line,
+    PathElement::Point(457.17px, 357.22px),
+    PathElement::Cubic(456.76px, 359.54px, 455.67px, 361.76px),
+    PathElement::Point(454.08px, 363.81px),
+    PathElement::Line,
+    PathElement::Point(454.06px, 363.87px),
+    PathElement::Cubic(454.44px, 365.69px, 454.41px, 367.63px),
+    PathElement::Point(454.04px, 369.61px),
+    PathElement::Cubic(454.56px, 370.00px, 455.05px, 370.41px),
+    PathElement::Point(455.51px, 370.85px),
+    PathElement::Cubic(458.21px, 372.30px, 460.47px, 374.79px),
+    PathElement::Point(462.24px, 377.87px),
+    PathElement::Line,
+    PathElement::Point(465.72px, 381.22px),
+    PathElement::Line,
+    PathElement::Point(472.42px, 384.37px),
+    PathElement::Cubic(476.69px, 385.39px, 480.50px, 388.76px),
+    PathElement::Point(483.42px, 393.24px),
+    PathElement::Cubic(483.75px, 393.72px, 484.05px, 394.21px),
+    PathElement::Point(484.32px, 394.71px),
+    PathElement::Cubic(484.54px, 395.09px, 484.76px, 395.48px),
+    PathElement::Point(484.97px, 395.87px),
+    PathElement::Line,
+    PathElement::Point(487.89px, 397.55px),
+    PathElement::Cubic(489.72px, 398.24px, 491.39px, 399.09px),
+    PathElement::Point(492.85px, 400.12px),
+    PathElement::Cubic(494.94px, 401.13px, 496.84px, 402.72px),
+    PathElement::Point(498.51px, 404.71px),
+    PathElement::Cubic(499.44px, 404.65px, 500.35px, 404.66px),
+    PathElement::Point(501.24px, 404.73px),
+    PathElement::Cubic(504.71px, 404.39px, 508.49px, 405.41px),
+    PathElement::Point(512.14px, 407.31px),
+    PathElement::Line,
+    PathElement::Point(521.94px, 409.41px),
+    PathElement::Line,
+    PathElement::Point(526.81px, 409.31px),
+    PathElement::Cubic(527.96px, 409.16px, 529.09px, 409.13px),
+    PathElement::Point(530.18px, 409.23px),
+    PathElement::Line,
+    PathElement::Point(531.80px, 409.20px),
+    PathElement::Cubic(533.96px, 408.70px, 536.28px, 408.78px),
+    PathElement::Point(538.64px, 409.34px),
+    PathElement::Line,
+    PathElement::Point(544.40px, 409.20px),
+    PathElement::Cubic(546.00px, 408.83px, 547.68px, 408.78px),
+    PathElement::Point(549.40px, 409.00px),
+    PathElement::Line,
+    PathElement::Point(559.44px, 408.19px),
+    PathElement::Line,
+    PathElement::Point(563.57px, 406.52px),
+    PathElement::Line,
+    PathElement::Point(574.96px, 398.68px),
+    PathElement::Line,
+    PathElement::Point(576.48px, 397.06px),
+    PathElement::Line,
+    PathElement::Point(580.42px, 389.54px),
+    PathElement::Line,
+    PathElement::Point(580.23px, 377.78px),
+    PathElement::Line,
+    PathElement::Point(578.76px, 370.53px),
+    PathElement::Cubic(578.02px, 368.64px, 577.55px, 366.74px),
+    PathElement::Point(577.41px, 364.90px),
+    PathElement::Cubic(576.48px, 361.88px, 576.60px, 358.39px),
+    PathElement::Point(577.52px, 354.82px),
+    PathElement::Line,
+    PathElement::Point(577.45px, 352.67px),
+    PathElement::Line,
+    PathElement::Point(576.93px, 350.10px),
+    PathElement::Line,
+    PathElement::Point(572.55px, 339.74px),
+    PathElement::Cubic(572.01px, 338.97px, 571.56px, 338.13px),
+    PathElement::Point(571.19px, 337.24px),
+    PathElement::Line,
+    PathElement::Point(569.37px, 334.01px),
+    PathElement::Cubic(565.86px, 345.23px, 552.32px, 356.83px),
+    PathElement::Point(541.78px, 355.76px),
+    PathElement::Close
+]/>
+<Path stroke={
+    color: rgba(107, 114, 128, 255)
+    width: 3px
+} fill=rgba(0, 0, 0, 255)/>
+<Ellipse x=22.86% width=5.98% y=35.00% height=19.23% fill=rgba(100, 116, 139, 255)/>
+<Rectangle y=36.92% width=13.79% x=19.98% height=9.44% fill=rgba(100, 116, 139, 255)/>
