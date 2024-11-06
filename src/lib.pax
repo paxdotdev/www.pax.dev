@@ -1,130 +1,366 @@
-<Group width=100% height=65px y=0.00% x=-0.00%>
-    <Stacker direction=StackerDirection::Horizontal x=1.93px sizes=[Some(12.27%), Some(9.03%), Some(11.25%), Some(9.36%), None] 
-        width=897.06px height=65.00px>
-        <Image x=10px height=85px width=85px y=-12px source=ImageSource::Url("assets/logo-white-on-transparent.png") skew_x=0.00rad 
-            skew_y=0.00rad rotate=0.00rad/>
-        <Link url="https://docs.pax.dev/" target=Target::New>
-            <Text width=100% height=100% text="Docs" style={
-                font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                y=100.00% x=0.00%/>
-        </Link>
-        <Link url="https://discord.com/invite/Eq8KWAUc6b" target=Target::New>
-            <Text width=96.13% height=100% text="Discord" style={
-                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                y=0.00%/>
-        </Link>
-        <Link url="https://www.github.com/paxdotdev/pax" target=Target::New>
-            <Text width=100% height=100% text="GitHub" style={
-                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                x=0.00% y=0.00%/>
-        </Link>
-    </Stacker>
-    <Rectangle fill=BLACK stroke={
-        color: rgba(100, 116, 139, 255)
-        width: 1.00px
-    } corner_radii={
-        top_left: 0
-        top_right: 0
-        bottom_left: 7
-        bottom_right: 5
-    }/>
-</Group>
-<Group width=90% x=50% y=0.00% height=146.18%>
-    <Group id=section_1 y=0.00% x=82.44% height=68.40%>
-        <Stacker y=100.00% x=100.00% sizes=[Some(75px), None]>
-            <Group />
-            <Stacker height=100% x=50% width=100% y=50% direction={PaxDotDev::get_stacker_direction($mobile)} sizes=[Some(55.52%), None]>
-                <Stacker height=100% width=95% x=49.99% y=50% direction=StackerDirection::Vertical gutter=25px 
-                    sizes=[Some(23.75%), Some(25.95%), Some(19.54%), Some(31.58%)]>
-                    <Image source=ImageSource::Url("assets/logo-black-on-transparent.png") y={100% + 50px * (1 - (1 * $mobile))}/>
-                    if !$mobile {
-                        <Group x=100.00% y=0.00%>
-                            <Text x=0.00% width=100% y=100.00% text="Build with words.<br />Control the details." class=h1 height=100%/>
-                        </Group>
-                    }
-                    <Group>
-                        <Text y=0.00% x=0.00% width=100% text="Pax is a revolutionary new canvas for building apps &amp; websites with AI." class=h2 
-                            height=165.07px/>
-                    </Group>
-                    <Stacker height=100% width=100% y=50px x=50% direction=StackerDirection::Horizontal>
-                        <Link width=200px height=75px x={100% - 5px} y=10px target=Target::New 
-                            url="https://airtable.com/appCUQtUS9g4kuQZL/pagGMVOPv9AH1cNJS/form">
-                            <Button x=49.99% y=50.00% width=100% height=75px label="Try it now" color=BLACK style={
-                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                                font_size: 25px
-                                fill: WHITE
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Center
-                            } 
-                                outline={
-                                    color: rgba(100, 116, 139, 255)
-                                    width: 1.00px
-                                }/>
-                        </Link>
-                        <Link width=200px height=75px x=5px y=10px target=Target::New url="https://www.github.com/paxdotdev/pax">
-                            <Button x=100.00% y=0.00% width=100% height=100% label="GitHub" color=rgba(0, 0, 0, 0) style={
-                                font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Normal)
-                                font_size: 26.00px
-                                fill: rgba(0, 0, 0, 255)
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Center
-                                align_multiline: TextAlignHorizontal::Center
-                                underline: false
-                            } 
-                                outline={
-                                    color: rgba(3, 3, 3, 255)
-                                    width: 1.00px
-                                } hover_color=rgba(100, 116, 139, 255)/>
-                        </Link>
-                    </Stacker>
-                </Stacker>
-                <YoutubeVideo width=100% url="https://www.youtube.com/embed/o8pkhbyb1Yo?si=uHno4d-n2O7ejp21" y=50.00% x=0.00% height=75%/>
-            </Stacker>
-        </Stacker>
-    </Group>
-</Group>
-
-@settings {
-    @mount: handle_mount
-    .h1 {
-        style: {
-            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-            font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.25}
-            underline: false
-            align_vertical: TextAlignVertical::Bottom
-            align_horizontal: TextAlignHorizontal::Center
-            align_multiline: TextAlignHorizontal::Center
-        }
-    }
-    .h2 {
-        style: {
-            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-            font_size: {PaxDotDev::get_responsive_text_size($mobile) * 1.65}
-            underline: false
-            align_vertical: TextAlignVertical::Top
-            align_horizontal: TextAlignHorizontal::Center
-            align_multiline: TextAlignHorizontal::Center
-        }
-    }
-}
+<Checkbox x=20.61% y=24.92% height=13.87% width=6.67% background=hsla(0.60%, 181, 111, 255)/>
+<Path stroke={
+    color: hsla(0.61%, 23, 118, 255)
+    width: 0px
+} fill=BLACK elements=[
+    PathElement::Point(72.02%, 88.86%),
+    PathElement::Cubic(71.76%, 88.44%, 71.58%, 88.01%),
+    PathElement::Point(71.48%, 87.58%),
+    PathElement::Cubic(70.97%, 86.90%, 70.71%, 86.10%),
+    PathElement::Point(70.65%, 85.24%),
+    PathElement::Cubic(70.52%, 84.91%, 70.43%, 84.58%),
+    PathElement::Point(70.39%, 84.25%),
+    PathElement::Cubic(69.89%, 83.47%, 69.71%, 82.56%),
+    PathElement::Point(69.78%, 81.59%),
+    PathElement::Cubic(69.49%, 81.00%, 69.32%, 80.41%),
+    PathElement::Point(69.28%, 79.84%),
+    PathElement::Cubic(68.85%, 78.94%, 68.82%, 77.90%),
+    PathElement::Point(69.08%, 76.82%),
+    PathElement::Line,
+    PathElement::Point(68.99%, 76.03%),
+    PathElement::Cubic(68.87%, 75.60%, 68.81%, 75.17%),
+    PathElement::Point(68.84%, 74.75%),
+    PathElement::Line,
+    PathElement::Point(68.79%, 74.36%),
+    PathElement::Cubic(68.49%, 73.62%, 68.47%, 72.79%),
+    PathElement::Point(68.68%, 71.94%),
+    PathElement::Line,
+    PathElement::Point(68.52%, 70.29%),
+    PathElement::Cubic(68.34%, 69.72%, 68.28%, 69.15%),
+    PathElement::Point(68.34%, 68.61%),
+    PathElement::Cubic(68.02%, 67.74%, 68.07%, 66.78%),
+    PathElement::Point(68.41%, 65.79%),
+    PathElement::Line,
+    PathElement::Point(68.37%, 63.70%),
+    PathElement::Cubic(68.31%, 63.35%, 68.30%, 63.01%),
+    PathElement::Point(68.34%, 62.68%),
+    PathElement::Line,
+    PathElement::Point(68.33%, 62.13%),
+    PathElement::Cubic(68.11%, 61.39%, 68.16%, 60.60%),
+    PathElement::Point(68.41%, 59.80%),
+    PathElement::Line,
+    PathElement::Point(68.36%, 57.08%),
+    PathElement::Cubic(68.31%, 56.75%, 68.31%, 56.42%),
+    PathElement::Point(68.34%, 56.10%),
+    PathElement::Line,
+    PathElement::Point(68.34%, 55.84%),
+    PathElement::Cubic(68.32%, 55.85%, 68.30%, 55.86%),
+    PathElement::Point(68.29%, 55.86%),
+    PathElement::Cubic(67.86%, 56.20%, 67.39%, 56.48%),
+    PathElement::Point(66.89%, 56.70%),
+    PathElement::Line,
+    PathElement::Point(66.63%, 56.86%),
+    PathElement::Cubic(66.08%, 57.36%, 65.37%, 57.76%),
+    PathElement::Point(64.54%, 58.07%),
+    PathElement::Cubic(64.08%, 58.41%, 63.59%, 58.69%),
+    PathElement::Point(63.07%, 58.91%),
+    PathElement::Cubic(62.15%, 59.58%, 60.90%, 60.03%),
+    PathElement::Point(59.48%, 60.28%),
+    PathElement::Line,
+    PathElement::Point(59.15%, 60.43%),
+    PathElement::Cubic(58.48%, 60.86%, 57.66%, 61.16%),
+    PathElement::Point(56.74%, 61.35%),
+    PathElement::Line,
+    PathElement::Point(56.59%, 61.41%),
+    PathElement::Cubic(55.92%, 61.85%, 55.10%, 62.15%),
+    PathElement::Point(54.19%, 62.34%),
+    PathElement::Line,
+    PathElement::Point(54.04%, 62.40%),
+    PathElement::Cubic(53.72%, 62.61%, 53.37%, 62.78%),
+    PathElement::Point(52.98%, 62.93%),
+    PathElement::Cubic(52.47%, 63.24%, 51.93%, 63.49%),
+    PathElement::Point(51.37%, 63.67%),
+    PathElement::Cubic(50.69%, 64.08%, 49.88%, 64.38%),
+    PathElement::Point(48.97%, 64.57%),
+    PathElement::Cubic(48.81%, 64.66%, 48.64%, 64.74%),
+    PathElement::Point(48.47%, 64.82%),
+    PathElement::Cubic(47.45%, 65.45%, 46.10%, 65.84%),
+    PathElement::Point(44.60%, 66.02%),
+    PathElement::Cubic(44.43%, 66.07%, 44.26%, 66.12%),
+    PathElement::Point(44.09%, 66.16%),
+    PathElement::Cubic(42.67%, 66.65%, 40.92%, 66.71%),
+    PathElement::Point(39.10%, 66.46%),
+    PathElement::Cubic(38.64%, 66.52%, 38.17%, 66.54%),
+    PathElement::Point(37.69%, 66.51%),
+    PathElement::Cubic(37.38%, 66.53%, 37.06%, 66.52%),
+    PathElement::Point(36.73%, 66.50%),
+    PathElement::Cubic(36.30%, 66.52%, 35.88%, 66.52%),
+    PathElement::Point(35.47%, 66.48%),
+    PathElement::Cubic(34.21%, 66.61%, 32.85%, 66.41%),
+    PathElement::Point(31.50%, 65.96%),
+    PathElement::Line,
+    PathElement::Point(31.33%, 65.95%),
+    PathElement::Cubic(30.68%, 65.98%, 30.02%, 65.92%),
+    PathElement::Point(29.35%, 65.77%),
+    PathElement::Cubic(28.87%, 65.76%, 28.40%, 65.72%),
+    PathElement::Point(27.95%, 65.66%),
+    PathElement::Cubic(26.25%, 65.61%, 24.49%, 64.95%),
+    PathElement::Point(22.90%, 63.96%),
+    PathElement::Cubic(22.07%, 63.77%, 21.31%, 63.53%),
+    PathElement::Point(20.63%, 63.22%),
+    PathElement::Cubic(19.25%, 62.80%, 18.01%, 61.94%),
+    PathElement::Point(16.98%, 60.84%),
+    PathElement::Line,
+    PathElement::Point(16.18%, 60.34%),
+    PathElement::Cubic(15.99%, 60.24%, 15.81%, 60.13%),
+    PathElement::Point(15.63%, 60.02%),
+    PathElement::Cubic(13.69%, 59.19%, 12.36%, 57.36%),
+    PathElement::Point(11.73%, 55.27%),
+    PathElement::Line,
+    PathElement::Point(11.65%, 55.15%),
+    PathElement::Cubic(11.12%, 54.58%, 10.72%, 53.99%),
+    PathElement::Point(10.49%, 53.39%),
+    PathElement::Cubic(9.83%, 52.61%, 9.49%, 51.63%),
+    PathElement::Point(9.42%, 50.57%),
+    PathElement::Cubic(9.06%, 50.02%, 8.81%, 49.46%),
+    PathElement::Point(8.69%, 48.90%),
+    PathElement::Cubic(8.14%, 48.03%, 7.97%, 46.97%),
+    PathElement::Point(8.11%, 45.85%),
+    PathElement::Line,
+    PathElement::Point(8.06%, 45.67%),
+    PathElement::Cubic(7.78%, 45.08%, 7.62%, 44.48%),
+    PathElement::Point(7.60%, 43.90%),
+    PathElement::Cubic(7.19%, 43.08%, 7.11%, 42.14%),
+    PathElement::Point(7.31%, 41.16%),
+    PathElement::Cubic(7.21%, 40.82%, 7.17%, 40.47%),
+    PathElement::Point(7.17%, 40.13%),
+    PathElement::Line,
+    PathElement::Point(7.10%, 39.63%),
+    PathElement::Cubic(6.81%, 38.97%, 6.75%, 38.24%),
+    PathElement::Point(6.87%, 37.48%),
+    PathElement::Cubic(6.80%, 37.19%, 6.77%, 36.90%),
+    PathElement::Point(6.77%, 36.62%),
+    PathElement::Line,
+    PathElement::Point(6.67%, 36.00%),
+    PathElement::Cubic(6.42%, 35.42%, 6.34%, 34.78%),
+    PathElement::Point(6.41%, 34.13%),
+    PathElement::Cubic(6.31%, 33.73%, 6.26%, 33.34%),
+    PathElement::Point(6.28%, 32.96%),
+    PathElement::Line,
+    PathElement::Point(6.26%, 32.80%),
+    PathElement::Cubic(5.91%, 32.01%, 5.88%, 31.12%),
+    PathElement::Point(6.10%, 30.20%),
+    PathElement::Line,
+    PathElement::Point(5.80%, 27.53%),
+    PathElement::Cubic(5.67%, 27.20%, 5.59%, 26.85%),
+    PathElement::Point(5.57%, 26.49%),
+    PathElement::Line,
+    PathElement::Point(5.09%, 24.58%),
+    PathElement::Cubic(4.80%, 24.00%, 4.64%, 23.41%),
+    PathElement::Point(4.61%, 22.84%),
+    PathElement::Cubic(4.18%, 21.98%, 4.13%, 20.97%),
+    PathElement::Point(4.36%, 19.93%),
+    PathElement::Line,
+    PathElement::Point(4.11%, 18.14%),
+    PathElement::Cubic(4.01%, 17.91%, 3.95%, 17.67%),
+    PathElement::Point(3.90%, 17.43%),
+    PathElement::Line,
+    PathElement::Point(3.46%, 15.96%),
+    PathElement::Cubic(3.26%, 15.61%, 3.12%, 15.24%),
+    PathElement::Point(3.04%, 14.85%),
+    PathElement::Line,
+    PathElement::Point(2.85%, 14.43%),
+    PathElement::Cubic(0.00%, 10.46%, 5.76%, 2.43%),
+    PathElement::Point(11.62%, 2.21%),
+    PathElement::Cubic(16.75%, -0.00%, 27.12%, 4.46%),
+    PathElement::Point(27.41%, 9.00%),
+    PathElement::Line,
+    PathElement::Point(27.51%, 9.33%),
+    PathElement::Cubic(28.14%, 10.19%, 28.51%, 11.09%),
+    PathElement::Point(28.51%, 11.97%),
+    PathElement::Cubic(28.72%, 12.44%, 28.84%, 12.95%),
+    PathElement::Point(28.87%, 13.49%),
+    PathElement::Cubic(29.42%, 14.42%, 29.69%, 15.36%),
+    PathElement::Point(29.59%, 16.26%),
+    PathElement::Cubic(29.76%, 16.85%, 29.78%, 17.49%),
+    PathElement::Point(29.68%, 18.16%),
+    PathElement::Line,
+    PathElement::Point(29.70%, 18.35%),
+    PathElement::Cubic(29.81%, 18.75%, 29.86%, 19.16%),
+    PathElement::Point(29.83%, 19.55%),
+    PathElement::Line,
+    PathElement::Point(30.54%, 23.00%),
+    PathElement::Cubic(31.15%, 24.01%, 31.45%, 25.04%),
+    PathElement::Point(31.31%, 26.00%),
+    PathElement::Cubic(31.46%, 26.58%, 31.48%, 27.20%),
+    PathElement::Point(31.37%, 27.84%),
+    PathElement::Line,
+    PathElement::Point(31.44%, 28.88%),
+    PathElement::Cubic(31.68%, 29.54%, 31.77%, 30.20%),
+    PathElement::Point(31.67%, 30.83%),
+    PathElement::Line,
+    PathElement::Point(31.75%, 31.79%),
+    PathElement::Cubic(31.76%, 31.85%, 31.77%, 31.91%),
+    PathElement::Point(31.78%, 31.97%),
+    PathElement::Cubic(32.11%, 32.73%, 32.23%, 33.49%),
+    PathElement::Point(32.10%, 34.21%),
+    PathElement::Line,
+    PathElement::Point(32.14%, 34.62%),
+    PathElement::Cubic(32.23%, 34.98%, 32.27%, 35.34%),
+    PathElement::Point(32.26%, 35.72%),
+    PathElement::Cubic(32.55%, 36.44%, 32.65%, 37.16%),
+    PathElement::Point(32.53%, 37.84%),
+    PathElement::Line,
+    PathElement::Point(32.57%, 38.35%),
+    PathElement::Cubic(32.66%, 38.69%, 32.69%, 39.05%),
+    PathElement::Point(32.68%, 39.42%),
+    PathElement::Cubic(32.81%, 39.86%, 32.87%, 40.30%),
+    PathElement::Point(32.83%, 40.73%),
+    PathElement::Line,
+    PathElement::Point(33.25%, 43.03%),
+    PathElement::Cubic(33.27%, 43.11%, 33.29%, 43.20%),
+    PathElement::Point(33.30%, 43.28%),
+    PathElement::Line,
+    PathElement::Point(33.35%, 43.56%),
+    PathElement::Line,
+    PathElement::Point(34.10%, 45.71%),
+    PathElement::Line,
+    PathElement::Point(34.35%, 46.18%),
+    PathElement::Cubic(34.76%, 46.24%, 35.15%, 46.33%),
+    PathElement::Point(35.53%, 46.45%),
+    PathElement::Line,
+    PathElement::Point(35.82%, 46.50%),
+    PathElement::Cubic(36.09%, 46.50%, 36.36%, 46.52%),
+    PathElement::Point(36.63%, 46.56%),
+    PathElement::Cubic(36.94%, 46.53%, 37.25%, 46.53%),
+    PathElement::Point(37.55%, 46.54%),
+    PathElement::Cubic(37.64%, 46.51%, 37.74%, 46.49%),
+    PathElement::Point(37.83%, 46.47%),
+    PathElement::Cubic(38.43%, 46.23%, 39.09%, 46.05%),
+    PathElement::Point(39.80%, 45.93%),
+    PathElement::Cubic(40.66%, 45.34%, 41.60%, 44.91%),
+    PathElement::Point(42.60%, 44.72%),
+    PathElement::Cubic(42.76%, 44.63%, 42.93%, 44.55%),
+    PathElement::Point(43.11%, 44.47%),
+    PathElement::Cubic(43.76%, 44.12%, 44.45%, 43.86%),
+    PathElement::Point(45.17%, 43.73%),
+    PathElement::Line,
+    PathElement::Point(45.33%, 43.68%),
+    PathElement::Cubic(46.07%, 43.22%, 46.88%, 42.90%),
+    PathElement::Point(47.73%, 42.74%),
+    PathElement::Line,
+    PathElement::Point(48.26%, 42.56%),
+    PathElement::Cubic(48.60%, 42.38%, 48.98%, 42.24%),
+    PathElement::Point(49.37%, 42.12%),
+    PathElement::Cubic(49.95%, 41.65%, 50.60%, 41.28%),
+    PathElement::Point(51.31%, 41.04%),
+    PathElement::Line,
+    PathElement::Point(52.15%, 40.58%),
+    PathElement::Cubic(52.44%, 40.39%, 52.75%, 40.22%),
+    PathElement::Point(53.09%, 40.07%),
+    PathElement::Line,
+    PathElement::Point(53.20%, 40.01%),
+    PathElement::Cubic(53.45%, 39.67%, 53.75%, 39.36%),
+    PathElement::Point(54.10%, 39.10%),
+    PathElement::Line,
+    PathElement::Point(54.78%, 38.31%),
+    PathElement::Cubic(55.07%, 37.73%, 55.46%, 37.22%),
+    PathElement::Point(55.97%, 36.79%),
+    PathElement::Line,
+    PathElement::Point(56.64%, 35.95%),
+    PathElement::Cubic(56.77%, 35.76%, 56.92%, 35.58%),
+    PathElement::Point(57.09%, 35.39%),
+    PathElement::Line,
+    PathElement::Point(57.68%, 34.30%),
+    PathElement::Line,
+    PathElement::Point(57.86%, 33.75%),
+    PathElement::Cubic(57.83%, 32.77%, 58.05%, 31.86%),
+    PathElement::Point(58.59%, 31.10%),
+    PathElement::Cubic(58.63%, 30.88%, 58.69%, 30.65%),
+    PathElement::Point(58.77%, 30.43%),
+    PathElement::Cubic(58.85%, 29.80%, 59.05%, 29.21%),
+    PathElement::Point(59.39%, 28.69%),
+    PathElement::Cubic(59.41%, 28.12%, 59.57%, 27.52%),
+    PathElement::Point(59.83%, 26.93%),
+    PathElement::Cubic(60.35%, 25.31%, 61.31%, 23.90%),
+    PathElement::Point(62.72%, 23.07%),
+    PathElement::Cubic(65.57%, 19.48%, 75.68%, 18.36%),
+    PathElement::Point(79.73%, 21.18%),
+    PathElement::Cubic(80.11%, 21.38%, 80.46%, 21.61%),
+    PathElement::Point(80.77%, 21.85%),
+    PathElement::Cubic(82.50%, 22.53%, 83.91%, 23.45%),
+    PathElement::Point(84.65%, 24.56%),
+    PathElement::Cubic(85.00%, 24.95%, 85.32%, 25.39%),
+    PathElement::Point(85.59%, 25.85%),
+    PathElement::Line,
+    PathElement::Point(86.12%, 26.50%),
+    PathElement::Cubic(87.48%, 27.47%, 88.48%, 28.59%),
+    PathElement::Point(88.83%, 29.76%),
+    PathElement::Cubic(89.11%, 30.29%, 89.30%, 30.87%),
+    PathElement::Point(89.42%, 31.48%),
+    PathElement::Line,
+    PathElement::Point(90.14%, 33.27%),
+    PathElement::Cubic(90.97%, 34.24%, 91.48%, 35.26%),
+    PathElement::Point(91.52%, 36.27%),
+    PathElement::Cubic(91.76%, 36.84%, 91.86%, 37.46%),
+    PathElement::Point(91.86%, 38.12%),
+    PathElement::Line,
+    PathElement::Point(92.19%, 39.66%),
+    PathElement::Cubic(92.77%, 40.59%, 93.05%, 41.55%),
+    PathElement::Point(92.94%, 42.46%),
+    PathElement::Cubic(93.13%, 42.99%, 93.19%, 43.56%),
+    PathElement::Point(93.14%, 44.16%),
+    PathElement::Line,
+    PathElement::Point(93.37%, 45.97%),
+    PathElement::Cubic(93.92%, 47.01%, 94.14%, 48.07%),
+    PathElement::Point(93.93%, 49.03%),
+    PathElement::Cubic(94.03%, 49.61%, 93.99%, 50.22%),
+    PathElement::Point(93.84%, 50.85%),
+    PathElement::Line,
+    PathElement::Point(93.79%, 53.21%),
+    PathElement::Cubic(94.04%, 54.02%, 94.09%, 54.81%),
+    PathElement::Point(93.87%, 55.54%),
+    PathElement::Line,
+    PathElement::Point(93.86%, 56.10%),
+    PathElement::Cubic(93.90%, 56.42%, 93.89%, 56.75%),
+    PathElement::Point(93.84%, 57.08%),
+    PathElement::Line,
+    PathElement::Point(93.79%, 59.80%),
+    PathElement::Cubic(94.04%, 60.60%, 94.09%, 61.39%),
+    PathElement::Point(93.87%, 62.13%),
+    PathElement::Line,
+    PathElement::Point(93.86%, 62.68%),
+    PathElement::Cubic(93.90%, 63.01%, 93.89%, 63.35%),
+    PathElement::Point(93.83%, 63.70%),
+    PathElement::Line,
+    PathElement::Point(93.79%, 65.77%),
+    PathElement::Cubic(93.94%, 66.35%, 93.97%, 66.93%),
+    PathElement::Point(93.85%, 67.48%),
+    PathElement::Line,
+    PathElement::Point(94.02%, 70.78%),
+    PathElement::Cubic(94.31%, 71.52%, 94.41%, 72.26%),
+    PathElement::Point(94.26%, 72.96%),
+    PathElement::Line,
+    PathElement::Point(94.31%, 73.66%),
+    PathElement::Cubic(94.36%, 73.95%, 94.38%, 74.24%),
+    PathElement::Point(94.36%, 74.55%),
+    PathElement::Line,
+    PathElement::Point(94.43%, 75.52%),
+    PathElement::Cubic(94.50%, 75.85%, 94.53%, 76.18%),
+    PathElement::Point(94.51%, 76.51%),
+    PathElement::Line,
+    PathElement::Point(94.81%, 78.00%),
+    PathElement::Cubic(95.05%, 78.50%, 95.18%, 79.00%),
+    PathElement::Point(95.19%, 79.50%),
+    PathElement::Line,
+    PathElement::Point(95.37%, 80.17%),
+    PathElement::Cubic(95.58%, 80.58%, 95.72%, 80.99%),
+    PathElement::Point(95.77%, 81.41%),
+    PathElement::Line,
+    PathElement::Point(95.79%, 81.47%),
+    PathElement::Cubic(96.44%, 82.29%, 96.84%, 83.16%),
+    PathElement::Point(96.89%, 84.02%),
+    PathElement::Cubic(97.00%, 84.22%, 97.09%, 84.44%),
+    PathElement::Point(97.16%, 84.67%),
+    PathElement::Cubic(100.00%, 88.42%, 96.38%, 96.25%),
+    PathElement::Point(91.01%, 97.24%),
+    PathElement::Cubic(86.72%, 100.00%, 76.29%, 97.46%),
+    PathElement::Point(74.26%, 93.39%),
+    PathElement::Cubic(73.77%, 92.88%, 73.38%, 92.35%),
+    PathElement::Point(73.10%, 91.82%),
+    PathElement::Cubic(72.44%, 91.00%, 72.09%, 89.97%),
+    PathElement::Point(72.02%, 88.86%),
+    PathElement::Close
+] 
+    width=17.03% y=14.81% x=10.69% height=38.61%/>
+<Rectangle width=13.12% height=29.26% y=14.03% x=35.28%/>
