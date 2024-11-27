@@ -1,0 +1,35 @@
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: ff-real-headline-pro;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+#pax-logo {
+    margin: 0 auto 100px auto;
+    width: 350px;
+}
+
+h1 {
+    font-size: 108px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 64px;
+
+}
+
+.panel {
+    height: 100vh;  /* Sets height to 100% of viewport height */
+    width: 90vw;    /* Full width */
+    display: flex;  /* Enables flex layout for centering content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;  /* Allows absolute positioning of children if needed */
+    padding: 0 5vw;
+}
