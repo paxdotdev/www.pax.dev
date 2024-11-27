@@ -16,16 +16,9 @@
     </head>
     <body>
         <link rel="stylesheet" href="https://use.typekit.net/ivu7epf.css">
-        <div id="mount">
+        <link rel="stylesheet" href="styles/site.css">
+        <div id="content">
+            <h1><img alt="Pax" src="assets/pax-logo-white-on-black.png" /></h1>
         </div>
-        <script src="pax-interface-web.js"></script>
-        <script>
-            if (typeof window.Pax.mount === 'function') {
-                const basePath = window.location.origin + window.location.pathname;
-                window.Pax.mount("#mount", basePath + "pax-cartridge");
-            } else {
-                console.error("Pax cartridge failed to load or was malformed.");
-            }
-        </script>
     </body>
 </html>
