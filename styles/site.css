@@ -23,6 +23,10 @@ h2 {
 
 }
 
+strong {
+    font-weight: 400;
+}
+
 .panel {
     height: 100vh;  /* Sets height to 100% of viewport height */
     width: 90vw;    /* Full width */
