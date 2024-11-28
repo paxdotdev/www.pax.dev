@@ -30,6 +30,16 @@ strong {
     font-weight: 400;
 }
 
+button {
+    background-color: ;
+    border: 2px solid black;
+}
+
+.inverted {
+    background-color: white;
+    color: black;
+}
+
 .panel {
     height: 100vh;  /* Sets height to 100% of viewport height */
     width: 90vw;    /* Full width */
