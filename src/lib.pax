@@ -1,130 +1,179 @@
-<Group width=100% height=65px y=0.00% x=-0.00%>
-    <Stacker direction=StackerDirection::Horizontal x=1.93px sizes=[Some(12.27%), Some(9.03%), Some(11.25%), Some(9.36%), None] 
-        width=897.06px height=65.00px>
-        <Image x=10px height=85px width=85px y=-12px source=ImageSource::Url("assets/logo-white-on-transparent.png") skew_x=0.00rad 
-            skew_y=0.00rad rotate=0.00rad/>
-        <Link url="https://docs.pax.dev/" target=Target::New>
-            <Text width=100% height=100% text="Docs" style={
-                font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                y=100.00% x=0.00%/>
-        </Link>
-        <Link url="https://discord.com/invite/Eq8KWAUc6b" target=Target::New>
-            <Text width=96.13% height=100% text="Discord" style={
-                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                y=0.00%/>
-        </Link>
-        <Link url="https://www.github.com/paxdotdev/pax" target=Target::New>
-            <Text width=100% height=100% text="GitHub" style={
-                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-                font_size: 20px
-                fill: WHITE
-                underline: false
-                align_vertical: TextAlignVertical::Center
-                align_horizontal: TextAlignHorizontal::Center
-                align_multiline: TextAlignHorizontal::Center
-            } 
-                x=0.00% y=0.00%/>
-        </Link>
-    </Stacker>
-    <Rectangle fill=BLACK stroke={
-        color: rgba(100, 116, 139, 255)
-        width: 1.00px
-    } corner_radii={
-        top_left: 0
-        top_right: 0
-        bottom_left: 7
-        bottom_right: 5
-    }/>
-</Group>
-<Group width=90% x=50% y=0.00% height=146.18%>
-    <Group id=section_1 y=0.00% x=82.44% height=68.40%>
-        <Stacker y=100.00% x=100.00% sizes=[Some(75px), None]>
-            <Group />
-            <Stacker height=100% x=50% width=100% y=50% direction={PaxDotDev::get_stacker_direction($mobile)} sizes=[Some(55.52%), None]>
-                <Stacker height=100% width=95% x=49.99% y=50% direction=StackerDirection::Vertical gutter=25px 
-                    sizes=[Some(23.75%), Some(25.95%), Some(19.54%), Some(31.58%)]>
-                    <Image source=ImageSource::Url("assets/logo-black-on-transparent.png") y={100% + 50px * (1 - (1 * $mobile))}/>
-                    if !$mobile {
-                        <Group x=100.00% y=0.00%>
-                            <Text x=0.00% width=100% y=100.00% text="Build with words.<br />Control the details." class=h1 height=100%/>
-                        </Group>
-                    }
-                    <Group>
-                        <Text y=0.00% x=0.00% width=100% text="Pax is a revolutionary new canvas for building apps &amp; websites with AI." class=h2 
-                            height=165.07px/>
-                    </Group>
-                    <Stacker height=100% width=100% y=50px x=50% direction=StackerDirection::Horizontal>
-                        <Link width=200px height=75px x={100% - 5px} y=10px target=Target::New 
-                            url="https://airtable.com/appCUQtUS9g4kuQZL/pagGMVOPv9AH1cNJS/form">
-                            <Button x=49.99% y=50.00% width=100% height=75px label="Try it now" color=BLACK style={
-                                font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Light)}
-                                font_size: 25px
-                                fill: WHITE
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Center
-                            } 
-                                outline={
-                                    color: rgba(100, 116, 139, 255)
-                                    width: 1.00px
-                                }/>
-                        </Link>
-                        <Link width=200px height=75px x=5px y=10px target=Target::New url="https://www.github.com/paxdotdev/pax">
-                            <Button x=100.00% y=0.00% width=100% height=100% label="GitHub" color=rgba(0, 0, 0, 0) style={
-                                font: Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Normal)
-                                font_size: 26.00px
-                                fill: rgba(0, 0, 0, 255)
-                                align_vertical: TextAlignVertical::Center
-                                align_horizontal: TextAlignHorizontal::Center
-                                align_multiline: TextAlignHorizontal::Center
-                                underline: false
-                            } 
-                                outline={
-                                    color: rgba(3, 3, 3, 255)
-                                    width: 1.00px
-                                } hover_color=rgba(100, 116, 139, 255)/>
-                        </Link>
-                    </Stacker>
-                </Stacker>
-                <YoutubeVideo width=100% url="https://www.youtube.com/embed/o8pkhbyb1Yo?si=uHno4d-n2O7ejp21" y=50.00% x=0.00% height=75%/>
-            </Stacker>
-        </Stacker>
-    </Group>
-</Group>
-
-@settings {
-    @mount: handle_mount
-    .h1 {
-        style: {
-            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::Bold)}
-            font_size: {PaxDotDev::get_responsive_text_size($mobile) * 2.25}
-            underline: false
-            align_vertical: TextAlignVertical::Bottom
-            align_horizontal: TextAlignHorizontal::Center
-            align_multiline: TextAlignHorizontal::Center
-        }
-    }
-    .h2 {
-        style: {
-            font: {Font::Web("ff-real-headline-pro", "https://use.typekit.net/ivu7epf.css", FontStyle::Normal, FontWeight::ExtraLight)}
-            font_size: {PaxDotDev::get_responsive_text_size($mobile) * 1.65}
-            underline: false
-            align_vertical: TextAlignVertical::Top
-            align_horizontal: TextAlignHorizontal::Center
-            align_multiline: TextAlignHorizontal::Center
-        }
-    }
-}
+<Checkbox width=3.33% y=18.87% x=1.65% height=2.93%/>
+<Stacker width=10.58% y=46.93% height=32.82% x=41.22% rotate=180.00deg>
+    <Rectangle fill=rgb(150, 150, 150)/>
+    <Rectangle fill=rgb(210, 210, 210)/>
+    <Rectangle fill=rgb(150, 150, 150) x=-841.67% y=481.25%/>
+</Stacker>
+<Rectangle width=6.09% y=16.76% x=42.90% height=13.49%/>
+<Path stroke={
+    color: hsla(0.61%, 23, 118, 255)
+    width: 0px
+} fill=BLACK elements=[
+    PathElement::Point(72.43%, 88.31%),
+    PathElement::Cubic(72.26%, 89.00%, 72.01%, 89.64%),
+    PathElement::Point(71.66%, 90.19%),
+    PathElement::Cubic(71.38%, 91.15%, 70.75%, 92.06%),
+    PathElement::Point(69.88%, 92.87%),
+    PathElement::Line,
+    PathElement::Point(69.87%, 92.88%),
+    PathElement::Cubic(69.16%, 94.90%, 66.76%, 96.48%),
+    PathElement::Point(63.96%, 97.35%),
+    PathElement::Cubic(63.44%, 97.69%, 62.91%, 97.99%),
+    PathElement::Point(62.36%, 98.23%),
+    PathElement::Cubic(61.02%, 99.02%, 59.19%, 99.27%),
+    PathElement::Point(57.26%, 99.11%),
+    PathElement::Line,
+    PathElement::Point(56.03%, 99.29%),
+    PathElement::Cubic(53.93%, 100.00%, 51.20%, 99.34%),
+    PathElement::Point(48.80%, 97.98%),
+    PathElement::Line,
+    PathElement::Point(42.05%, 95.60%),
+    PathElement::Cubic(41.33%, 95.46%, 40.66%, 95.26%),
+    PathElement::Point(40.06%, 95.00%),
+    PathElement::Cubic(38.73%, 94.64%, 37.49%, 93.76%),
+    PathElement::Point(36.44%, 92.61%),
+    PathElement::Line,
+    PathElement::Point(25.67%, 85.72%),
+    PathElement::Cubic(25.18%, 85.48%, 24.71%, 85.22%),
+    PathElement::Point(24.29%, 84.94%),
+    PathElement::Cubic(22.86%, 84.20%, 21.74%, 82.78%),
+    PathElement::Point(21.00%, 81.10%),
+    PathElement::Line,
+    PathElement::Point(5.17%, 61.10%),
+    PathElement::Cubic(4.99%, 60.92%, 4.83%, 60.74%),
+    PathElement::Point(4.67%, 60.55%),
+    PathElement::Cubic(3.29%, 59.31%, 2.66%, 57.25%),
+    PathElement::Point(2.67%, 55.05%),
+    PathElement::Line,
+    PathElement::Point(0.94%, 47.82%),
+    PathElement::Cubic(0.68%, 47.22%, 0.49%, 46.61%),
+    PathElement::Point(0.41%, 46.02%),
+    PathElement::Cubic(0.00%, 44.80%, 0.12%, 43.36%),
+    PathElement::Point(0.61%, 41.91%),
+    PathElement::Line,
+    PathElement::Point(0.80%, 37.06%),
+    PathElement::Cubic(0.80%, 37.01%, 0.80%, 36.97%),
+    PathElement::Point(0.80%, 36.92%),
+    PathElement::Cubic(0.43%, 35.00%, 1.52%, 32.78%),
+    PathElement::Point(3.28%, 30.91%),
+    PathElement::Line,
+    PathElement::Point(9.66%, 20.58%),
+    PathElement::Cubic(9.80%, 20.28%, 9.95%, 19.99%),
+    PathElement::Point(10.11%, 19.72%),
+    PathElement::Cubic(10.78%, 18.14%, 12.48%, 16.82%),
+    PathElement::Point(14.56%, 15.92%),
+    PathElement::Line,
+    PathElement::Point(24.33%, 8.93%),
+    PathElement::Cubic(24.58%, 8.71%, 24.84%, 8.50%),
+    PathElement::Point(25.10%, 8.31%),
+    PathElement::Cubic(26.39%, 7.07%, 28.53%, 6.44%),
+    PathElement::Point(30.85%, 6.34%),
+    PathElement::Line,
+    PathElement::Point(52.19%, 1.00%),
+    PathElement::Cubic(52.68%, 0.81%, 53.18%, 0.66%),
+    PathElement::Point(53.67%, 0.55%),
+    PathElement::Cubic(55.21%, 0.00%, 57.14%, 0.11%),
+    PathElement::Point(59.06%, 0.66%),
+    PathElement::Line,
+    PathElement::Point(72.15%, 1.45%),
+    PathElement::Cubic(72.44%, 1.44%, 72.74%, 1.44%),
+    PathElement::Point(73.02%, 1.45%),
+    PathElement::Cubic(74.93%, 1.29%, 77.03%, 2.14%),
+    PathElement::Point(78.86%, 3.52%),
+    PathElement::Line,
+    PathElement::Point(84.49%, 6.12%),
+    PathElement::Cubic(84.95%, 6.27%, 85.39%, 6.44%),
+    PathElement::Point(85.81%, 6.64%),
+    PathElement::Cubic(87.42%, 7.19%, 88.81%, 8.54%),
+    PathElement::Point(89.83%, 10.21%),
+    PathElement::Line,
+    PathElement::Point(95.10%, 15.44%),
+    PathElement::Cubic(97.06%, 16.69%, 98.01%, 19.36%),
+    PathElement::Point(98.04%, 22.13%),
+    PathElement::Line,
+    PathElement::Point(99.19%, 27.95%),
+    PathElement::Cubic(99.41%, 28.54%, 99.56%, 29.13%),
+    PathElement::Point(99.63%, 29.70%),
+    PathElement::Cubic(100.00%, 31.00%, 99.78%, 32.52%),
+    PathElement::Point(99.15%, 34.02%),
+    PathElement::Line,
+    PathElement::Point(98.41%, 40.50%),
+    PathElement::Cubic(98.41%, 40.82%, 98.40%, 41.13%),
+    PathElement::Point(98.37%, 41.44%),
+    PathElement::Cubic(98.45%, 43.12%, 97.46%, 44.94%),
+    PathElement::Point(95.95%, 46.51%),
+    PathElement::Line,
+    PathElement::Point(94.12%, 49.58%),
+    PathElement::Cubic(93.88%, 50.19%, 93.59%, 50.75%),
+    PathElement::Point(93.24%, 51.25%),
+    PathElement::Cubic(92.65%, 52.44%, 91.46%, 53.48%),
+    PathElement::Point(89.99%, 54.29%),
+    PathElement::Line,
+    PathElement::Point(86.97%, 57.13%),
+    PathElement::Cubic(85.75%, 58.91%, 83.05%, 59.92%),
+    PathElement::Point(80.14%, 60.15%),
+    PathElement::Line,
+    PathElement::Point(74.09%, 61.66%),
+    PathElement::Cubic(73.48%, 61.91%, 72.87%, 62.10%),
+    PathElement::Point(72.26%, 62.21%),
+    PathElement::Cubic(70.85%, 62.68%, 69.12%, 62.60%),
+    PathElement::Point(67.39%, 62.15%),
+    PathElement::Line,
+    PathElement::Point(59.96%, 61.98%),
+    PathElement::Cubic(59.23%, 62.08%, 58.51%, 62.10%),
+    PathElement::Point(57.83%, 62.02%),
+    PathElement::Cubic(56.50%, 62.11%, 55.07%, 61.72%),
+    PathElement::Point(53.69%, 61.01%),
+    PathElement::Line,
+    PathElement::Point(34.51%, 56.75%),
+    PathElement::Cubic(29.21%, 56.67%, 23.70%, 48.31%),
+    PathElement::Point(26.12%, 44.02%),
+    PathElement::Cubic(26.20%, 39.20%, 35.39%, 34.19%),
+    PathElement::Point(40.10%, 36.39%),
+    PathElement::Line,
+    PathElement::Point(59.97%, 41.01%),
+    PathElement::Line,
+    PathElement::Point(68.43%, 41.35%),
+    PathElement::Line,
+    PathElement::Point(72.87%, 40.35%),
+    PathElement::Line,
+    PathElement::Point(74.06%, 39.31%),
+    PathElement::Line,
+    PathElement::Point(75.71%, 36.75%),
+    PathElement::Line,
+    PathElement::Point(76.46%, 31.35%),
+    PathElement::Line,
+    PathElement::Point(75.76%, 27.19%),
+    PathElement::Line,
+    PathElement::Point(72.95%, 24.27%),
+    PathElement::Line,
+    PathElement::Point(68.84%, 22.25%),
+    PathElement::Line,
+    PathElement::Point(57.52%, 21.42%),
+    PathElement::Line,
+    PathElement::Point(37.33%, 26.28%),
+    PathElement::Line,
+    PathElement::Point(28.97%, 32.08%),
+    PathElement::Line,
+    PathElement::Point(23.67%, 40.38%),
+    PathElement::Line,
+    PathElement::Point(23.45%, 43.38%),
+    PathElement::Line,
+    PathElement::Point(24.92%, 50.17%),
+    PathElement::Line,
+    PathElement::Point(39.56%, 68.97%),
+    PathElement::Line,
+    PathElement::Point(50.20%, 75.99%),
+    PathElement::Line,
+    PathElement::Point(50.73%, 76.19%),
+    PathElement::Cubic(52.35%, 72.72%, 55.94%, 69.51%),
+    PathElement::Point(59.28%, 69.61%),
+    PathElement::Cubic(64.06%, 67.63%, 72.88%, 72.98%),
+    PathElement::Point(72.71%, 77.75%),
+    PathElement::Line,
+    PathElement::Point(73.59%, 81.23%),
+    PathElement::Cubic(74.58%, 83.20%, 73.93%, 85.92%),
+    PathElement::Point(72.43%, 88.31%),
+    PathElement::Close
+] 
+    x=15.18% y=33.96% width=18.85% height=36.38%/>
