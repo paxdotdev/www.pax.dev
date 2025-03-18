@@ -1,93 +1,318 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pax</title>
-        <!-- Google tag (gtag.js) -->
-         <script async src="https://www.googletagmanager.com/gtag/js?id=G-MG3GLRDHYR"></script>
-         <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-         gtag('js', new Date());
-    
-         gtag('config', 'G-MG3GLRDHYR');
-         </script>
-    </head>
-    <body>
-        <link rel="stylesheet" href="https://use.typekit.net/ivu7epf.css">
-        <link rel="stylesheet" href="/styles/reset.css">
-        <link rel="stylesheet" href="/styles/site.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pax - Fix User Interfaces</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
 
-        <div class="panel">
-            <img id="pax-logo" alt="Pax" src="assets/pax-logo-white-on-black.png" />
-            <h2 class="center">
-                A visual portal<br />into your codebase
-            </h2>
-            [video]<br />
+        body {
+            color: #000;
+            background-color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-            <h3 class="center">Build native apps & websites<br/>
-                using a visual canvas, AI chat, and code.</h3>
-        </div>
-        <div class="panel">
-            <h3>
-                Pax is a developer tool for building native apps & web pages.
-                <br /><br/>
-                User interface engine with a highly declarative user interface language
-                Attaches to codebase (currently Rust; JavaScript/TypeScript and other languages coming soon.)
-                <br /><br />
-                And attaches to visual design tool
-                Declarative language can be read & written by a visual design tool
-                And collaborated on with a visual copilot and multiplayer teammates [coming soon, Pax Pro: get early access]
-            </h3>
+        /* Typography */
+        h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p, li {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            margin-bottom: 1rem;
+        }
+
+        /* Scrolling slideshow sections */
+        section {
+            padding: 5vh 5vw;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Alternating backgrounds */
+        section:nth-child(odd) {
+            color: #fff;
+            background-color: #000;
+        }
+
+        section:nth-child(even) {
+            color: #000;
+            background-color: #fff;
+        }
+
+        /* CTA buttons */
+        .cta-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .cta-primary {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-secondary {
+            background-color: transparent;
+            color: inherit;
+            border: 2px solid currentColor;
+            border-radius: 4px;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        section:nth-child(even) .cta-primary {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* List styling */
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Layout helpers */
+        .content-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Grid for problems section */
+        .problems-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        /* Media queries */
+        @media (min-width: 768px) {
+            .problems-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 767px) {
+            section {
+                min-height: 100vh;
+                padding: 4vh 5vw;
+            }
+        }
+
+        /* Desktop adjustments */
+        @media (min-width: 768px) {
+            section {
+                min-height: 100vh;
+                padding: 5vh 10vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        /* Technical details section */
+        .technical-details {
+            background-color: rgba(0, 0, 0, 0.03);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        /* Diagram placeholder */
+        .diagram {
+            width: 100%;
+            height: 300px;
+            border: 2px dashed currentColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="content-container">
+            <h1>User interfaces are broken.</h1>
+            <p style="font-size: clamp(1.5rem, 3vw, 2rem);">Pax is an open source project on a mission to fix them.</p>
             
+            <div class="cta-container">
+                <a href="#" class="cta-primary">Get Started</a>
+                <a href="#" class="cta-secondary">Docs</a>
+                <a href="#" class="cta-secondary">GitHub</a>
+                <a href="#" class="cta-secondary">Discord</a>
+            </div>
         </div>
-        <div class="panel">
-            <h1>Open Source</h1>
-            <h2>
-                Both the cross-platform rendering runtimes and the vector design tool<br />
-                that reads & writes .pax files are 100% free, MIT licensed.
-            </h2>
-            <h3>
-                Mission statement: Building software should be as intuitive as Minecraft, and as creatively expressive as painting.<br />
-                By empowering more creators with higher fidelity creative tools, we aim to improve the (digital) human condition.
-            </h3>
-            <button onclick="window.location.href='https://github.com/paxproject'">GitHub</button>
-        </div>
-        <div class="panel">
-            <h1>Pax Pro</h1>
-            <h2>
-                We're developing a team collaboration portal that seeks to bring<br />
-                human imagination closer to the metal.
-            </h2>
-            <h3>
-                Pax Pro is a place to collaborate with AI and teammates,<br />
-                using visual and AI chat tools to perform surgery on a codebase.<br />
-                Non-developers can fetch the latest from GitHub and publish their work as pull requests.
-            </h3>
-            <button>Get Early Access</button>
-        </div>
+    </section>
 
-        <div class="panel">
-            <h1>How it works</h1>
-            <h2>Two pieces that work together...</h2>
-            <!-- Placeholder for readme snippet -->
-            <div class="links">
-                <a href="/docs">Docs</a>
-                <a href="https://github.com/paxproject">GitHub</a>
+    <!-- Problems Section -->
+    <section id="problems">
+        <div class="content-container">
+            <h2>What's broken, exactly?</h2>
+            <p>The way the world creates apps & websites is complicated, inaccessible, and anti-artistic:</p>
+            
+            <div class="problems-grid">
+                <div class="problem">
+                    <h3>Too complicated</h3>
+                    <ul>
+                        <li>Sprawling landscape</li>
+                        <li>Unintuitive layout systems, complicated legacy standards, responsiveness</li>
+                        <li>Toolchains and collaboration flows</li>
+                    </ul>
+                </div>
+                
+                <div class="problem">
+                    <h3>Not accessible to enough of humanity</h3>
+                    <ul>
+                        <li>Too technical</li>
+                        <li>Need WYSIWYG</li>
+                        <li>Needs to empower collaboration with AI</li>
+                    </ul>
+                </div>
+                
+                <div class="problem">
+                    <h3>Should empower artist expression</h3>
+                    <ul>
+                        <li>Very few people can create because you must be technical. Visual artists shouldn't need to be highly technical.</li>
+                        <li>Creative tooling should be part of the spec</li>
+                        <li>APIs designed for design & creativity — simplicity, modern foundation instead of legacy, animations, with room to expand into game engine-like</li>
+                        <li>No-code is not the answer — cutting off code cuts off control & ownership, and limits art</li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="panel">
-            <h1>Get involved</h1>
-            <div class="newsletter-signup">
-                <!-- Add newsletter form here -->
+    <!-- Solutions Section -->
+    <section id="solutions">
+        <div class="content-container">
+            <h2>And how does Pax seek to fix these problems?</h2>
+            
+            <h3>Designed for visual & AI creation</h3>
+            <p>Uniquely, Pax enables creating user interfaces visually and with AI tools, hand-in-hand with writing code.</p>
+            
+            <h3>Reduce complication</h3>
+            <ul>
+                <li>Build once, deploy to any device — because Pax is built at a very low level — the same level as operating systems and web browsers — Pax targets web browsers (via WASM) and operating systems with native conventions, GPU rendering, and unmatched performance.</li>
+                <li>Simplified, intuitive layout systems</li>
+                <li>Hermetic separation between markup language & application code — keeps UI definitions clean & simple, with compiler-level enforcement</li>
+            </ul>
+            
+            <h3>Design for all of humanity</h3>
+            <ul>
+                <li>100% free & open source</li>
+                <li>Visual & AI tooling, with complete code control</li>
+                <li>a11y out of the box</li>
+            </ul>
+            
+            <h3>Empower art</h3>
+            <ul>
+                <li>Creative tooling for artists, empower the creative human spirit</li>
+                <li>"With code" Pax's philosophy is "with code" — inviting non-coders to contribute to the same codebases as developers, using code as a system of record, through visual & AI creative tools.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- How it works Section -->
+    <section id="how-it-works">
+        <div class="content-container">
+            <h2>How does it work?</h2>
+            
+            <p>Pax enables describing "anything you might build with React or SwiftUI" and "anything you might design in Photoshop or Figma".</p>
+            
+            <p>By building both a classic UI development tool and a visual creative tool around the same foundation, Pax unlocks a fundamentally better way to create user interfaces: collaboratively, across developers, designers, artists, and AI — using a codebase as the system of record.</p>
+            
+            <p>Pax is initially focused on today's professionals, while laying the infrastructure for the billions of creators around the corner.</p>
+            
+            <h3>A bit more technically:</h3>
+            
+            <div class="technical-details">
+                <p>The crux of Pax's invention is a declarative user interface description language — union of a markup language (like HTML) and an expression language (like Excel). These user interface definitions attach to a programming language — allowing Turing-complete application logic while keeping user interface definitions 100% declarative, enforced at the language and compiler level.</p>
+                
+                <div class="diagram">[Separation of concerns with application code — diagram]</div>
+                
+                <p>Further, Pax is designed to render in "design tool space" — the same intuitive coordinate system used by tools like Powerpoint or Google Slides, as well as professional creative tools like Photoshop and Figma.</p>
             </div>
-            <div class="social-links">
-                <a href="https://discord.gg/pax">Chat on Discord</a>
-                <a href="https://twitter.com/paxproject">Follow on X</a>
-                <a href="https://linkedin.com/company/paxproject">LinkedIn</a>
+            
+            <h3>To execute this invention, we needed to build:</h3>
+            <ul>
+                <li>Parser & compiler</li>
+                <li>Rendering engine, GPU rendering, prioritizing portability, performance, and resource efficiency</li>
+                <li>Platform-specific runtimes, native compositing</li>
+                <li>Programming language integrations: Rust [reflection, compiletime integration, runtime integration], TypeScript is planned</li>
+                <li>Layout engine, top-down, responsive by default</li>
+                <li>Build tooling: package into wasm apps or native apps (macOS and iOS alpha)</li>
+                <li>Pax Designer: a vector design tool that reads & writes code</li>
+                <li>Pax Visual AI: ICL prompt that teaches Pax and enables visual AI collaboration</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Try it out Section -->
+    <section id="try-it-out">
+        <div class="content-container">
+            <h2>How can I try it out?</h2>
+            
+            <p>Today, building with Pax requires familiarity with the Rust programming language. If you're comfortable with Rust and a terminal, get started here.</p>
+            
+            <p>In the near future, we plan to expand Pax's programming language support to include TypeScript, and possibly other languages like Python, Swift, C++, and Go.</p>
+            
+            <p>Check out the docs for instructions on getting started.<br>
+            Also check out the GitHub repo to run examples or contribute to the project.</p>
+            
+            <div class="cta-container">
+                <a href="#" class="cta-primary">Get Started</a>
+                <a href="#" class="cta-secondary">Docs</a>
+                <a href="#" class="cta-secondary">GitHub</a>
+                <a href="#" class="cta-secondary">Discord</a>
             </div>
         </div>
-    </body>
+    </section>
+</body>
 </html>
