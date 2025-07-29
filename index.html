@@ -1,318 +1,410 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pax - Fix User Interfaces</title>
-    <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        body {
-            color: #000;
-            background-color: #fff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Typography */
-        h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-        }
-
-        h2 {
-            font-size: clamp(2rem, 6vw, 4rem);
-            font-weight: 800;
-            margin-bottom: 2rem;
-            line-height: 1.2;
-        }
-
-        h3 {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        p, li {
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            margin-bottom: 1rem;
-        }
-
-        /* Scrolling slideshow sections */
-        section {
-            padding: 5vh 5vw;
-            position: relative;
-            width: 100%;
-        }
-
-        /* Alternating backgrounds */
-        section:nth-child(odd) {
-            color: #fff;
-            background-color: #000;
-        }
-
-        section:nth-child(even) {
-            color: #000;
-            background-color: #fff;
-        }
-
-        /* CTA buttons */
-        .cta-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .cta-primary {
-            background-color: #fff;
-            color: #000;
-            border: none;
-            border-radius: 4px;
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-secondary {
-            background-color: transparent;
-            color: inherit;
-            border: 2px solid currentColor;
-            border-radius: 4px;
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        section:nth-child(even) .cta-primary {
-            background-color: #000;
-            color: #fff;
-        }
-
-        /* List styling */
-        ul {
-            margin-left: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Layout helpers */
-        .content-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* Grid for problems section */
-        .problems-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        /* Media queries */
-        @media (min-width: 768px) {
-            .problems-grid {
-                grid-template-columns: repeat(3, 1fr);
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pax - Mobile, web, and desktop apps in Rust</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
-        }
 
-        /* Mobile adjustments */
-        @media (max-width: 767px) {
-            section {
-                min-height: 100vh;
-                padding: 4vh 5vw;
+            body {
+                font-family: "ff-real-headline-pro", sans-serif;
+                font-weight: 100;
+                font-style: normal;
+                color: #000;
+                background-color: #fff;
+                line-height: 1.6;
+                overflow-x: hidden;
+                font-size: 1.5rem;
             }
-        }
 
-        /* Desktop adjustments */
-        @media (min-width: 768px) {
-            section {
+            h1,
+            h2 {
+                font-weight: 300;
+            }
+
+            /* Panel Layout */
+            .panel {
                 min-height: 100vh;
-                padding: 5vh 10vw;
+                width: 100%;
+                padding: 4rem 2rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
             }
-        }
 
-        /* Technical details section */
-        .technical-details {
-            background-color: rgba(0, 0, 0, 0.03);
-            padding: 2rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-        }
+            .panel-double {
+                min-height: 200vh;
+            }
 
-        /* Diagram placeholder */
-        .diagram {
-            width: 100%;
-            height: 300px;
-            border: 2px dashed currentColor;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 2rem 0;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="content-container">
-            <h1>User interfaces are broken.</h1>
-            <p style="font-size: clamp(1.5rem, 3vw, 2rem);">Pax is an open source project on a mission to fix them.</p>
-            
-            <div class="cta-container">
-                <a href="#" class="cta-primary">Get Started</a>
-                <a href="#" class="cta-secondary">Docs</a>
-                <a href="#" class="cta-secondary">GitHub</a>
-                <a href="#" class="cta-secondary">Discord</a>
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            /* Navigation */
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 2rem;
+                z-index: 100;
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+
+            .logo {
+                height: 140px;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 2rem;
+
+            }
+
+            .nav-links a {
+                font-weight: 500;
+                font-size: 1.5rem;
+                color: #000;
+                text-decoration: none;
+            }
+
+            .get-started {
+                background-color: #000;
+                color: #fff !important;
+                padding: 0.5rem 1.75rem 0.5rem 0.95rem;
+                margin-top: -5px;
+                border-radius: 0;
+                text-decoration: none;
+                clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
+            }
+
+            /* Hero Section (Panel 1) */
+            .hero {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding-top: 5rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+                max-width: 800px;
+                margin: 1.5rem auto;
+                line-height: 1.2;
+                font-weight: 300;
+            }
+
+            .features-list {
+                font-size: 1.5rem;
+                margin: 2rem 0;
+
+            .features-list p {
+                margin-bottom: 0.5rem;
+            }
+
+            .github-button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #000;
+                color: #fff;
+                padding: 0.875rem 1.5rem 0.875rem 1.5rem;
+                border-radius: 0;
+                text-decoration: none;
+                font-weight: 400;
+                position: relative;
+                clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
+                min-width: 210px;
+            }
+
+            .github-button svg {
+                height: 1.5rem;
+                width: 1.5rem;
+                margin-left: 0.625rem;
+                position: relative;
+                top: 2px;
+            }
+
+            /* Common heading styles */
+            h2 {
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+                display: flex;
+                align-items: center;
+                font-weight: 300;
+                line-height: 1.2;
+            }
+
+            /* Diamond shape */
+            .diamond {
+                width: 2rem;
+                height: 2rem;
+                background-color: #000;
+                transform: rotate(45deg);
+                display: inline-block;
+                margin-left: 1.5rem;
+            }
+
+            .open-source h2 .diamond {
+                display: none;
+            }
+
+            .features-description {
+                font-size: 1.25rem;
+                max-width: 900px;
+                margin-bottom: 2rem;
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    sans-serif;
+            }
+
+            .features-description a {
+                color: #000;
+                text-decoration: underline;
+                font-weight: 500;
+            }
+
+            .footnote {
+                font-size: 0.9rem;
+                max-width: 900px;
+                margin-top: 2rem;
+            }
+
+            .center-content {
+                display: flex;
+                justify-content: center;
+                margin: 3rem 0;
+            }
+
+            /* Ship to any device (Panel 3) */
+            .ship-to-device-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 2.5rem;
+                width: fit-content;
+            }
+
+            .ship-to-device h2 {
+                font-size: 2.5rem;
+                font-weight: 300;
+                display: inline-block;
+                margin-bottom: 0;
+                line-height: 1.3;
+            }
+
+            /* Open Source Panel */
+            .open-source {
+                text-align: center;
+            }
+
+            .open-source h2 {
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+                font-weight: 300;
+                display: inline-block;
+                text-align: center;
+            }
+
+            .open-source .features-description {
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+
+            .open-source .features-description a {
+                text-decoration: underline;
+                font-weight: 300;
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .panel {
+                    padding: 3rem 1.5rem;
+                }
+
+                .hero h1 {
+                    font-size: 2rem;
+                }
+
+                .features-list {
+                    font-size: 1.2rem;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                .nav-links {
+                    gap: 1rem;
+                }
+
+                .diamond {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="https://use.typekit.net/jyv0izi.css" />
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="#">
+                <img class="logo" src="assets/logo-black-on-transparent.png" />
+            </a>
+            <div class="nav-links">
+                <a href="https://github.com/paxproject">GitHub</a>
+                <a href="#">Docs</a>
+                <a href="#" class="get-started">Get Started</a>
             </div>
-        </div>
-    </section>
+        </nav>
 
-    <!-- Problems Section -->
-    <section id="problems">
-        <div class="content-container">
-            <h2>What's broken, exactly?</h2>
-            <p>The way the world creates apps & websites is complicated, inaccessible, and anti-artistic:</p>
-            
-            <div class="problems-grid">
-                <div class="problem">
-                    <h3>Too complicated</h3>
-                    <ul>
-                        <li>Sprawling landscape</li>
-                        <li>Unintuitive layout systems, complicated legacy standards, responsiveness</li>
-                        <li>Toolchains and collaboration flows</li>
-                    </ul>
+        <!-- Panel 1: Hero Section -->
+        <section class="panel hero">
+            <div class="container">
+                <h1>
+                    A modern UI language and rendering engine for desktop,
+                    mobile, and browser apps
+                </h1>
+                <div class="features-list">
+                    <p>Build user interfaces declaratively & reactively.</p>
+                    <p>Write logic in Rust with extreme performance.</p>
+                    <p>Ship to any device.</p>
                 </div>
-                
-                <div class="problem">
-                    <h3>Not accessible to enough of humanity</h3>
-                    <ul>
-                        <li>Too technical</li>
-                        <li>Need WYSIWYG</li>
-                        <li>Needs to empower collaboration with AI</li>
-                    </ul>
+                <a href="https://github.com/paxproject" class="github-button">
+                    Pax on GitHub<svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="white"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M12 0C5.374 0 0 5.373 0 12C0 17.302 3.438 21.8 8.207 23.387C8.806 23.498 9 23.126 9 22.81V20.576C5.662 21.302 4.967 19.16 4.967 19.16C4.421 17.773 3.634 17.404 3.634 17.404C2.545 16.659 3.717 16.675 3.717 16.675C4.922 16.759 5.556 17.912 5.556 17.912C6.626 19.746 8.363 19.216 9.048 18.909C9.155 18.134 9.466 17.604 9.81 17.305C7.145 17 4.343 15.971 4.343 11.374C4.343 10.063 4.812 8.993 5.579 8.153C5.455 7.85 5.044 6.629 5.696 4.977C5.696 4.977 6.704 4.655 8.997 6.207C9.954 5.941 10.98 5.808 12 5.803C13.02 5.808 14.047 5.941 15.006 6.207C17.297 4.655 18.303 4.977 18.303 4.977C18.956 6.63 18.545 7.851 18.421 8.153C19.191 8.993 19.656 10.064 19.656 11.374C19.656 15.983 16.849 16.998 14.177 17.295C14.607 17.667 15 18.397 15 19.517V22.81C15 23.129 15.192 23.504 15.801 23.386C20.566 21.797 24 17.3 24 12C24 5.373 18.627 0 12 0Z"
+                        />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Panel 2: Build Anything in 2D -->
+        <section class="panel build-2d">
+            <div class="container">
+                <h2>Build anything in 2D <span class="diamond"></span></h2>
+                <p class="features-description">
+                    Make apps, websites, games, visualizations, and more – Pax
+                    is an open-ended and extensible toolkit for building
+                    interfaces on screens.
+                </p>
+                <p class="features-description">
+                    Features include 2D vector drawing on the GPU*, animations,
+                    text, interactions, responsive layouts, gradients, form
+                    controls, custom composable components, screen reader
+                    support, scrolling, clipping/occlusion, and raster image
+                    rendering.
+                </p>
+                <p class="footnote">
+                    * GPU rendering is available under a feature flag and CPU
+                    rendering is the default fallback until GPU rendering is
+                    production-ready. See the roadmap.
+                </p>
+            </div>
+        </section>
+
+        <!-- Panel 3: Ship to any device -->
+        <section class="panel ship-to-device">
+            <div class="container">
+                <h2>Ship to any device* <span class="diamond"></span></h2>
+                <div class="ship-to-device-content">
+                    <p class="features-description">
+                        Pax is written in Rust and runs on metal, interfacing as
+                        directly as practical with the target's CPU, GPU, and
+                        memory.
+                    </p>
+                    <p class="features-description">
+                        This enables Pax to be highly portable and performant,
+                        achieving up to 240FPS rendering, runnable natively on
+                        practically any computer or mobile device.
+                    </p>
+                    <p class="features-description">
+                        Pax's primary design challenge is to offer high-level
+                        ergonomics, inspired by HTML & CSS
+                        <a href="#">among others</a>, while prioritizing
+                        portability, performance, and resource efficiency.
+                    </p>
+                    <p class="footnote">
+                        * Pax is designed to target any native desktop or mobile
+                        operating system, and could be extended to embedded
+                        devices. However, during beta Pax targets only the web
+                        browser via WebAssembly, with feature-incomplete alpha
+                        support for native macOS and iOS.
+                    </p>
                 </div>
-                
-                <div class="problem">
-                    <h3>Should empower artist expression</h3>
-                    <ul>
-                        <li>Very few people can create because you must be technical. Visual artists shouldn't need to be highly technical.</li>
-                        <li>Creative tooling should be part of the spec</li>
-                        <li>APIs designed for design & creativity — simplicity, modern foundation instead of legacy, animations, with room to expand into game engine-like</li>
-                        <li>No-code is not the answer — cutting off code cuts off control & ownership, and limits art</li>
-                    </ul>
+            </div>
+        </section>
+
+        <!-- Panel 4: Free & open source -->
+        <section class="panel open-source">
+            <div class="container text-center">
+                <h2>Free & open source</h2>
+
+                <div class="center-content">
+                    <a
+                        href="https://github.com/paxproject"
+                        class="github-button"
+                    >
+                        Pax on GitHub<svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="white"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12C0 17.302 3.438 21.8 8.207 23.387C8.806 23.498 9 23.126 9 22.81V20.576C5.662 21.302 4.967 19.16 4.967 19.16C4.421 17.773 3.634 17.404 3.634 17.404C2.545 16.659 3.717 16.675 3.717 16.675C4.922 16.759 5.556 17.912 5.556 17.912C6.626 19.746 8.363 19.216 9.048 18.909C9.155 18.134 9.466 17.604 9.81 17.305C7.145 17 4.343 15.971 4.343 11.374C4.343 10.063 4.812 8.993 5.579 8.153C5.455 7.85 5.044 6.629 5.696 4.977C5.696 4.977 6.704 4.655 8.997 6.207C9.954 5.941 10.98 5.808 12 5.803C13.02 5.808 14.047 5.941 15.006 6.207C17.297 4.655 18.303 4.977 18.303 4.977C18.956 6.63 18.545 7.851 18.421 8.153C19.191 8.993 19.656 10.064 19.656 11.374C19.656 15.983 16.849 16.998 14.177 17.295C14.607 17.667 15 18.397 15 19.517V22.81C15 23.129 15.192 23.504 15.801 23.386C20.566 21.797 24 17.3 24 12C24 5.373 18.627 0 12 0Z"
+                            />
+                        </svg>
+                    </a>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Solutions Section -->
-    <section id="solutions">
-        <div class="content-container">
-            <h2>And how does Pax seek to fix these problems?</h2>
-            
-            <h3>Designed for visual & AI creation</h3>
-            <p>Uniquely, Pax enables creating user interfaces visually and with AI tools, hand-in-hand with writing code.</p>
-            
-            <h3>Reduce complication</h3>
-            <ul>
-                <li>Build once, deploy to any device — because Pax is built at a very low level — the same level as operating systems and web browsers — Pax targets web browsers (via WASM) and operating systems with native conventions, GPU rendering, and unmatched performance.</li>
-                <li>Simplified, intuitive layout systems</li>
-                <li>Hermetic separation between markup language & application code — keeps UI definitions clean & simple, with compiler-level enforcement</li>
-            </ul>
-            
-            <h3>Design for all of humanity</h3>
-            <ul>
-                <li>100% free & open source</li>
-                <li>Visual & AI tooling, with complete code control</li>
-                <li>a11y out of the box</li>
-            </ul>
-            
-            <h3>Empower art</h3>
-            <ul>
-                <li>Creative tooling for artists, empower the creative human spirit</li>
-                <li>"With code" Pax's philosophy is "with code" — inviting non-coders to contribute to the same codebases as developers, using code as a system of record, through visual & AI creative tools.</li>
-            </ul>
-        </div>
-    </section>
+                <p class="features-description">
+                    Pax started as a sabbatical project by
+                    <a href="#">Zack Brown</a>, then became incubated through a
+                    company along with <a href="#">Warfa Jibril</a> and
+                    <a href="#">Samuel Selleck</a>, backed by South Park Commons
+                    and some other cool people.
+                </p>
 
-    <!-- How it works Section -->
-    <section id="how-it-works">
-        <div class="content-container">
-            <h2>How does it work?</h2>
-            
-            <p>Pax enables describing "anything you might build with React or SwiftUI" and "anything you might design in Photoshop or Figma".</p>
-            
-            <p>By building both a classic UI development tool and a visual creative tool around the same foundation, Pax unlocks a fundamentally better way to create user interfaces: collaboratively, across developers, designers, artists, and AI — using a codebase as the system of record.</p>
-            
-            <p>Pax is initially focused on today's professionals, while laying the infrastructure for the billions of creators around the corner.</p>
-            
-            <h3>A bit more technically:</h3>
-            
-            <div class="technical-details">
-                <p>The crux of Pax's invention is a declarative user interface description language — union of a markup language (like HTML) and an expression language (like Excel). These user interface definitions attach to a programming language — allowing Turing-complete application logic while keeping user interface definitions 100% declarative, enforced at the language and compiler level.</p>
-                
-                <div class="diagram">[Separation of concerns with application code — diagram]</div>
-                
-                <p>Further, Pax is designed to render in "design tool space" — the same intuitive coordinate system used by tools like Powerpoint or Google Slides, as well as professional creative tools like Photoshop and Figma.</p>
-            </div>
-            
-            <h3>To execute this invention, we needed to build:</h3>
-            <ul>
-                <li>Parser & compiler</li>
-                <li>Rendering engine, GPU rendering, prioritizing portability, performance, and resource efficiency</li>
-                <li>Platform-specific runtimes, native compositing</li>
-                <li>Programming language integrations: Rust [reflection, compiletime integration, runtime integration], TypeScript is planned</li>
-                <li>Layout engine, top-down, responsive by default</li>
-                <li>Build tooling: package into wasm apps or native apps (macOS and iOS alpha)</li>
-                <li>Pax Designer: a vector design tool that reads & writes code</li>
-                <li>Pax Visual AI: ICL prompt that teaches Pax and enables visual AI collaboration</li>
-            </ul>
-        </div>
-    </section>
+                <p class="features-description">
+                    Pax's long-term mission is two-fold: (1) to empower art on
+                    screens and (2) to enable more of humanity to create
+                    software.
+                </p>
 
-    <!-- Try it out Section -->
-    <section id="try-it-out">
-        <div class="content-container">
-            <h2>How can I try it out?</h2>
-            
-            <p>Today, building with Pax requires familiarity with the Rust programming language. If you're comfortable with Rust and a terminal, get started here.</p>
-            
-            <p>In the near future, we plan to expand Pax's programming language support to include TypeScript, and possibly other languages like Python, Swift, C++, and Go.</p>
-            
-            <p>Check out the docs for instructions on getting started.<br>
-            Also check out the GitHub repo to run examples or contribute to the project.</p>
-            
-            <div class="cta-container">
-                <a href="#" class="cta-primary">Get Started</a>
-                <a href="#" class="cta-secondary">Docs</a>
-                <a href="#" class="cta-secondary">GitHub</a>
-                <a href="#" class="cta-secondary">Discord</a>
+                <p class="features-description">
+                    Pax is licensed MIT or Apache 2.0, at your choice.
+                </p>
             </div>
-        </div>
-    </section>
-</body>
+        </section>
+    </body>
 </html>
