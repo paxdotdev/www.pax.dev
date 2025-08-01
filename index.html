@@ -89,15 +89,17 @@
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                padding-top: 5rem;
+                padding-top: 2rem;
+
             }
 
-            .hero h1 {
+            h1 {
                 font-size: 3rem;
                 max-width: 800px;
-                margin: 1.5rem auto;
+                margin: 0 auto;
                 line-height: 1.2;
                 font-weight: 300;
+                margin-bottom: 2rem;
             }
 
             .features-list {
@@ -303,24 +305,26 @@
                 </h1>
                 <div class="features-list">
                     <p>Build user interfaces declaratively & reactively</p>
-                    <p>Write logic in Rust with extreme performance</p>
+                    <p>Build apps with Rust for extreme performance</p>
                     <p>Ship to any device</p>
                 </div>
-                <div style="transform: scale(1.4)">
-                    <span style="font-weight: 200; font-size: 1.2rem">
-                    Free & Open Source
-                    </span>
-                <span>
-                    <a
+                <div style="display: flex; align-items: center; justify-content: center;">
+                  <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
+                    <div style="display: flex; align-items: center; font-size: 1.5rem; font-weight: 200">
+                      Free & Open Source
+                    </div>
+                    <div style="display: flex; align-items: center; transform: translateY(5px) translateX(20px) scale(1.4)">
+                      <a
                         class="github-button"
                         href="https://github.com/paxdotdev/pax"
                         data-color-scheme="no-preference: dark_high_contrast; light: light; dark: dark;"
                         data-size="large"
                         data-show-count="true"
                         aria-label="Star paxdotdev/pax on GitHub"
-                        >Star</a
-                    >
-                </span></div>
+                      >Star</a>
+                    </div>
+                  </div>
+                </div>
 
             </div>
         </section>
@@ -517,7 +521,7 @@
         <!-- Panel 3: Ship to any device -->
         <section class="panel ship-to-device">
             <div class="container">
-                <h2>Ship to any device² <span class="diamond"></span></h2>
+                <h2>Ship to any device <span class="diamond"></span></h2>
                 <div class="ship-to-device-content">
                     <p class="features-description">
                         Pax is written in Rust and compiles to run on the metal, interfacing as
