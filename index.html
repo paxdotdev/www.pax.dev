@@ -16,11 +16,6 @@
                 font-size: 1.5rem;
             }
 
-            h1,
-            h2 {
-                font-weight: 300;
-            }
-
             /* Panel Layout */
             .panel {
                 min-height: 100vh;
@@ -65,7 +60,7 @@
             }
 
             .nav-links a {
-                font-weight: 100;
+                font-weight: 200;
                 font-size: 1.3rem;
                 color: #000;
                 text-decoration: none;
@@ -76,6 +71,7 @@
                 color: #fff !important;
                 padding: 0.5rem 1.75rem 0.5rem 0.95rem;
                 margin-top: -7px;
+                margin-right: 50px;
                 border-radius: 0;
                 text-decoration: none;
                 clip-path: polygon(
@@ -118,7 +114,7 @@
             /* Common heading styles */
             h2 {
                 font-size: 2.5rem;
-                margin-bottom: 3rem;
+                margin-bottom: 0;
                 display: flex;
                 align-items: center;
                 font-weight: 300;
@@ -310,8 +306,11 @@
                     <p>Write logic in Rust with extreme performance</p>
                     <p>Ship to any device</p>
                 </div>
-
                 <div style="transform: scale(1.4)">
+                    <span style="font-weight: 200; font-size: 1.2rem">
+                    Free & Open Source
+                    </span>
+                <span>
                     <a
                         class="github-button"
                         href="https://github.com/paxdotdev/pax"
@@ -321,7 +320,8 @@
                         aria-label="Star paxdotdev/pax on GitHub"
                         >Star</a
                     >
-                </div>
+                </span></div>
+
             </div>
         </section>
 
@@ -440,6 +440,10 @@
                                 <td>✅</td>
                             </tr>
                             <tr>
+                                <td>Embedded expression language (PAXEL)</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
                                 <td>Responsive Layouts</td>
                                 <td>✅</td>
                             </tr>
@@ -516,7 +520,7 @@
                 <h2>Ship to any device² <span class="diamond"></span></h2>
                 <div class="ship-to-device-content">
                     <p class="features-description">
-                        Pax is written in Rust and runs on metal, interfacing as
+                        Pax is written in Rust and compiles to run on the metal, interfacing as
                         directly as practical with the target's CPU, GPU, and
                         memory.
                     </p>
