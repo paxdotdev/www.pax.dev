@@ -125,6 +125,12 @@
                 line-height: 1.2;
             }
 
+            h3 {
+                font-weight: 200;
+                font-size: 1.7rem;
+                margin-bottom: 0;
+            }
+
             /* Diamond shape */
             .diamond {
                 width: 2rem;
@@ -328,11 +334,12 @@
                     more – Pax is an open-ended and extensible toolkit for
                     building interfaces on screens.
                 </p>
+                <h3>Current status:</h3>
                 <div class="flex-container" id="container">
                     <table class="flex-item">
                         <thead>
                             <!-- <tr> -->
-                                <th colspan="2" class="category">Rendering</th>
+                                <th colspan="2" class="category">Rendering Engine</th>
                             </tr>
                             <tr>
                                 <th>Feature</th>
@@ -341,14 +348,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>2D Vector Drawing on GPU</td>
+                                <td>2D Vector Drawing</td>
                                 <td>
-                                    ✅<br /><span class="footnote"
-                                        >GPU rendering is available under a feature
-                                        flag and CPU rendering is the default
-                                        fallback until GPU rendering is
-                                        production-ready</span
-                                    >
+                                    ✅
                                 </td>
                             </tr>
                             <tr>
@@ -376,13 +378,21 @@
                                 <td>✅</td>
                             </tr>
                             <tr>
+                                <td>GPU rendering</td>
+                                <td>☑️ Alpha<br /><span class="footnote"
+                                    >GPU rendering is available under a feature
+                                    flag, but CPU rendering is the default
+                                    fallback until GPU rendering is production-ready.</span
+                                ></td>
+                            </tr>
+                            <tr>
                                 <td>Opacity</td>
                                 <td>
-                                    Planned<br />
+                                    ☑️ In Progress<br />
                                     <span class="footnote"
                                         >Opacity is currently supported via alpha
                                         channels on colors and gradients. Nested
-                                        element opacity requires engine
+                                        element opacity requires
                                         implementation.</span
                                     >
                                 </td>
@@ -414,11 +424,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Interactions</td>
-                                <td>✅</td>
-                            </tr>
-                            <tr>
-                                <td>Responsive Layouts</td>
+                                <td>Extensible Component System</td>
                                 <td>✅</td>
                             </tr>
                             <tr>
@@ -426,12 +432,30 @@
                                 <td>✅</td>
                             </tr>
                             <tr>
-                                <td>Extensible Component System</td>
+                                <td>Interactions & Events</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Reactive state system</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Responsive Layouts</td>
                                 <td>✅</td>
                             </tr>
                             <tr>
                                 <td>Screen Reader Support</td>
                                 <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Pax Designer</td>
+                                <td>
+                                    ☑️ In Progress<br /><span class="footnote">
+                                        Pax Designer is a visual + AI creative tool that reads & writes Pax definitions.
+                                        An alpha implementation is available on GitHub under the
+                                        pax-designer directory.
+                                    </span>
+                                </td>
                             </tr>
                             <tr>
                                 <td>JavaScript Language Support</td>
@@ -441,16 +465,7 @@
                                 <td>Python Language Support</td>
                                 <td>Planned</td>
                             </tr>
-                            <tr>
-                                <td>Pax Designer</td>
-                                <td>
-                                    In Progress<br /><span class="footnote">
-                                        Pax Designer is a visual + AI creative tool that reads & writes Pax definitions.
-                                        An alpha implementation is available on GitHub under the
-                                        pax-designer directory.
-                                    </span>
-                                </td>
-                            </tr>
+
                         </tbody>
                     </table>
 
@@ -467,15 +482,15 @@
                         <tbody>
                             <tr>
                                 <td>Web</td>
-                                <td>Beta</td>
+                                <td>✅ Beta</td>
                             </tr>
                             <tr>
                                 <td>iOS</td>
-                                <td>Alpha</td>
+                                <td>☑️ Alpha</td>
                             </tr>
                             <tr>
                                 <td>macOS</td>
-                                <td>Alpha</td>
+                                <td>☑️ Alpha</td>
                             </tr>
                             <tr>
                                 <td>Linux</td>
