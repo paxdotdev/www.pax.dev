@@ -5,12 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pax - Mobile, web, and desktop apps in Rust</title>
         <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
             body {
                 font-family: "ff-real-headline-pro", sans-serif;
                 font-weight: 100;
@@ -68,12 +62,11 @@
             .nav-links {
                 display: flex;
                 gap: 2rem;
-
             }
 
             .nav-links a {
-                font-weight: 500;
-                font-size: 1.5rem;
+                font-weight: 100;
+                font-size: 1.3rem;
                 color: #000;
                 text-decoration: none;
             }
@@ -82,10 +75,16 @@
                 background-color: #000;
                 color: #fff !important;
                 padding: 0.5rem 1.75rem 0.5rem 0.95rem;
-                margin-top: -5px;
+                margin-top: -7px;
                 border-radius: 0;
                 text-decoration: none;
-                clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
+                clip-path: polygon(
+                    0 0,
+                    calc(100% - 18px) 0,
+                    100% 50%,
+                    calc(100% - 18px) 100%,
+                    0 100%
+                );
             }
 
             /* Hero Section (Panel 1) */
@@ -106,34 +105,14 @@
             }
 
             .features-list {
-                font-size: 1.5rem;
-                margin: 2rem 0;
-
+                margin-bottom: 40px;
+            }
             .features-list p {
-                margin-bottom: 0.5rem;
+                margin: 0;
             }
 
             .github-button {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #000;
-                color: #fff;
-                padding: 0.875rem 1.5rem 0.875rem 1.5rem;
-                border-radius: 0;
-                text-decoration: none;
-                font-weight: 400;
-                position: relative;
-                clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
-                min-width: 210px;
-            }
-
-            .github-button svg {
-                height: 1.5rem;
-                width: 1.5rem;
-                margin-left: 0.625rem;
-                position: relative;
-                top: 2px;
+                transform: scale(2);
             }
 
             /* Common heading styles */
@@ -163,25 +142,14 @@
             .features-description {
                 font-size: 1.25rem;
                 max-width: 900px;
-                margin-bottom: 2rem;
-                font-family:
-                    system-ui,
-                    -apple-system,
-                    BlinkMacSystemFont,
-                    "Segoe UI",
-                    sans-serif;
-            }
-
-            .features-description a {
-                color: #000;
-                text-decoration: underline;
-                font-weight: 500;
+                padding-top: 20px;
             }
 
             .footnote {
                 font-size: 0.9rem;
                 max-width: 900px;
-                margin-top: 2rem;
+                line-height: 1.3rem;
+                display: inline-block;
             }
 
             .center-content {
@@ -211,29 +179,72 @@
                 text-align: center;
             }
 
-            .open-source h2 {
-                font-size: 2.5rem;
-                margin-bottom: 3rem;
-                font-weight: 300;
-                display: inline-block;
-                text-align: center;
-            }
-
-            .open-source .features-description {
-                max-width: 800px;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-            }
-
             a {
                 color: #000;
                 text-decoration: none;
             }
 
-            .open-source .features-description a {
-                text-decoration: underline;
-                font-weight: 300;
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                text-align: left;
+                font-size: 1.2rem;
+            }
+            th,
+            td {
+                border: 1px solid #ccc;
+                padding: 0.75rem;
+                text-align: left;
+            }
+            th {
+                background-color: #eaeaea;
+                font-weight: 100;
+                font-size: 1.2rem;
+            }
+
+            tbody tr td:first-child {
+                font-weight: 200;
+            }
+
+            .category {
+                background-color: #f0f0f0;
+                font-weight: bold;
+                text-align: center;
+                font-size: 1.2rem;
+            }
+
+            /* Flexbox container that creates three columns */
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap; /* Allows items to wrap to next line */
+                gap: 20px; /* Space between items */
+                max-width: 1200px;
+                margin: 0 auto;
+                font-size: 1.4rem;
+            }
+
+            /* Each column/item in the flex container */
+            .flex-item {
+                /* Flex-basis calculation: (100% - 2 gaps) / 3 items */
+                flex: 1 1 calc(33.333% - 14px);
+                /* Alternative approach: flex: 1 1 300px; for a minimum width */
+                min-width: 300px; /* Minimum width before wrapping */
+            }
+
+            /* Responsive behavior - stacks vertically on smaller screens */
+            @media (max-width: 768px) {
+                .flex-item {
+                    flex: 1 1 100%; /* Full width on mobile */
+                }
+            }
+
+            /* Optional: Medium screens show 2 columns */
+            @media (min-width: 769px) and (max-width: 1024px) {
+                .flex-item {
+                    flex: 1 1 calc(50% - 10px); /* Two columns on tablets */
+                }
             }
 
             /* Responsive adjustments */
@@ -265,6 +276,8 @@
             }
         </style>
         <link rel="stylesheet" href="https://use.typekit.net/jyv0izi.css" />
+        <!-- Place this tag in your head or just before your close body tag. -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -291,19 +304,18 @@
                     <p>Write logic in Rust with extreme performance</p>
                     <p>Ship to any device</p>
                 </div>
-                <a href="https://github.com/paxproject" class="github-button">
-                    Pax on GitHub<svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="white"
-                        xmlns="http://www.w3.org/2000/svg"
+
+                <div style="transform: scale(1.4)">
+                    <a
+                        class="github-button"
+                        href="https://github.com/paxdotdev/pax"
+                        data-color-scheme="no-preference: dark_high_contrast; light: light; dark: dark;"
+                        data-size="large"
+                        data-show-count="true"
+                        aria-label="Star paxdotdev/pax on GitHub"
+                        >Star</a
                     >
-                        <path
-                            d="M12 0C5.374 0 0 5.373 0 12C0 17.302 3.438 21.8 8.207 23.387C8.806 23.498 9 23.126 9 22.81V20.576C5.662 21.302 4.967 19.16 4.967 19.16C4.421 17.773 3.634 17.404 3.634 17.404C2.545 16.659 3.717 16.675 3.717 16.675C4.922 16.759 5.556 17.912 5.556 17.912C6.626 19.746 8.363 19.216 9.048 18.909C9.155 18.134 9.466 17.604 9.81 17.305C7.145 17 4.343 15.971 4.343 11.374C4.343 10.063 4.812 8.993 5.579 8.153C5.455 7.85 5.044 6.629 5.696 4.977C5.696 4.977 6.704 4.655 8.997 6.207C9.954 5.941 10.98 5.808 12 5.803C13.02 5.808 14.047 5.941 15.006 6.207C17.297 4.655 18.303 4.977 18.303 4.977C18.956 6.63 18.545 7.851 18.421 8.153C19.191 8.993 19.656 10.064 19.656 11.374C19.656 15.983 16.849 16.998 14.177 17.295C14.607 17.667 15 18.397 15 19.517V22.81C15 23.129 15.192 23.504 15.801 23.386C20.566 21.797 24 17.3 24 12C24 5.373 18.627 0 12 0Z"
-                        />
-                    </svg>
-                </a>
+                </div>
             </div>
         </section>
 
@@ -312,22 +324,174 @@
             <div class="container">
                 <h2>Build anything in 2D <span class="diamond"></span></h2>
                 <p class="features-description">
-                    Make apps, websites, games, visualizations, and more – Pax
-                    is an open-ended and extensible toolkit for building
-                    interfaces on screens.
+                    Make apps, interactive websites, games, visualizations, and
+                    more – Pax is an open-ended and extensible toolkit for
+                    building interfaces on screens.
                 </p>
-                <p class="features-description">
-                    Features include 2D vector drawing on the GPU¹, animations,
-                    text, interactions, responsive layouts, gradients, form
-                    controls, an extensible component system, screen reader
-                    support, scrolling, clipping/occlusion, and raster image
-                    rendering.
-                </p>
-                <p class="footnote">
-                    ¹ GPU rendering is available under a feature flag and CPU
-                    rendering is the default fallback until GPU rendering is
-                    production-ready. See the roadmap.
-                </p>
+                <div class="flex-container" id="container">
+                    <table class="flex-item">
+                        <thead>
+                            <!-- <tr> -->
+                                <th colspan="2" class="category">Rendering</th>
+                            </tr>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2D Vector Drawing on GPU</td>
+                                <td>
+                                    ✅<br /><span class="footnote"
+                                        >GPU rendering is available under a feature
+                                        flag and CPU rendering is the default
+                                        fallback until GPU rendering is
+                                        production-ready</span
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Animations</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Text</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Gradients</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Raster Image Rendering</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Scrolling</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Clipping / Occlusion</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Opacity</td>
+                                <td>
+                                    Planned<br />
+                                    <span class="footnote"
+                                        >Opacity is currently supported via alpha
+                                        channels on colors and gradients. Nested
+                                        element opacity requires engine
+                                        implementation.</span
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Masking</td>
+                                <td>Planned</td>
+                            </tr>
+                            <tr>
+                                <td>Blending</td>
+                                <td>Planned</td>
+                            </tr>
+                            <tr>
+                                <td>3D + AR/VR</td>
+                                <td>Planned</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="flex-item">
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="category">Framework</th>
+                            </tr>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Interactions</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Responsive Layouts</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Form Controls</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Extensible Component System</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>Screen Reader Support</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript Language Support</td>
+                                <td>Planned</td>
+                            </tr>
+                            <tr>
+                                <td>Python Language Support</td>
+                                <td>Planned</td>
+                            </tr>
+                            <tr>
+                                <td>Pax Designer</td>
+                                <td>
+                                    In Progress<br /><span class="footnote">
+                                        Pax Designer is a visual + AI creative tool that reads & writes Pax definitions.
+                                        An alpha implementation is available on GitHub under the
+                                        pax-designer directory.
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="flex-item">
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="category">Platforms</th>
+                            </tr>
+                            <tr>
+                                <th>Platform</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Web</td>
+                                <td>Beta</td>
+                            </tr>
+                            <tr>
+                                <td>iOS</td>
+                                <td>Alpha</td>
+                            </tr>
+                            <tr>
+                                <td>macOS</td>
+                                <td>Alpha</td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td>Planned</td>
+                            </tr>
+                            <tr>
+                                <td>Windows</td>
+                                <td>Planned</td>
+                            </tr>
+                            <tr>
+                                <td>Android</td>
+                                <td>Planned</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
@@ -352,13 +516,6 @@
                         <a href="#">among others</a>, while prioritizing
                         portability, performance, and resource efficiency.
                     </p>
-                    <p class="footnote">
-                        ² Pax is designed to target any native desktop or mobile
-                        operating system, and could be extended to embedded
-                        devices. However, during beta Pax targets only the web
-                        browser via WebAssembly, with feature-incomplete alpha
-                        support for native macOS and iOS.
-                    </p>
                 </div>
             </div>
         </section>
@@ -367,25 +524,6 @@
         <section class="panel open-source">
             <div class="container text-center">
                 <h2>Free & open source</h2>
-
-                <div class="center-content">
-                    <a
-                        href="https://github.com/paxproject"
-                        class="github-button"
-                    >
-                        Pax on GitHub<svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="white"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M12 0C5.374 0 0 5.373 0 12C0 17.302 3.438 21.8 8.207 23.387C8.806 23.498 9 23.126 9 22.81V20.576C5.662 21.302 4.967 19.16 4.967 19.16C4.421 17.773 3.634 17.404 3.634 17.404C2.545 16.659 3.717 16.675 3.717 16.675C4.922 16.759 5.556 17.912 5.556 17.912C6.626 19.746 8.363 19.216 9.048 18.909C9.155 18.134 9.466 17.604 9.81 17.305C7.145 17 4.343 15.971 4.343 11.374C4.343 10.063 4.812 8.993 5.579 8.153C5.455 7.85 5.044 6.629 5.696 4.977C5.696 4.977 6.704 4.655 8.997 6.207C9.954 5.941 10.98 5.808 12 5.803C13.02 5.808 14.047 5.941 15.006 6.207C17.297 4.655 18.303 4.977 18.303 4.977C18.956 6.63 18.545 7.851 18.421 8.153C19.191 8.993 19.656 10.064 19.656 11.374C19.656 15.983 16.849 16.998 14.177 17.295C14.607 17.667 15 18.397 15 19.517V22.81C15 23.129 15.192 23.504 15.801 23.386C20.566 21.797 24 17.3 24 12C24 5.373 18.627 0 12 0Z"
-                            />
-                        </svg>
-                    </a>
-                </div>
 
                 <p class="features-description">
                     Pax started as a sabbatical project by
@@ -404,13 +542,6 @@
                 <p class="features-description">
                     Pax is licensed MIT or Apache 2.0, at your choice.
                 </p>
-            </div>
-        </section>
-        <section class="panel whats-next">
-            <div class="container text-center">
-                <h2>What's next?</h2>
-
-                <p class="features-description"></p>
             </div>
         </section>
     </body>
