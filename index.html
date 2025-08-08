@@ -4,281 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pax - Mobile, web, and desktop apps in Rust</title>
-        <style>
-            body {
-                font-family: "ff-real-headline-pro", sans-serif;
-                font-weight: 100;
-                font-style: normal;
-                color: #000;
-                background-color: #fff;
-                line-height: 1.6;
-                overflow-x: hidden;
-                font-size: 1.5rem;
-            }
-
-            /* Panel Layout */
-            .panel {
-                min-height: 100vh;
-                width: 100%;
-                padding: 4rem 2rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-
-            .panel-double {
-                min-height: 200vh;
-            }
-
-            .container {
-                max-width: 1200px;
-                margin: 0 auto;
-                width: 100%;
-            }
-
-            /* Navigation */
-            nav {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0 2rem;
-                z-index: 100;
-                background-color: rgba(255, 255, 255, 0.9);
-            }
-
-            .logo {
-                height: 140px;
-            }
-
-            .nav-links {
-                display: flex;
-                gap: 2rem;
-            }
-
-            .nav-links a {
-                font-weight: 200;
-                font-size: 1.3rem;
-                color: #000;
-                text-decoration: none;
-            }
-
-            .get-started {
-                background-color: #000;
-                color: #fff !important;
-                padding: 0.5rem 1.75rem 0.5rem 0.95rem;
-                margin-top: -7px;
-                margin-right: 50px;
-                border-radius: 0;
-                text-decoration: none;
-                clip-path: polygon(
-                    0 0,
-                    calc(100% - 18px) 0,
-                    100% 50%,
-                    calc(100% - 18px) 100%,
-                    0 100%
-                );
-            }
-
-            /* Hero Section (Panel 1) */
-            .hero {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                padding-top: 2rem;
-
-            }
-
-            h1 {
-                font-size: 3rem;
-                max-width: 800px;
-                margin: 0 auto;
-                line-height: 1.2;
-                font-weight: 300;
-                margin-bottom: 2rem;
-            }
-
-            .features-list {
-                margin-bottom: 40px;
-            }
-            .features-list p {
-                margin: 0;
-            }
-
-            .github-button {
-                transform: scale(2);
-            }
-
-            /* Common heading styles */
-            h2 {
-                font-size: 2.5rem;
-                margin-bottom: 0;
-                display: flex;
-                align-items: center;
-                font-weight: 300;
-                line-height: 1.2;
-            }
-
-            h3 {
-                font-weight: 200;
-                font-size: 1.7rem;
-                margin-bottom: 0;
-            }
-
-            /* Diamond shape */
-            .diamond {
-                width: 2rem;
-                height: 2rem;
-                background-color: #000;
-                transform: rotate(45deg);
-                display: inline-block;
-                margin-left: 1.5rem;
-            }
-
-            .open-source h2 .diamond {
-                display: none;
-            }
-
-            .features-description {
-                font-size: 1.25rem;
-                max-width: 900px;
-                padding-top: 20px;
-            }
-
-            .footnote {
-                font-size: 0.9rem;
-                max-width: 900px;
-                line-height: 1.3rem;
-                display: inline-block;
-            }
-
-            .center-content {
-                display: flex;
-                justify-content: center;
-                margin: 3rem 0;
-            }
-
-            /* Ship to any device (Panel 3) */
-            .ship-to-device-header {
-                display: flex;
-                align-items: center;
-                margin-bottom: 2.5rem;
-                width: fit-content;
-            }
-
-            .ship-to-device h2 {
-                font-size: 2.5rem;
-                font-weight: 300;
-                display: inline-block;
-                margin-bottom: 0;
-                line-height: 1.3;
-            }
-
-            /* Open Source Panel */
-            .open-source {
-                text-align: center;
-            }
-
-            a {
-                color: #000;
-                text-decoration: none;
-            }
-
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin-top: 1rem;
-                margin-bottom: 2rem;
-                text-align: left;
-                font-size: 1.2rem;
-            }
-            th,
-            td {
-                border: 1px solid #ccc;
-                padding: 0.75rem;
-                text-align: left;
-            }
-            th {
-                background-color: #eaeaea;
-                font-weight: 100;
-                font-size: 1.2rem;
-            }
-
-            tbody tr td:first-child {
-                font-weight: 200;
-            }
-
-            .category {
-                background-color: #f0f0f0;
-                font-weight: bold;
-                text-align: center;
-                font-size: 1.2rem;
-            }
-
-            /* Flexbox container that creates three columns */
-            .flex-container {
-                display: flex;
-                flex-wrap: wrap; /* Allows items to wrap to next line */
-                gap: 20px; /* Space between items */
-                max-width: 1200px;
-                margin: 0 auto;
-                font-size: 1.4rem;
-            }
-
-            /* Each column/item in the flex container */
-            .flex-item {
-                /* Flex-basis calculation: (100% - 2 gaps) / 3 items */
-                flex: 1 1 calc(33.333% - 14px);
-                /* Alternative approach: flex: 1 1 300px; for a minimum width */
-                min-width: 300px; /* Minimum width before wrapping */
-            }
-
-            /* Responsive behavior - stacks vertically on smaller screens */
-            @media (max-width: 768px) {
-                .flex-item {
-                    flex: 1 1 100%; /* Full width on mobile */
-                }
-            }
-
-            /* Optional: Medium screens show 2 columns */
-            @media (min-width: 769px) and (max-width: 1024px) {
-                .flex-item {
-                    flex: 1 1 calc(50% - 10px); /* Two columns on tablets */
-                }
-            }
-
-            /* Responsive adjustments */
-            @media (max-width: 768px) {
-                .panel {
-                    padding: 3rem 1.5rem;
-                }
-
-                .hero h1 {
-                    font-size: 2rem;
-                }
-
-                .features-list {
-                    font-size: 1.2rem;
-                }
-
-                h2 {
-                    font-size: 2rem;
-                }
-
-                .nav-links {
-                    gap: 1rem;
-                }
-
-                .diamond {
-                    width: 1.5rem;
-                    height: 1.5rem;
-                }
-            }
-        </style>
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/site.css" />
         <link rel="stylesheet" href="https://use.typekit.net/jyv0izi.css" />
         <!-- Place this tag in your head or just before your close body tag. -->
         <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -304,28 +31,44 @@
                     mobile, and browser apps
                 </h1>
                 <div class="features-list">
-                    <p>Build user interfaces declaratively & reactively</p>
                     <p>Build apps with Rust for extreme performance</p>
+                    <p>Author user interfaces declaratively & reactively</p>
                     <p>Ship to any device</p>
                 </div>
-                <div style="display: flex; align-items: center; justify-content: center;">
-                  <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
-                    <div style="display: flex; align-items: center; font-size: 1.5rem; font-weight: 200">
-                      Free & Open Source
+                <div
+                    style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    "
+                >
+                    <div
+                        style="
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 1.5rem;
+                        "
+                    >
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                transform: scale(1.5);
+                            "
+                        >
+                            <a
+                                class="github-button"
+                                href="https://github.com/paxdotdev/pax"
+                                data-color-scheme="no-preference: dark_high_contrast; light: light; dark: dark;"
+                                data-size="large"
+                                data-show-count="true"
+                                aria-label="Star paxdotdev/pax on GitHub"
+                                >Free &amp; Open Source</a
+                            >
+                        </div>
                     </div>
-                    <div style="display: flex; align-items: center; transform: translateY(5px) translateX(20px) scale(1.4)">
-                      <a
-                        class="github-button"
-                        href="https://github.com/paxdotdev/pax"
-                        data-color-scheme="no-preference: dark_high_contrast; light: light; dark: dark;"
-                        data-size="large"
-                        data-show-count="true"
-                        aria-label="Star paxdotdev/pax on GitHub"
-                      >Star</a>
-                    </div>
-                  </div>
                 </div>
-
             </div>
         </section>
 
@@ -338,12 +81,51 @@
                     more – Pax is an open-ended and extensible toolkit for
                     building interfaces on screens.
                 </p>
-                <h3>Current status:</h3>
+            </div>
+        </section>
+
+        <!-- Panel 3: Ship to any device -->
+        <section class="panel ship-to-device">
+            <div class="container">
+                <h2>Ship to any device <span class="diamond"></span></h2>
+                <div class="ship-to-device-content">
+                    <p class="features-description">
+                        Pax is written in Rust and compiles to run on the metal,
+                        interfacing as directly as practical with the target's
+                        CPU, GPU, and memory.
+                    </p>
+                    <p class="features-description">
+                        This enables Pax to be highly portable and performant,
+                        achieving up to 240FPS rendering, runnable natively on
+                        practically any computer or mobile device.
+                    </p>
+                    <p class="features-description">
+                        Pax's primary design challenge is to offer high-level
+                        ergonomics, inspired by HTML & CSS
+                        <a href="#">among others</a>, while prioritizing
+                        portability, performance, and resource efficiency.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel current-status">
+            <div class="container">
+                <h2>Current status <span class="diamond"></span></h2>
+                <p class="features-description">
+                    Pax is currently in beta. We aim for the project to become
+                    "a better choice than HTML" for many kinds of apps &
+                    websites. The design & execution burden to achieve this goal
+                    is high, but we believe it a worthwhile challenge to improve
+                    humanity's interface with machines.
+                </p>
                 <div class="flex-container" id="container">
                     <table class="flex-item">
                         <thead>
-                            <!-- <tr> -->
-                                <th colspan="2" class="category">Rendering Engine</th>
+                            <tr>
+                                <th colspan="2" class="category">
+                                    Rendering Engine
+                                </th>
                             </tr>
                             <tr>
                                 <th>Feature</th>
@@ -353,9 +135,7 @@
                         <tbody>
                             <tr>
                                 <td>2D Vector Drawing</td>
-                                <td>
-                                    ✅
-                                </td>
+                                <td>✅</td>
                             </tr>
                             <tr>
                                 <td>Animations</td>
@@ -382,24 +162,27 @@
                                 <td>✅</td>
                             </tr>
                             <tr>
-                                <td>GPU rendering</td>
-                                <td>☑️ Alpha<br /><span class="footnote"
-                                    >GPU rendering is available under a feature
-                                    flag, but CPU rendering is the default
-                                    fallback until GPU rendering is production-ready.</span
-                                ></td>
+                                <td>
+                                    GPU rendering<br /><span class="footnote"
+                                        >GPU rendering is available under a
+                                        feature flag, but CPU rendering is the
+                                        default fallback until GPU rendering is
+                                        better optimized.</span
+                                    >
+                                </td>
+                                <td>☑️<br />Alpha</td>
                             </tr>
                             <tr>
-                                <td>Opacity</td>
                                 <td>
-                                    ☑️ In Progress<br />
+                                    Opacity<br />
                                     <span class="footnote"
-                                        >Opacity is currently supported via alpha
-                                        channels on colors and gradients. Nested
-                                        element opacity requires
+                                        >Opacity is currently supported via
+                                        alpha channels on colors and gradients.
+                                        Nested element opacity requires
                                         implementation.</span
                                     >
                                 </td>
+                                <td>☑️<br />WIP</td>
                             </tr>
                             <tr>
                                 <td>Masking</td>
@@ -440,11 +223,10 @@
                                 <td>✅</td>
                             </tr>
                             <tr>
-                                <td>Reactive state system</td>
-                                <td>✅</td>
-                            </tr>
-                            <tr>
-                                <td>Embedded expression language (PAXEL)</td>
+                                <td>
+                                    Reactive state system & expression language
+                                    (PAXEL)
+                                </td>
                                 <td>✅</td>
                             </tr>
                             <tr>
@@ -456,14 +238,16 @@
                                 <td>✅</td>
                             </tr>
                             <tr>
-                                <td>Pax Designer</td>
                                 <td>
-                                    ☑️ In Progress<br /><span class="footnote">
-                                        Pax Designer is a visual + AI creative tool that reads & writes Pax definitions.
-                                        An alpha implementation is available on GitHub under the
+                                    Pax Designer<br /><span class="footnote">
+                                        Pax Designer is a visual + AI creative
+                                        tool that reads & writes Pax
+                                        definitions. An alpha implementation is
+                                        available on GitHub under the
                                         pax-designer directory.
                                     </span>
                                 </td>
+                                <td>☑️<br />WIP</td>
                             </tr>
                             <tr>
                                 <td>JavaScript Language Support</td>
@@ -473,7 +257,6 @@
                                 <td>Python Language Support</td>
                                 <td>Planned</td>
                             </tr>
-
                         </tbody>
                     </table>
 
@@ -490,15 +273,15 @@
                         <tbody>
                             <tr>
                                 <td>Web</td>
-                                <td>✅ Beta</td>
+                                <td>✅<br />Beta</td>
                             </tr>
                             <tr>
                                 <td>iOS</td>
-                                <td>☑️ Alpha</td>
+                                <td>☑️<br />Alpha</td>
                             </tr>
                             <tr>
                                 <td>macOS</td>
-                                <td>☑️ Alpha</td>
+                                <td>☑️<br />Alpha</td>
                             </tr>
                             <tr>
                                 <td>Linux</td>
@@ -515,56 +298,6 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </section>
-
-        <!-- Panel 3: Ship to any device -->
-        <section class="panel ship-to-device">
-            <div class="container">
-                <h2>Ship to any device <span class="diamond"></span></h2>
-                <div class="ship-to-device-content">
-                    <p class="features-description">
-                        Pax is written in Rust and compiles to run on the metal, interfacing as
-                        directly as practical with the target's CPU, GPU, and
-                        memory.
-                    </p>
-                    <p class="features-description">
-                        This enables Pax to be highly portable and performant,
-                        achieving up to 240FPS rendering, runnable natively on
-                        practically any computer or mobile device.
-                    </p>
-                    <p class="features-description">
-                        Pax's primary design challenge is to offer high-level
-                        ergonomics, inspired by HTML & CSS
-                        <a href="#">among others</a>, while prioritizing
-                        portability, performance, and resource efficiency.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Panel 4: Free & open source -->
-        <section class="panel open-source">
-            <div class="container text-center">
-                <h2>Free & open source</h2>
-
-                <p class="features-description">
-                    Pax started as a sabbatical project by
-                    <a href="#">Zack Brown</a>, then became incubated through a
-                    company along with <a href="#">Warfa Jibril</a> and
-                    <a href="#">Samuel Selleck</a>, backed by South Park Commons
-                    and some other cool people.
-                </p>
-
-                <p class="features-description">
-                    Pax's long-term mission is two-fold: (1) to empower art on
-                    screens and (2) to enable more of humanity to create
-                    software.
-                </p>
-
-                <p class="features-description">
-                    Pax is licensed MIT or Apache 2.0, at your choice.
-                </p>
             </div>
         </section>
     </body>

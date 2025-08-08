@@ -1,69 +1,282 @@
-
 body {
-    background-color: black;
-    color: white;
-    text-align: left;
-    font-family: ff-real-text-pro;
+    font-family: "ff-real-headline-pro", sans-serif;
     font-weight: 100;
-    font-size: 18px;
+    font-style: normal;
+    color: #000;
+    background-color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-size: 1.5rem;
 }
 
-#pax-logo {
-    margin: 0 auto 100px auto;
-    width: 350px;
+/* Panel Layout */
+.panel {
+    min-height: 100vh;
+    width: 100%;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.panel-double {
+    min-height: 200vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.logo {
+    height: 140px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 200;
+    font-size: 1.3rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.get-started {
+    background-color: #000;
+    color: #fff !important;
+    padding: 0.4rem 1.5rem 0.4rem 0.75rem;
+    margin-top: -7px;
+    margin-right: 50px;
+    border-radius: 0;
+    text-decoration: none;
+    clip-path: polygon(
+        0 0,
+        calc(100% - 18px) 0,
+        100% 50%,
+        calc(100% - 18px) 100%,
+        0 100%
+    );
+}
+
+/* Hero Section (Panel 1) */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
 }
 
 h1 {
-    font-family: ff-real-headline-pro;
-    font-size: 108px;
-    font-weight: 500;
+    font-size: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.2;
+    font-weight: 300;
+    margin-bottom: 2rem;
 }
 
+.features-list {
+    margin-bottom: 40px;
+}
+.features-list p {
+    margin: 0;
+}
+
+.github-button {
+    transform: scale(2);
+}
+
+/* Common heading styles */
 h2 {
-    font-family: ff-real-headline-pro;
-    font-size: 64px;
-    font-weight: 100;
-    margin-bottom: 35px;
-}
-
-svg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 h3 {
-    font-family: ff-real-headline-pro;
-    font-size: 32px;
+    font-weight: 200;
+    font-size: 1.7rem;
+    margin-bottom: 0;
+}
+
+/* Diamond shape */
+.diamond {
+    width: 2rem;
+    height: 2rem;
+    background-color: #000;
+    transform: rotate(45deg);
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+
+.open-source h2 .diamond {
+    display: none;
+}
+
+.features-description {
+    font-size: 1.25rem;
+    max-width: 900px;
+    padding-top: 20px;
+}
+
+.footnote {
+    font-size: 0.9rem;
+    max-width: 900px;
+    line-height: 1.3rem;
+    display: inline-block;
     font-weight: 100;
-    margin-bottom: 35px;
 }
 
-strong {
-    font-weight: 400;
+.center-content {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
 }
 
-button {
-    background-color: ;
-    border: 2px solid black;
+/* Ship to any device (Panel 3) */
+.ship-to-device-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    width: fit-content;
 }
 
-.inverted {
-    background-color: white;
-    color: black;
+.ship-to-device h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    display: inline-block;
+    margin-bottom: 0;
+    line-height: 1.3;
 }
 
-.center {
+/* Open Source Panel */
+.open-source {
     text-align: center;
 }
 
-.panel {
-    height: 100vh;  /* Sets height to 100% of viewport height */
-    width: 90vw;    /* Full width */
-    display: flex;  /* Enables flex layout for centering content */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;  /* Allows absolute positioning of children if needed */
-    padding: 0 5vw;
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+table thead tr:nth-child(1) {
+    font-size: 0.8rem;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: left;
+}
+th {
+    background-color: #eaeaea;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+tbody tr td:first-child {
+    font-weight: 200;
+}
+
+tbody tr td:nth-child(2) {
+    text-align: center;
+}
+
+.category {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Flexbox container that creates three columns */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to next line */
+    gap: 20px; /* Space between items */
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+}
+
+/* Each column/item in the flex container */
+.flex-item {
+    /* Flex-basis calculation: (100% - 2 gaps) / 3 items */
+    flex: 1 1 calc(33.333% - 14px);
+    /* Alternative approach: flex: 1 1 300px; for a minimum width */
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+/* Responsive behavior - stacks vertically on smaller screens */
+@media (max-width: 768px) {
+    .flex-item {
+        flex: 1 1 100%; /* Full width on mobile */
+    }
+}
+
+/* Optional: Medium screens show 2 columns */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .flex-item {
+        flex: 1 1 calc(50% - 10px); /* Two columns on tablets */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .panel {
+        padding: 3rem 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .features-list {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .diamond {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }
